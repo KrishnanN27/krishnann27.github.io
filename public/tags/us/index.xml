@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>US on </title>
+    <link>//localhost:1313/tags/us/</link>
+    <description>Recent content in US on </description>
+    <generator>Hugo -- 0.131.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 02 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/us/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Culture Shock: From Golden Rock, India to Golden, CO, US</title>
+      <link>//localhost:1313/posts/goldenrock-to-golden/</link>
+      <pubDate>Mon, 02 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/goldenrock-to-golden/</guid>
+      <description>A reflection on the cultural differences and surprises I encountered when moving from India to the US.</description>
+    </item>
+  </channel>
+</rss>
