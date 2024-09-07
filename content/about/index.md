@@ -13,7 +13,7 @@ date: 2024-09-01
             <strong>Previously</strong>, I worked as a Mobile, Frontend, and Cloud engineer at NCompass Tech Studio, where I contributed to building seamless user experiences and optimizing cloud deployments.
         </p>
         <p style="font-size: 1.05em; line-height: 1.8em;  margin: 0;">
-            Driven by a passion for innovation, I love tackling complex challenges through technology. When I'm not working, I enjoy <em>photography, hiking, working out</em>, and diving into <em>new technologies</em>. I'm also fascinated by <em>space exploration</em> and the latest trends in <em>AI</em>. Feel free to explore some of my photography <a href="/mylandscapes/" style="color: #007acc; text-decoration: none;">here</a>.
+            Driven by a passion for innovation, I love tackling complex challenges through technology. When I'm not working, I enjoy <em>photography, hiking, working out</em>, and diving into <em>new technologies</em>. I'm also fascinated by <em>space exploration</em> and the latest trends in <em>AI</em>. Feel free to explore some of my photography <a href="/gallery/" style="color: #007acc; text-decoration: none;">here</a>.
         </p>
     </div>
 </div>

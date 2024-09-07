@@ -1,0 +1,19 @@
+- company: "NCOMPASS TECH STUDIO PVT. LTD"
+  role: "Software Engineer"
+  location: "Chennai, India"
+  start_date: "May 2021"
+  end_date: "May 2022"
+  tasks:
+    - "Led the UI change initiative for an Android app, resulting in a significant increase in downloads, surpassing 1,000+ on the Play Store."
+    - "Developed custom components that improved integration across business groups by 25%."
+    - "Ensured a 98% bug-free code release through rigorous unit testing and test-driven development (TDD)."
+
+- company: "Colorado School of Mines"
+  role: "Graduate Research Assistant"
+  location: "Golden, CO"
+  start_date: "Aug 2023"
+  end_date: "Present"
+  tasks:
+    - "Contributed to the design and implementation of data-driven research projects."
+    - "Developed novel algorithms to accelerate SHACL validation in RDF graphs."
+    - "Collaborated with teams to build scalable solutions using cloud technologies."

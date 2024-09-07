@@ -1,0 +1,29 @@
+- title: "RDF Toolkit"
+  role: "Contributor"
+  date: "June 2024"
+  description: "Integrated search functionality using Fuse.js for the RDF Toolkit, enhancing the data querying experience."
+
+- title: "Echoes of Equality"
+  role: "Developer"
+  date: "Feb 2024"
+  description: "Created a platform connecting users with mentors, featuring a real-time chat and fundraising campaigns."
+
+- title: "ConverterForMe"
+  role: "Developer"
+  date: "July 2023"
+  description: "Developed an app for weight measurement conversions, aiding users in adapting to the USA fitness scene."
+
+- title: "EmiCalculator"
+  role: "Developer"
+  date: "July 2023"
+  description: "Designed an EMI Calculator app with responsive design principles, generating PDF reports for loan calculations."
+
+- title: "AutoFileOrganizer"
+  role: "Developer"
+  date: "July 2023"
+  description: "Built a Python script for automated file organization, showcasing expertise in Python and automation."
+
+- title: "Snake.sk"
+  role: "Developer"
+  date: "June 2023"
+  description: "Created a competitive Snake game using Flutter, integrating Firebase for high score tracking."
