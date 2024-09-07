@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Hackathon on </title>
-    <link>//localhost:1313/tags/hackathon/</link>
+    <link>//localhost:53033/tags/hackathon/</link>
     <description>Recent content in Hackathon on </description>
     <generator>Hugo -- 0.131.0</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 02 Sep 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1313/tags/hackathon/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:53033/tags/hackathon/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My First Ever Hackathon Experience: Spoiler Alert - I Won!</title>
-      <link>//localhost:1313/posts/hackathon/</link>
+      <link>//localhost:53033/posts/hackathon/</link>
       <pubDate>Mon, 02 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/hackathon/</guid>
+      <guid>//localhost:53033/posts/hackathon/</guid>
       <description>A recount of my first hackathon experience where I not only participated but also won!</description>
     </item>
   </channel>

@@ -61,8 +61,8 @@ weight = 7
 
 
 
-# [[main]]
-# name = "github"
-# pre = "github"
-# url = "https://github.com/mnjm/kayal"
-# weight = 10
+[[main]]
+name = "github"
+pre = "github"
+url = "https://github.com/KrishnanN27"
+weight = 10

@@ -107,20 +107,20 @@ cardView = true
 showRSS = false
 
 # Social links
-# [[social]]
-# name = "GitHub"
-# icon = "github"
-# url = "https://github.com/mnjm/kayal"
-#
-# [[social]]
-# name = "Email"
-# icon = "email"
-# url = "mailto:name@example.com"
-#
-# [[social]]
-# name = "Twitter / X"
-# icon = "x-twitter"
-# url = "https://x.com/sample"
+[[social]]
+name = "GitHub"
+icon = "github"
+url = "https://github.com/KrishnanN27"
+
+[[social]]
+name = "Email"
+icon = "email"
+url = "mailto:name@example.com"
+
+[[social]]
+name = "Twitter / X"
+icon = "x-twitter"
+url = "https://x.com/sample"
 
 
 [outputs]

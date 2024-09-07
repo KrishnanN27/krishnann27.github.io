@@ -27,8 +27,8 @@
 
 @font-face {
   font-display: swap;
-  font-family: 'Fira Sans'; /* Change this to Fira Sans */
+  font-family: 'Fira Mono Cyrillic';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/fira-sans-v10-latin-regular.woff2') format('woff2'); /* Use your custom font */
+  src: url('../fonts/fira-mono-cyrillic-400-normal.woff2') format('woff2');
 }
