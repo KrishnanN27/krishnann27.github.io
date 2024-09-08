@@ -40,7 +40,7 @@ enableSearch = false
 # Whether to show recent items on the homepage.
 showRecent = true
 # Heading label for recent items.
-showRecentLabel = "Featured"
+showRecentLabel = "Latest Posts"
 # Number of recent items to show.
 showRecentItems = 4
 # Whether to display a "Show more" link at the end of recent section that directs to `showMoreDest`.
@@ -106,21 +106,21 @@ cardView = true
 # Whether to display RSS link
 showRSS = false
 
-# Social links
-[[social]]
-name = "GitHub"
-icon = "github"
-url = "https://github.com/KrishnanN27"
+# # Social links
+# [[social]]
+# name = "GitHub"
+# icon = "github"
+# url = "https://github.com/KrishnanN27"
 
-[[social]]
-name = "Email"
-icon = "email"
-url = "mailto:name@example.com"
+# [[social]]
+# name = "Email"
+# icon = "email"
+# url = "mailto:name@example.com"
 
-[[social]]
-name = "Twitter / X"
-icon = "x-twitter"
-url = "https://x.com/sample"
+# [[social]]
+# name = "Twitter / X"
+# icon = "x-twitter"
+# url = "https://x.com/sample"
 
 
 [outputs]

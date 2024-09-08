@@ -2,8 +2,8 @@
 title: "Get to Know More"
 date: 2024-09-01
 ---
-
-<div style="display: flex; align-items: flex-start; margin-bottom: 30px;">
+---
+<div style="display: flex; align-items: flex-start; margin-bottom: 30px; margin-top: 30px;">
     <img src="/images/p2.jpeg" alt="Sowndarya Krishnan" style="width: 180px; height: auto; border-radius: 12px; margin-right: 25px; box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);">
     <div style="max-width: 720px;">
         <p style="font-size: 1.05em; line-height: 1.8em;  margin: 0 0 15px 0;">

@@ -49,11 +49,39 @@ footer {
   margin-top: 1rem;
   padding-top: 1rem;
 }
+h1 {
+  font-size: 1rem; /* Adjust as needed */
+}
+
+h2 {
+  font-size: 0.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.5rem;
+}
+
+p, body {
+  font-size: 0.9rem; /* Adjust the general body font size if needed */
+}
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 1.2rem;
-  line-height: normal;
+  line-height: 1.3; /* Adjust line-height to control spacing between lines */
 }
+
 
 h1::before { content: '# '; }
 h2::before { content: '## '; }

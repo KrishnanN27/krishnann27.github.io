@@ -41,8 +41,8 @@ weight = 4
 
 #
 [[main]]
-name = "Blog"
-title = "Blog"
+name = "Posts"
+title = "Posts"
 url = "/posts/"
 weight = 5
 
