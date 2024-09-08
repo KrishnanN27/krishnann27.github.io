@@ -62,7 +62,7 @@ where = "right"  # Options: right, left, top
 # Article settings
 [article]
 # Whether to display article dates.
-showDate = true
+showDate = false
 # Whether to display modified dates of articles.
 showModDate = true
 # Whether to display reading time of articles.
