@@ -19,9 +19,7 @@
   </ul>
 
   {{ if $showMore }}
-  <div class="showmore">
-    <button onclick="window.location.href = '{{ $showMoreDest }}'" aria-label="Show More"> Show More </a>
-  </div>
+  <p style="margin-top: 15px;"><a href="{{ $showMoreDest }}" style="color: #007acc; text-decoration: none;">Show more posts</a></p>
   {{ end }}
 </div>
 {{ end }}

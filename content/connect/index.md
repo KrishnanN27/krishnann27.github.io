@@ -4,14 +4,24 @@ date: 2024-09-01
 description: "Let's get in touch!"
 ---
 
-
 <p>If you'd like to reach out, here are a few ways to get in touch with me:</p>
 
 <ul style="list-style-type: none; padding-left: 0;">
-    <li><strong>Email:</strong> <a href="mailto:krishnaofficial27@gmail.com" style="color: #007acc; text-decoration: none;">krishnaofficial27@gmail.com</a></li>
-    <li><strong>GitHub:</strong> <a href="https://github.com/KrishnanN27" target="_blank" style="color: #007acc; text-decoration: none;">github.com/KrishnanN27</a></li>
-    <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sowndaryakrishnank/" target="_blank" style="color: #007acc; text-decoration: none;">linkedin.com/in/sowndaryakrishnank/</a></li>
-    <li><strong>Twitter:</strong> <a href="https://twitter.com/sowndarya_krish" target="_blank" style="color: #007acc; text-decoration: none;">twitter.com/sowndarya_krish</a></li>
+    <li><strong><i class="fas fa-envelope"></i> Personal Email:</strong> 
+        <a href="mailto:krishnaofficial27@gmail.com" style="color: #007acc; text-decoration: none;">krishnaofficial27@gmail.com</a>
+    </li>
+    <li><strong><i class="fas fa-envelope"></i> Official Email:</strong> 
+        <a href="mailto:sowndaryakrishnanna@mines.edu" style="color: #007acc; text-decoration: none;">sowndaryakrishnanna@mines.edu</a>
+    </li>
+    <li><strong><i class="fab fa-github"></i> GitHub:</strong> 
+        <a href="https://github.com/KrishnanN27" target="_blank" style="color: #007acc; text-decoration: none;">github.com/KrishnanN27</a>
+    </li>
+    <li><strong><i class="fab fa-linkedin"></i> LinkedIn:</strong> 
+        <a href="https://www.linkedin.com/in/sowndaryakrishnank/" target="_blank" style="color: #007acc; text-decoration: none;">linkedin.com/in/sowndaryakrishnank/</a>
+    </li>
+    <li><strong><i class="fab fa-twitter"></i> Twitter:</strong> 
+        <a href="https://twitter.com/sowndarya_krish" target="_blank" style="color: #007acc; text-decoration: none;">twitter.com/sowndarya_krish</a>
+    </li>
 </ul>
 
 <h2>Book a Meeting</h2>
