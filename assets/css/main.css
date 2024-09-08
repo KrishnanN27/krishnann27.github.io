@@ -275,6 +275,7 @@ details[open] div {
   font-size: 0.9rem; /* Smaller font size */
   font-weight: 600;
   border-bottom: none;
+  white-space: nowrap; /* Prevent menu items from wrapping */
 }
 
 #main-menu a:hover {
