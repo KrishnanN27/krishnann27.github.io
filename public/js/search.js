@@ -30,7 +30,10 @@
       var options = {
         shouldSort: true,
         ignoreLocation: true,
-        threshold: 0,
+        threshold: 0.3,
+        // Increase threshold to allow for more flexible matching
+        minMatchCharLength: 2,
+        // Match after 2 characters
         includeMatches: true,
         keys: [
           { name: "title", weight: 0.8 },
@@ -62,22 +65,32 @@
     }
   }
   function executeQuery(query) {
+    if (!query) {
+      resultCntr.innerHTML = "";
+      document.getElementById("no-results").style.display = "none";
+      return;
+    }
     let results = fuse.search(query);
+    document.getElementById("search-loading").style.display = "none";
     let resultsHtml = "";
-    if (results.length > 1) {
+    if (results.length > 0) {
       results.forEach(function(value, key) {
         var meta = value.item.section + " | ";
-        meta = meta + value.item.date ? value.item.date + " | " : "";
+        meta = meta + (value.item.date ? value.item.date + " | " : "");
         meta = meta + `<span class="srch-link">${value.item.permalink}</span>`;
-        resultsHtml = resultsHtml + `<li><a href="${value.item.permalink}">
-          <p class="srch-title">${value.item.title}</p>
-          <p class="srch-meta">${meta}</p>
-          <p class="srch-smry">${value.item.summary}</p>
-        </a></li>`;
+        resultsHtml += `
+        <li>
+          <a href="${value.item.permalink}">
+            <p class="srch-title">${value.item.title}</p>
+            <p class="srch-meta">${meta}</p>
+            <p class="srch-smry">${value.item.summary}</p>
+          </a>
+        </li>`;
       });
+      document.getElementById("no-results").style.display = "none";
       isResEmpty = false;
     } else {
-      resultsHtml = "";
+      resultsHtml = "<li>No results found</li>";
       isResEmpty = true;
     }
     resultCntr.innerHTML = resultsHtml;

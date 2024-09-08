@@ -1,0 +1,82 @@
+{{ if .Site.Params.enableSearch | default false }}
+<!-- Search Open Button -->
+<button id="search-open" class="menu-btn" aria-label="Search button">
+  {{ partial "icon.html" "search" }}
+</button>
+{{ end }}
+
+<!-- Search Container -->
+<div id="search-container" data-url="{{ "" | absURL }}" style="display: none;">
+  <div class="search" style="position: relative;">
+    <div class="panel">
+      <form>
+        <!-- Search Icon -->
+        {{ partial "icon.html" "search" }}
+        <!-- Search Input with Debounce Trigger -->
+        <input type="search" id="search-query" placeholder="Search" tabindex=0 autocomplete="off" onkeyup="debounceSearch()"/>
+        <!-- Close Button -->
+        <button id="search-close" title="Cancel (ESC)">
+          {{ partial "icon.html" "xmark" }}
+        </button>
+      </form>
+    </div>
+    <!-- Loading Indicator -->
+    <div id="search-loading" style="display: none;">Searching...</div>
+    <!-- No Results Message -->
+    <div id="no-results" style="display: none;">No results found</div>
+    <!-- Search Results List -->
+    <ul id="search-results"></ul>
+  </div>
+</div>
+
+<script>
+  var debounceTimeout;
+
+  // Debounce function to delay search
+  function debounceSearch() {
+    clearTimeout(debounceTimeout);
+    debounceTimeout = setTimeout(function () {
+      document.getElementById('search-loading').style.display = 'block';
+      executeQuery(document.getElementById('search-query').value);
+    }, 300); // 300ms delay
+  }
+
+  function executeQuery(query) {
+    if (!query) {
+      document.getElementById('search-results').innerHTML = "";
+      document.getElementById('no-results').style.display = 'none';
+      return;
+    }
+
+    let results = fuse.search(query);
+    document.getElementById('search-loading').style.display = 'none'; // Hide loading spinner
+
+    if (results.length > 0) {
+      let resultsHtml = "";
+      results.forEach(function (value, key) {
+        var meta = value.item.section + " | ";
+        meta = meta + (value.item.date ? value.item.date + " | " : "");
+        meta = meta + `<span class="srch-link">${value.item.permalink}</span>`;
+
+        // Highlight matched query in title or content
+        var highlightedTitle = value.item.title.replace(new RegExp(query, "gi"), (match) => `<mark>${match}</mark>`);
+        var highlightedSummary = value.item.summary.replace(new RegExp(query, "gi"), (match) => `<mark>${match}</mark>`);
+
+        resultsHtml += `
+          <li>
+            <a href="${value.item.permalink}">
+              <p class="srch-title">${highlightedTitle}</p>
+              <p class="srch-meta">${meta}</p>
+              <p class="srch-smry">${highlightedSummary}</p>
+            </a>
+          </li>`;
+      });
+
+      document.getElementById('no-results').style.display = 'none';
+      document.getElementById('search-results').innerHTML = resultsHtml;
+    } else {
+      document.getElementById('search-results').innerHTML = "";
+      document.getElementById('no-results').style.display = 'block';
+    }
+  }
+</script>
