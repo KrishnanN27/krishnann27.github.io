@@ -269,21 +269,26 @@ details[open] div {
 }
 
 #main-menu a {
-  margin: 0.7em 0.5em;
-  font-size: 1rem;
+  margin: 0.5em 0.4em; /* Reduced spacing */
+  font-size: 0.9rem; /* Smaller font size */
   font-weight: 600;
   border-bottom: none;
 }
 
 #main-menu a:hover {
-  border-bottom: 2px solid var(--tertiary-color);
+  border-bottom: 1px solid var(--tertiary-color); /* Thinner hover underline */
 }
 
 #main-menu a svg {
-  height: 1.1em;
-  width: 1.1em;
+  height: 0.9em; /* Reduced icon size */
+  width: 0.9em;
   vertical-align: text-top;
 }
+
+#main-menu a.active {
+  border-bottom: 1px solid var(--tertiary-color); /* Thinner active underline */
+}
+
 
 #main-menu a.active {
   border-bottom: 2px solid var(--tertiary-color);
