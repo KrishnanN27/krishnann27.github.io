@@ -4,6 +4,57 @@ html {
   line-height: 1.5rem;
   scroll-behavior:smooth
 }
+
+
+/* Education Section Styling */
+.custom-title .section-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--text-color); /* Main text color */
+  margin-bottom: 15px;
+}
+
+.education-section {
+  margin-top: 20px;
+}
+
+.education-item {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-left: 4px solid var(--primary-color); /* Use your theme's primary color */
+  background-color: rgba(0, 122, 255, 0.1); /* Subtle background color */
+  border-radius: 8px;
+}
+
+.work-summary {
+  font-weight: bold;
+  color: var(--text-color); /* Dynamic text color */
+  display: block;
+}
+
+.education-item .degree {
+  display: block; /* Forces the degree to the next line */
+  margin-top: 5px;
+  font-style: italic;
+  color: var(--secondary-text-color);
+}
+
+.education-item .details {
+  margin-top: 5px;
+  color: var(--text-color); /* Main text color */
+  font-size: 0.9rem;
+}
+
+.education-item i {
+  margin-right: 5px;
+}
+
+.education-item .work-summary span {
+  display: block;
+  margin-top: 8px;
+}
+
+
 /* Red Callout (Header Section) with Blue Accent */
 .red-callout {
   background-color: rgba(255, 59, 48, 0.2); /* Light red for a softer highlight */
@@ -11,7 +62,7 @@ html {
   border-radius: 12px;
   color: var(--primary-color);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-  font-size: 1rem;
+  font-size: 0.9rem;
   margin-bottom: 25px;
   margin-top: 25px;
   border-left: 5px solid #ff3b30; /* Red accent line */

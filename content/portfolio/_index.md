@@ -1,18 +1,17 @@
----
-title: "Portfolio"
-date: 2024-09-01
-showToC: true
----
-
 <div class="red-callout">
    This page provides an in-depth overview of my work experience and projects. For a concise summary, please refer to my <a href="/CV.pdf" target="_blank" style="color: #007acc; text-decoration: none; font-weight: bold;">resume</a>.
 </div>
+
+<div style="padding: 5px; margin-top: 5px; text-align: center;">
+   <p style="color: #cc6600; font-weight: bold;">Seeking full-time roles starting May 2025</p>
+</div>
+
 
 <div class="custom-title">
    <h1>Work Experience</h1>
 </div>
 
-<details class="work-details">
+<details class="work-details" open >
   <summary class="work-summary">Software Engineer - NCOMPASS TECH STUDIO PVT. LTD (May 2021 - May 2022) 
     <a href="https://ncompass.inc/" target="_blank" class="work-link" style="color: inherit; text-decoration: none;">
       <i class="fas fa-external-link-alt"></i>
@@ -27,6 +26,46 @@ showToC: true
     </ul>
   </div>
 </details>
+
+<div class="custom-title">
+   <h1>Education</h1>
+</div>
+
+<div class="custom-title">
+   <p class="section-title">Education</p>
+</div>
+
+<div class="education-section">
+
+   <!-- First School -->
+   <div class="education-item">
+      <summary class="work-summary">
+         Colorado School of Mines | Colorado, USA | Expected: May 2025
+         <span class="degree">
+            <i class="fas fa-graduation-cap"></i> MS in Computer Science
+         </span>
+      </summary>
+      <p class="details">
+         <i class="fas fa-map-marker-alt"></i> Colorado, USA | GPA: 3.7 / 4.0
+      </p>
+   </div>
+
+   <!-- Second School -->
+   <div class="education-item">
+      <summary class="work-summary">
+         Anna University | Chennai, India | Aug 2022
+         <span class="degree">
+            <i class="fas fa-graduation-cap"></i> B.E in Electronics & Communication Engineering
+         </span>
+      </summary>
+      <p class="details">
+         <i class="fas fa-map-marker-alt"></i> Chennai, India | GPA: 8.56 / 10
+      </p>
+   </div>
+
+</div>
+
+
 
 
 ---

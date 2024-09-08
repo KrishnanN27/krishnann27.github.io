@@ -5,7 +5,7 @@ description: "Overview of my thesis work and research projects at Colorado Schoo
 ---
 
 <!-- DATA-DRIVEN CPS LAB -->
-<details class="work-details" style="margin-top: 20px;"> <!-- Added margin-top for spacing -->
+<details class="work-details" open  style="margin-top: 20px;"> <!-- Added margin-top for spacing -->
   <summary class="work-summary">
     <span style="font-style: italic;">DATA-DRIVEN CPS LAB, Research Assistant</span> | Golden, CO | Aug 2023 – Present 
     <a href="https://datadrivencps.github.io/website/" target="_blank" class="work-link">
@@ -18,8 +18,21 @@ description: "Overview of my thesis work and research projects at Colorado Schoo
       <li>Working under <a href="https://gtf.fyi/" style="color: #007acc; text-decoration: none;">Dr. Gabe Fierro</a>, focusing on SHACL validation and inference in RDF graphs.</li>
       <li>Developing novel algebra for SHACL validation to streamline and optimize data manipulation.</li>
     </ul>
+    <div style="display: flex; gap: 15px; margin-top: 20px;">
+      <!-- First image (r1) -->
+      <div style="flex: 1;">
+        <img src="/images/research/r1.jpg" alt="Poster Presentation at Mines" style="width: 250px; height: 250px; object-fit: cover; border-radius: 12px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);">
+        <p style="text-align: center; font-size: 0.9em; color: inherit;">Poster presentation at Mines (Image 1)</p>
+      </div>
+      <div style="flex: 1;">
+        <img src="/images/research/r2.jpg" alt="Poster Presentation at Mines" style="width: 250px; height: 250px; object-fit: cover; border-radius: 12px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);">
+        <p style="text-align: center; font-size: 0.9em; color: inherit;">Poster presentation at Mines (Image 2)</p>
+      </div>
+    </div>
   </div>
 </details>
+
+
 
 
 <!-- SLOAN PROJECT Backend Engineer -->
@@ -51,6 +64,7 @@ description: "Overview of my thesis work and research projects at Colorado Schoo
     <p><i class="fas fa-user-tie"></i> <strong>Role:</strong> Frontend Developer</p>
     <ul>
       <li>Developing a community dashboard for energy consumption visualization.</li>
+      <li>Built and enhanced a community dashboard with real-time visualizations, ensuring usability and accessibility for all users.</li>
       <li>Incorporating community feedback to improve usability for all users, especially non-tech-savvy individuals.</li>
     </ul>
   </div>
