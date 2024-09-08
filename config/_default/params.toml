@@ -34,13 +34,14 @@ enableSearch = false
 # bing = ""
 # pinterest = ""
 # yandex = ""
-
+paginate = 4 
 # Homepage settings
 [homepage]
+
 # Whether to show recent items on the homepage.
 showRecent = true
 # Heading label for recent items.
-showRecentLabel = "Latest Posts"
+showRecentLabel = ""
 # Number of recent items to show.
 showRecentItems = 4
 # Whether to display a "Show more" link at the end of recent section that directs to `showMoreDest`.
@@ -53,6 +54,10 @@ showMoreDest = "/posts"
 # image = "imgs/profile.svg"
 # Image position.
 where = "right"  # Options: right, left, top
+
+
+ # This will show 4 updates per page
+
 
 # Article settings
 [article]
@@ -105,23 +110,6 @@ showBreadcrumbs = false
 cardView = true
 # Whether to display RSS link
 showRSS = false
-
-# # Social links
-# [[social]]
-# name = "GitHub"
-# icon = "github"
-# url = "https://github.com/KrishnanN27"
-
-# [[social]]
-# name = "Email"
-# icon = "email"
-# url = "mailto:name@example.com"
-
-# [[social]]
-# name = "Twitter / X"
-# icon = "x-twitter"
-# url = "https://x.com/sample"
-
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]

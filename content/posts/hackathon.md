@@ -59,17 +59,7 @@ Here's a collection of images that capture the spirit of the hackathon:
 }
 </style>
 
-<div class="carousel">
-    <img src="/images/hb/h1.jpeg" alt="Hackathon Image 1">
-    <img src="/images/hb/h2.jpeg" alt="Hackathon Image 2">
-    <img src="/images/hb/h3.jpeg" alt="Hackathon Image 3">
-    <img src="/images/hb/h4.jpeg" alt="Hackathon Image 4">
-    <img src="/images/hb/h9.jpeg" alt="Hackathon Image 9">
-    <img src="/images/hb/h5.jpeg" alt="Hackathon Image 5">
-    <img src="/images/hb/h8.jpeg" alt="Hackathon Image 8">
-    <img src="/images/hb/h6.jpeg" alt="Hackathon Image 6">
-    <img src="/images/hb/h7.jpeg" alt="Hackathon Image 7">
-</div>
+
 
 ---
 

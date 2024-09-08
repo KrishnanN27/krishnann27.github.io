@@ -23,6 +23,13 @@
       <description>A reflection on the cultural differences and surprises I encountered when moving from India to the US.</description>
     </item>
     <item>
+      <title>Connect</title>
+      <link>//localhost:1313/connect/</link>
+      <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/connect/</guid>
+      <description>Let&#39;s get in touch!</description>
+    </item>
+    <item>
       <title>Get to Know More</title>
       <link>//localhost:1313/about/</link>
       <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
@@ -35,6 +42,13 @@
       <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/gallery/</guid>
       <description>Welcome to my gallery! Here you’ll find some of my favorite landscapes, each capturing a unique and serene moment in nature.</description>
+    </item>
+    <item>
+      <title>Updates</title>
+      <link>//localhost:1313/updates/</link>
+      <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/updates/</guid>
+      <description>🎯 Planning to propose my MS thesis in Spring 2025 and graduate in May 2025.</description>
     </item>
   </channel>
 </rss>

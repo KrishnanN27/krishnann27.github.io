@@ -4,6 +4,75 @@ html {
   line-height: 1.5rem;
   scroll-behavior:smooth
 }
+/* Red Callout (Header Section) with Blue Accent */
+.red-callout {
+  background-color: rgba(255, 59, 48, 0.2); /* Light red for a softer highlight */
+  padding: 15px;
+  border-radius: 12px;
+  color: var(--primary-color);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  border-left: 5px solid #ff3b30; /* Red accent line */
+  border-top: 3px solid #007acc; /* Blue accent line */
+}
+
+/* Custom Collapsible Style */
+/* Custom Collapsible Style */
+.project-details {
+  background-color: var(--secondary-color-light); /* Custom light background */
+  border: 1px solid var(--primary-color); /* Primary color border */
+  margin-bottom: 15px;
+  border-radius: 8px; /* Keep rounded corners */
+  padding: 10px;
+}
+
+.project-summary {
+  font-weight: bold;
+  color: var(--primary-color); /* Primary color for project titles */
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  padding: 5px;
+  border-radius: 8px; /* Maintain rounded corners */
+}
+
+.project-summary:hover {
+  color: var(--link-color); /* Change to link color on hover */
+  background-color: var(--secondary-color-dark); /* Darker background on hover */
+  border-radius: 8px; /* Keep corners rounded on hover */
+}
+
+.project-details[open] .project-summary {
+  background-color: rgba(0, 122, 204, 0.4); /* Light blue background with 80% opacity */
+  color: #fff; /* White text when opened */
+  border-radius: 8px; /* Keep rounded corners */
+}
+
+.project-link i {
+  margin-left: 10px;
+  color: var(--link-color); /* Match link color */
+}
+
+.project-details div {
+  margin-top: 10px;
+  padding-left: 15px; /* Indent content slightly */
+  color: var(--primary-color);
+}
+
+.project-details ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.project-details p i {
+  margin-right: 5px; /* Add space between icon and text */
+  color: var(--link-color); /* Use the same color for icons */
+}
+
+
+
+
 
 body {
   font-family: var(--ff);
@@ -13,6 +82,69 @@ body {
   padding: 0;
   transition: background 50ms ease-in-out, color 50ms ease-in-out;
 }
+
+
+
+
+
+p i {
+  margin-right: 5px; /* Add space between icon and text */
+  color: #007acc; /* Same blue for icons */
+}
+
+
+/* Custom Collapsible Style for Work Experience */
+.work-details {
+  background-color: var(--secondary-color-light); /* Custom light background */
+  border: 1px solid var(--primary-color); /* Primary color border */
+  margin-bottom: 15px;
+  border-radius: 8px; /* Keep rounded corners */
+  padding: 10px;
+}
+
+.work-summary {
+  font-weight: bold;
+  color: var(--primary-color); /* Primary color for work titles */
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  padding: 5px;
+  border-radius: 8px; /* Maintain rounded corners */
+}
+
+.work-summary:hover {
+  color: var(--link-color); /* Change to link color on hover */
+  background-color: var(--secondary-color-dark); /* Darker background on hover */
+  border-radius: 8px; /* Keep corners rounded on hover */
+}
+
+.work-details[open] .work-summary {
+  background-color: rgba(0, 122, 204, 0.4); /* Light blue background with 80% opacity when opened */
+  color: #fff; /* White text when opened */
+  border-radius: 8px; /* Keep rounded corners */
+}
+
+.work-link i {
+  margin-left: 10px;
+  color: var(--link-color); /* Match link color */
+}
+
+.work-details div {
+  margin-top: 10px;
+  padding-left: 15px; /* Indent content slightly */
+  color: var(--primary-color);
+}
+
+.work-details ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.work-details p i {
+  margin-right: 5px; /* Add space between icon and text */
+  color: var(--link-color); /* Use the same color for icons */
+}
+
+
 
 header {
   display: flex;
@@ -56,7 +188,7 @@ h1 {
 }
 
 h2 {
-  font-size: 0.75rem;
+  font-size: 0.9rem;
 }
 
 h3 {
@@ -72,7 +204,7 @@ h5 {
 }
 
 h6 {
-  font-size: 0.5rem;
+  font-size: 0.9rem;
 }
 
 p, body {
@@ -283,8 +415,8 @@ details[open] div {
 }
 
 #main-menu a svg {
-  height: 0.9em; /* Reduced icon size */
-  width: 0.9em;
+  height: 1.5em; /* Reduced icon size */
+  width: 1.5em;
   vertical-align: text-top;
 }
 

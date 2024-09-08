@@ -1,0 +1,24 @@
+<div style="margin-top: 30px; margin-bottom: 0;">
+    <h2 style="border-bottom: 2px solid #007acc; display: inline-block; padding-bottom: 5px; margin-bottom: 10px;">Latest Updates</h2>
+
+    {{ with .Site.GetPage "updates" }}
+    <div style="background-color: rgba(0, 0, 0, 0.05); padding: 15px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);">
+        <!-- Split the content into separate list items -->
+        {{ $updates := split (string .RawContent) "\n- " }} <!-- Splitting at the markdown list item "-" -->
+
+        <!-- Create a list of updates, limited to the first 3 -->
+        <ul style="list-style-type: none; padding-left: 0; margin-bottom: 0;">
+            {{ range first 3 (after 1 $updates) }} <!-- Skip the first empty element, limit to 3 -->
+                {{ if ne . "" }} <!-- Exclude empty lines -->
+                <li>{{ . | markdownify }}</li> <!-- Directly render the list item as markdown -->
+                {{ end }}
+            {{ end }}
+        </ul>
+
+        <!-- Show more updates link -->
+        <p><a href="{{ .Permalink }}" style="color: #007acc; text-decoration: none;">Show more updates</a></p>
+    </div>
+    {{ else }}
+    <p>No updates available at the moment.</p>
+    {{ end }}
+</div>
