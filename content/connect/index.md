@@ -19,9 +19,6 @@ description: "Let's get in touch!"
     <li><strong><i class="fab fa-linkedin"></i> LinkedIn:</strong> 
         <a href="https://www.linkedin.com/in/sowndaryakrishnank/" target="_blank" style="color: #007acc; text-decoration: none;">linkedin.com/in/sowndaryakrishnank/</a>
     </li>
-    <li><strong><i class="fab fa-twitter"></i> Twitter:</strong> 
-        <a href="https://twitter.com/sowndarya_krish" target="_blank" style="color: #007acc; text-decoration: none;">twitter.com/sowndarya_krish</a>
-    </li>
 </ul>
 
 <h2>Book a Meeting</h2>
