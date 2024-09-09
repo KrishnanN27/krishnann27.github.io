@@ -10,9 +10,9 @@
     <atom:link href="//localhost:1313/tags/us/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Culture Shock: From Golden Rock, India to Golden, CO, US</title>
-      <link>//localhost:1313/posts/goldenrock-to-golden/</link>
+      <link>//localhost:1313/posts/the-culture-shock/</link>
       <pubDate>Mon, 02 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/goldenrock-to-golden/</guid>
+      <guid>//localhost:1313/posts/the-culture-shock/</guid>
       <description>A reflection on the cultural differences and surprises I encountered when moving from India to the US.</description>
     </item>
   </channel>

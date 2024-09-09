@@ -6,8 +6,15 @@
     <description>Recent content in Posts on </description>
     <generator>Hugo -- 0.131.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 08 Sep 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="//localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Recovering what I lost (just my attention span)</title>
+      <link>//localhost:1313/posts/recovering_attention_span/</link>
+      <pubDate>Sun, 08 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/recovering_attention_span/</guid>
+      <description>A recount of my first hackathon experience where I not only participated but also won!</description>
+    </item>
     <item>
       <title>My First Ever Hackathon Experience: Spoiler Alert - I Won!</title>
       <link>//localhost:1313/posts/hackathon/</link>
@@ -17,9 +24,9 @@
     </item>
     <item>
       <title>The Culture Shock: From Golden Rock, India to Golden, CO, US</title>
-      <link>//localhost:1313/posts/goldenrock-to-golden/</link>
+      <link>//localhost:1313/posts/the-culture-shock/</link>
       <pubDate>Mon, 02 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/goldenrock-to-golden/</guid>
+      <guid>//localhost:1313/posts/the-culture-shock/</guid>
       <description>A reflection on the cultural differences and surprises I encountered when moving from India to the US.</description>
     </item>
   </channel>
