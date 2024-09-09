@@ -64,5 +64,12 @@
       <guid>//localhost:1313/updates/</guid>
       <description>🎯 Planning to propose my MS thesis in Spring 2025 and graduate in May 2025.</description>
     </item>
+    <item>
+      <title>Know Your Worth: The Value of Changing Your Environment</title>
+      <link>//localhost:1313/posts/know_your_worth/</link>
+      <pubDate>Fri, 02 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/know_your_worth/</guid>
+      <description>A thoughtful analogy on how our value depends on the environment we are in and how to avoid settling for less.</description>
+    </item>
   </channel>
 </rss>

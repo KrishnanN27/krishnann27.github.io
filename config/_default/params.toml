@@ -34,7 +34,7 @@ enableSearch = true
 # bing = ""
 # pinterest = ""
 # yandex = ""
-paginate = 4 
+# paginate = 4 
 # Homepage settings
 [homepage]
 
@@ -43,7 +43,7 @@ showRecent = true
 # Heading label for recent items.
 showRecentLabel = ""
 # Number of recent items to show.
-showRecentItems = 4
+showRecentItems = 2
 # Whether to display a "Show more" link at the end of recent section that directs to `showMoreDest`.
 showMore = true
 showMoreDest = "/posts"
@@ -91,7 +91,7 @@ showBreadcrumbs = false
 # Whether to display pages as a card
 cardView = true
 # Whether to display RSS link
-showRSS = false
+showRSS = true
 
 # Taxonomy settings
 [taxonomy]

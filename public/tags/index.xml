@@ -113,5 +113,33 @@
       <guid>//localhost:1313/tags/us/</guid>
       <description></description>
     </item>
+    <item>
+      <title>Life-Lessons</title>
+      <link>//localhost:1313/tags/life-lessons/</link>
+      <pubDate>Fri, 02 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/life-lessons/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mindset</title>
+      <link>//localhost:1313/tags/mindset/</link>
+      <pubDate>Fri, 02 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/mindset/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Motivation</title>
+      <link>//localhost:1313/tags/motivation/</link>
+      <pubDate>Fri, 02 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/motivation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Personal-Growth</title>
+      <link>//localhost:1313/tags/personal-growth/</link>
+      <pubDate>Fri, 02 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/personal-growth/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
