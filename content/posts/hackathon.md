@@ -7,7 +7,7 @@ tags = ["hackathon", "experience", "achievement", "coding"]
 +++
 <!--more-->
 
-{{< figure src="/images/hb/h.jpeg" alt="Hackathon Image 1" caption="The Hackathon Kickoff!" style="width: 50%; height: ; automargin: auto;" >}}
+{{< figure src="/images/hb/h.jpeg" alt="Hackathon Image 1" caption="The Hackathon Kickoff!" style="width: 50%; height: auto; automargin: auto;" >}}
 
 Participating in my first-ever hackathon was a **wild ride**. As someone *new* to the hackathon scene, I didn’t really know what to expect. But with some **determination**, **teamwork**, and a little bit of luck, my team and I managed not just to participate—but actually **win**!
 
@@ -37,25 +37,41 @@ I could go on and on about the rest of the hackathon, but the bottom line is, we
 
 It’s a bit of a drag that we couldn’t take the app any further, but we received a lot of appreciation from all over the CS department, including the Head of the Department. The organizer even mentioned us in a LinkedIn post! You can check it out [here](https://www.linkedin.com/feed/update/urn:li:activity:7164457607091478529/).
 
-
 If you’re curious to learn more about "Echoes of Equality," you can check out the project on [DevPost](https://devpost.com/EchoesOfEquality).
 
 ---
-
 ### Gallery
 Here's a collection of images that capture the spirit of the hackathon:
+<div class="grid-gallery">
+  <div class="grid-item"><img src="/images/hb/h1.jpeg" alt="Hackathon Image 1" /></div>
+  <div class="grid-item"><img src="/images/hb/h2.jpeg" alt="Hackathon Image 2" /></div>
+  <div class="grid-item"><img src="/images/hb/h3.jpeg" alt="Hackathon Image 3" /></div>
+  <div class="grid-item"><img src="/images/hb/h4.jpeg" alt="Hackathon Image 4" /></div>
+  <div class="grid-item"><img src="/images/hb/h5.jpeg" alt="Hackathon Image 5" /></div>
+  <div class="grid-item"><img src="/images/hb/h6.jpeg" alt="Hackathon Image 6" /></div>
+  <div class="grid-item"><img src="/images/hb/h7.jpeg" alt="Hackathon Image 7" /></div>
+  <div class="grid-item"><img src="/images/hb/h8.jpeg" alt="Hackathon Image 8" /></div>
+  <!-- <div class="grid-item"><img src="/images/hb/h9.jpeg" alt="Hackathon Image 9" /></div> -->
+</div>
 
 <style>
-.carousel {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
+.grid-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
 }
-.carousel img {
-    width: 100%;
-    height: auto;
-    scroll-snap-align: start;
-    flex: none;
+
+.grid-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.grid-item img:hover {
+  transform: scale(1.1); /* Hover zoom effect */
 }
 </style>
 

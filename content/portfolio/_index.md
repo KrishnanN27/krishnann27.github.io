@@ -5,7 +5,7 @@ description: "A collection of my work."
 ---
 
 <div class="red-callout">
-   This page provides an in-depth overview of my work experience and projects. For a concise summary, please refer to my <a href="/CV.pdf" target="_blank" style="color: #007acc; text-decoration: none; font-weight: bold;">resume</a>.
+   This page provides an in-depth overview of my work experience and projects. For a concise summary, please refer to my <a href="/CV_Sowndarya_Krishnan.pdf" target="_blank" style="color: #007acc; text-decoration: none; font-weight: bold;">resume</a>.
 </div>
 
 <div style="padding: 5px; margin-top: 5px; text-align: center;">
