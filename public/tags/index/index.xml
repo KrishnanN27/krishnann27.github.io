@@ -6,12 +6,12 @@
     <description>Recent content in Index on </description>
     <generator>Hugo -- 0.131.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 08 Sep 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="//localhost:1313/tags/index/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Posts</title>
       <link>//localhost:1313/posts/</link>
-      <pubDate>Mon, 02 Sep 2024 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 08 Sep 2024 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/posts/</guid>
       <description>Example posts demonstrating hugo&#39;s markup features</description>
     </item>
