@@ -37,7 +37,7 @@ I could go on and on about the rest of the hackathon, but the bottom line is, we
 
 It’s a bit of a drag that we couldn’t take the app any further, but we received a lot of appreciation from all over the CS department, including the Head of the Department. The organizer even mentioned us in a LinkedIn post! You can check it out [here](https://www.linkedin.com/feed/update/urn:li:activity:7164457607091478529/).
 
-If you’re curious to learn more about "Echoes of Equality," you can check out the project on [DevPost](https://devpost.com/EchoesOfEquality).
+If you’re curious to learn more about "Echoes of Equality," you can check out the project on [DevPost](https://devpost.com/software/echoes-of-equality).
 
 ---
 ### Gallery
