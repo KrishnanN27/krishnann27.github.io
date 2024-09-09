@@ -2,7 +2,7 @@
 title = "Recovering what I lost (just my attention span)"
 date = "2024-09-08"
 author = "Krish"
-description = "A recount of my first hackathon experience where I not only participated but also won!"
+description = "A personal journey of reclaiming focus and overcoming digital distractions with practical tips and strategies"
 tags = ["focus", "productivity", "distraction", "self-improvement", "Experience", "Help", "Students"]
 +++
 <div style="text-align: center; margin: 20px 0;">

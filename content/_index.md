@@ -1,7 +1,7 @@
 ---
 title: "Home"
 date: 2024-09-01
-description: "This is a brief description of the content."
+description: "Code & Canvas of Krish."
 ---
 
 <div style="display: flex; align-items: center; gap: 20px; margin-top: 40px; flex-wrap: wrap;">
