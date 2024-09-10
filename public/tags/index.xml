@@ -65,6 +65,27 @@
       <description></description>
     </item>
     <item>
+      <title>Achievement</title>
+      <link>//localhost:1313/tags/achievement/</link>
+      <pubDate>Mon, 02 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/achievement/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Coding</title>
+      <link>//localhost:1313/tags/coding/</link>
+      <pubDate>Mon, 02 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/coding/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hackathon</title>
+      <link>//localhost:1313/tags/hackathon/</link>
+      <pubDate>Mon, 02 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/hackathon/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>India</title>
       <link>//localhost:1313/tags/india/</link>
       <pubDate>Mon, 02 Sep 2024 00:00:00 +0000</pubDate>

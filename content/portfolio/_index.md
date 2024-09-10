@@ -31,6 +31,14 @@ draft: true
   </div>
 </details>
 
+<div style="padding: 15px; border-radius: 10px; background-color: rgba(255, 255, 0, 0.2); margin-top: 20px; border-left: 5px solid #007acc;">
+  <p style="margin: 0; font-size: 1em; color: var(--primary-color);">
+    Alongside my thesis, I'm working on several development-oriented side projects. You can explore more about my research and these projects <a href="/research" style="color: #007acc; font-weight: bold; text-decoration: none;">here</a> 
+    <i class="fas fa-arrow-right"></i>.
+  </p>
+</div>
+
+
 ## Notable Awards & Participation
 
 <details class="work-details" open>
