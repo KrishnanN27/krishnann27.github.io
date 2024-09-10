@@ -42,7 +42,7 @@ enableSearch = true
 # Whether to show recent items on the homepage.
 showRecent = true
 # Heading label for recent items.
-showRecentLabel = ""
+showRecentLabel = "Recent Posts"
 # Number of recent items to show.
 showRecentItems = 2
 # Whether to display a "Show more" link at the end of recent section that directs to `showMoreDest`.
