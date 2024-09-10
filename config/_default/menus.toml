@@ -10,11 +10,11 @@
 
 # `pre` is an icon ID. For a list of all available icons, check [https://github.com/mnjm/kayal/tree/main/assets/icons]
 
-[[main]]
-name = "sowndarya Krishnan"
-title = "Home"
-url = "/"
-weight = 1
+# [[main]]
+# name = "sowndarya Krishnan"
+# title = "Home"
+# url = "/"
+# weight = 1
 
 
 

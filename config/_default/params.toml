@@ -28,6 +28,7 @@ showHeadingAnchors = true
 # Whether to enable search. Needs JSON output for this to work.
 enableSearch = true
 
+
 # Site search engine verification tags.
 # [verification]
 # google = ""
@@ -80,14 +81,14 @@ openToC = false
 # Check https://mnjm.github.io/kayal/docs/advanced-customization/#comments
 showComments = false
 # Whether to display breadcrumbs
-showBreadcrumbs = false
+showBreadcrumbs = true
 
 # List template settings
 [list]
 # Whether to group articles by year.
 groupByYear = false
 # Whether to display breadcrumbs
-showBreadcrumbs = false
+showBreadcrumbs = true
 # Whether to display pages as a card
 cardView = true
 # Whether to display RSS link
@@ -105,7 +106,7 @@ headline = "Krish"
 # Whether to group articles by year.
 groupByYear = false
 # Whether to display breadcrumbs
-showBreadcrumbs = false
+showBreadcrumbs = true
 # Whether to display pages as a card
 cardView = true
 # Whether to display RSS link

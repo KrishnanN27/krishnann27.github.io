@@ -6,19 +6,19 @@
 
   {{/* Title */}}
   {{ if .IsHome }}
-  <title>{{ .Site.Title | emojify }} &middot; Home </title>
-  <meta name="title" content="{{ .Site.Title | emojify }}" />
+  <title>{{ .Site.Title | emojify }} &middot; Sowndarya Krishnan Navaneetha Kannan - Home</title>
+  <meta name="title" content="{{ .Site.Title | emojify }} - Sowndarya Krishnan Navaneetha Kannan" />
   {{ else }}
-  <title>{{ .Title | emojify }} &middot; {{ .Site.Title | emojify }}</title>
-  <meta name="title" content="{{ .Title | emojify }} &middot; {{ .Site.Title | emojify }}" />
+  <title>{{ .Title | emojify }} &middot; {{ .Site.Title | emojify }} - Sowndarya Krishnan Navaneetha Kannan</title>
+  <meta name="title" content="{{ .Title | emojify }} &middot; {{ .Site.Title | emojify }} - Sowndarya Krishnan Navaneetha Kannan" />
   {{ end }}
 
   {{/* Metadata */}}
   {{ with (.Params.Summary | default .Params.Description) | default .Site.Params.description }}
-  <meta name="description" content="{{ . }}" />
+  <meta name="description" content="{{ . }} - Sowndarya Krishnan Navaneetha Kannan's portfolio and work." />
   {{ end }}
   {{ with .Params.Tags | default .Site.Params.keywords -}}
-  <meta name="keywords" content="{{ range . }}{{ . }}, {{ end -}}" />
+  <meta name="keywords" content="Sowndarya Krishnan Navaneetha Kannan, Portfolio, Computer Science, Research, SHACL, DataDrivenCPS, {{ range . }}{{ . }}, {{ end -}}" />
   {{- end }}
   <link rel="canonical" href="{{ .Permalink }}" />
 
@@ -26,14 +26,18 @@
   {{ partialCached "head/js.html" . }}
 
   {{/* Icons */}}
+  {{/* Icons */}}
   {{ if templates.Exists "partials/favicons.html" }}
     {{ partialCached "favicons.html" .Site }}
   {{ else }}
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png" | relURL }}" />
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32x32.png" | relURL }}" />
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ "favicon-16x16.png" | relURL }}" />
+    <link rel="preload" href="{{ "icons/chrome.png" | relURL }}" as="image" type="image/png">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ "icons/chrome.png" | relURL }}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ "icons/chrome.png" | relURL }}" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ "icons/chrome.png" | relURL }}" />
     <link rel="manifest" href="{{ "site.webmanifest" | relURL }}" />
   {{ end }}
+
 
   {{/* Open Graph Meta Tags */}}
   {{ template "_internal/opengraph.html" . }}
@@ -52,7 +56,6 @@
   {{ range $fonts }}
     <link rel="preload" href="{{ . | absURL }}" as="font" type="font/woff2" crossorigin>
   {{ end }}
-  
 
   {{/* Additional Scripts */}}
   {{ partial "head/vendor.html" . }}
@@ -83,8 +86,8 @@
   {{ with .OutputFormats.Get "rss" -}}
     {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
   {{ end }}
-
-   <!-- Add Font Awesome for icons -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  
+  <!-- Add Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   
 </head>

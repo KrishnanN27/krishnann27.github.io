@@ -18,19 +18,26 @@ description: "Overview of my thesis work and research projects at Colorado Schoo
       <li>Working under <a href="https://gtf.fyi/" style="color: #007acc; text-decoration: none;">Dr. Gabe Fierro</a>, focusing on SHACL validation and inference in RDF graphs.</li>
       <li>Developing novel algebra for SHACL validation to streamline and optimize data manipulation.</li>
     </ul>
+    <!-- Image section with consistent aspect ratio -->
     <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px;">
       <!-- First image (r1) -->
       <div style="flex: 1; min-width: 280px;">
-        <img src="/images/research/r1.jpg" alt="Poster Presentation at Mines" style="width: 100%; height: auto; object-fit: cover; border-radius: 12px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);">
-        <p style="text-align: center; font-size: 0.9em; color: inherit;">Presenting research poster at Mines</p>
+        <div style="position: relative; padding-bottom: 66.66%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);">
+          <img src="/images/research/r1.jpg" alt="Poster Presentation at Mines" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <p style="text-align: center; font-size: 0.9em; color: inherit; margin-top: 10px;">Presenting research poster at Mines</p>
       </div>
+      <!-- Second image (r2) -->
       <div style="flex: 1; min-width: 280px;">
-        <img src="/images/research/r2.jpg" alt="Poster Presentation at Mines" style="width: 100%; height: auto; object-fit: cover; border-radius: 12px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);">
-        <p style="text-align: center; font-size: 0.9em; color: inherit;">Discussing research findings with peers</p>
+        <div style="position: relative; padding-bottom: 66.66%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);">
+          <img src="/images/research/r2.jpg" alt="Discussing research findings with peers" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <p style="text-align: center; font-size: 0.9em; color: inherit; margin-top: 10px;">Discussing research findings with peers</p>
       </div>
     </div>
   </div>
 </details>
+
 
 
 

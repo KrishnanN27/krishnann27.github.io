@@ -1,7 +1,8 @@
 ---
 title: "Portfolio"
 date: 2024-09-01
-description: "A collection of my work."
+draft: true
+
 ---
 
 <div class="red-callout">
