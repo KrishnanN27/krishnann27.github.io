@@ -5,11 +5,12 @@ author = "Krish"
 description = "A recount of my first hackathon experience where I not only participated but also won!"
 tags = ["hackathon", "experience", "achievement", "coding"]
 +++
-<!--more-->
+
+Participating in my first-ever hackathon was a **wild ride**.<!--more--> As someone *new* to the hackathon scene, I didn’t really know what to expect. But with some **determination**, **teamwork**, and a little bit of luck, my team and I managed not just to participate—but actually **win**!
+
 
 {{< figure src="/images/hb/h.jpeg" alt="Hackathon Image 1" caption="The Hackathon Kickoff!" style="width: 50%; height: auto; automargin: auto;" >}}
 
-Participating in my first-ever hackathon was a **wild ride**. As someone *new* to the hackathon scene, I didn’t really know what to expect. But with some **determination**, **teamwork**, and a little bit of luck, my team and I managed not just to participate—but actually **win**!
 
 ### The Journey Begins
 
