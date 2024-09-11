@@ -15,7 +15,7 @@ tags = ["focus", "productivity", "distraction", "self-improvement", "Experience"
 ## Realizing the Problem
 
 <div style="padding: 15px; border-radius: 10px; margin-bottom: 20px; background-color: rgba(0, 0, 0, 0.05); color: var(--primary-color);">
-Returning to grad school after a break, I quickly realized how much my ability to focus had deteriorated. I used to work for hours without distractions, but now, constant digital interruptions and *doom-scrolling* had eroded my concentration.
+eturning to grad school after being a working professional for a year, I quickly realized how much my ability to focus had deteriorated. I used to work for hours without distractions, but now, constant digital interruptions and doom-scrolling had eroded my concentration.
 
 It became difficult to even sit through a 20-minute video, let alone focus on tasks. Despite attempts like **caffeine**, quiet spaces, and packed schedules, nothing seemed to help. In *Gen Z* terms, I had fallen victim to **social media brain rot**. 🧠📱
 </div>
