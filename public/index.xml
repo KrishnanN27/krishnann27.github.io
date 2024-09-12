@@ -2,73 +2,80 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Home on </title>
-    <link>//localhost:1313/</link>
+    <link>//localhost:53399/</link>
     <description>Recent content in Home on </description>
     <generator>Hugo -- 0.131.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 08 Sep 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:53399/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How I Finally Hosted a Domain: Patience is Key</title>
+      <link>//localhost:53399/posts/finally_i_got_a_domain_for_myself/</link>
+      <pubDate>Thu, 12 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:53399/posts/finally_i_got_a_domain_for_myself/</guid>
+      <description>A step-by-step guide to hosting a custom domain on GitHub Pages, including tips, challenges, and solutions.</description>
+    </item>
     <item>
       <title>Recovering what I lost (just my attention span)</title>
-      <link>//localhost:1313/posts/recovering_attention_span/</link>
+      <link>//localhost:53399/posts/recovering_attention_span/</link>
       <pubDate>Sun, 08 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/recovering_attention_span/</guid>
+      <guid>//localhost:53399/posts/recovering_attention_span/</guid>
       <description>A personal journey of reclaiming focus and overcoming digital distractions with practical tips and strategies</description>
     </item>
     <item>
       <title>My First Ever Hackathon Experience: Spoiler Alert - I Won!</title>
-      <link>//localhost:1313/posts/hackathon/</link>
+      <link>//localhost:53399/posts/hackathon/</link>
       <pubDate>Mon, 02 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/hackathon/</guid>
+      <guid>//localhost:53399/posts/hackathon/</guid>
       <description>A recount of my first hackathon experience where I not only participated but also won!</description>
     </item>
     <item>
       <title>The Culture Shock: From Golden Rock, India to Golden, CO, US</title>
-      <link>//localhost:1313/posts/the-culture-shock/</link>
+      <link>//localhost:53399/posts/the-culture-shock/</link>
       <pubDate>Mon, 02 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/the-culture-shock/</guid>
+      <guid>//localhost:53399/posts/the-culture-shock/</guid>
       <description>A reflection on the cultural differences and surprises I encountered when moving from India to the US.</description>
     </item>
     <item>
       <title>Connect</title>
-      <link>//localhost:1313/connect/</link>
+      <link>//localhost:53399/connect/</link>
       <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/connect/</guid>
+      <guid>//localhost:53399/connect/</guid>
       <description>Let&#39;s get in touch!</description>
     </item>
     <item>
       <title>Get to Know More</title>
-      <link>//localhost:1313/about/</link>
+      <link>//localhost:53399/about/</link>
       <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/about/</guid>
+      <guid>//localhost:53399/about/</guid>
       <description>I&#39;m Sowndarya Krishnan (known as Krish or Chris), currently pursuing a Master’s Thesis in Computer Science at the Colorado School of Mines.</description>
     </item>
     <item>
       <title>My Gallery</title>
-      <link>//localhost:1313/gallery/</link>
+      <link>//localhost:53399/gallery/</link>
       <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/gallery/</guid>
+      <guid>//localhost:53399/gallery/</guid>
       <description>Welcome to my gallery! Here you’ll find some of my favorite landscapes, each capturing a unique and serene moment in nature.</description>
     </item>
     <item>
       <title>Professional Photos</title>
-      <link>//localhost:1313/professional/</link>
+      <link>//localhost:53399/professional/</link>
       <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/professional/</guid>
+      <guid>//localhost:53399/professional/</guid>
       <description>Download professional photos for events or invitations.</description>
     </item>
     <item>
       <title>Updates</title>
-      <link>//localhost:1313/updates/</link>
+      <link>//localhost:53399/updates/</link>
       <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/updates/</guid>
+      <guid>//localhost:53399/updates/</guid>
       <description>🎯 Planning to propose my MS thesis in Spring 2025 and graduate in May 2025.</description>
     </item>
     <item>
       <title>Know Your Worth: The Value of Changing Your Environment</title>
-      <link>//localhost:1313/posts/know_your_worth/</link>
+      <link>//localhost:53399/posts/know_your_worth/</link>
       <pubDate>Fri, 02 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/know_your_worth/</guid>
+      <guid>//localhost:53399/posts/know_your_worth/</guid>
       <description>A thoughtful analogy on how our value depends on the environment we are in and how to avoid settling for less.</description>
     </item>
   </channel>

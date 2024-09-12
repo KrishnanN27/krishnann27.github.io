@@ -1,5 +1,5 @@
 :root {
-  --ff: 'Fira Code', monospace; /* Change the default font family */
+  --ff: 'Fira Code', monospace, sans-serif; /* Added fallback font */
   --radius: 6px;
   --primary-color: #292929;
   --secondary-color: #EFEFE6;
@@ -13,20 +13,25 @@
   --code-scroll-thumb: #525252;
   --scrollbar-track: #EFEFE6;
   --scrollbar-thumb: #B7B78F;
+
+  /* Dynamic font sizes for responsiveness */
+  --font-size-base: clamp(1rem, 1.5vw, 1.2rem); /* Responsive base font size */
+  --heading-size-h1: clamp(1.8rem, 2.5vw, 2.2rem);
+  --heading-size-h2: clamp(1.4rem, 2vw, 1.8rem);
 }
 
 .dark {
-  --primary-color: #EFEFE6;
+  --primary-color: #F0F0F0; /* Lighter text color for dark mode */
   --secondary-color: #292929;
   --tertiary-color: #FF7F11;
   --tertiary-color-light: #A34C00;
-  --secondary-color-dark: #3D3D29;
+  --secondary-color-dark: #4A4A3D; /* Lighter for better contrast */
   --scrollbar-track: #292929;
-  --scrollbar-thumb: #525252;
+  --scrollbar-thumb: #737373; /* Lighter thumb for better contrast */
 }
 
 @font-face {
-  font-display: swap;
+  font-display: optional; /* Swaps fonts only if necessary */
   font-family: 'Fira Code';
   font-style: normal;
   font-weight: 300;

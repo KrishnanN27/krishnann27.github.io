@@ -238,9 +238,7 @@ h1 {
   font-size: 1.2rem; /* Adjust as needed */
 }
 
-h2 {
-  font-size: 1rem;
-}
+
 
 h3 {
   font-size: 0.9rem;
@@ -265,6 +263,21 @@ p, body {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 1.2rem;
   line-height: 1.3; /* Adjust line-height to control spacing between lines */
+}
+
+
+h2 {
+  font-size: 1rem;
+  padding: 0.3rem 0.5rem;
+  background-color: rgba(0, 122, 255, 0.1); /* Light blue background with opacity */
+  border-radius: 6px; /* Rounded corners for a smoother look */
+  display: inline-block; /* Ensure the background fits the text only */
+  margin-bottom: 1rem; /* Space between the heading and the content */
+}
+
+h2:hover {
+  background-color: rgba(0, 122, 255, 0.2); /* Slightly darker on hover */
+  transition: background-color 0.3s ease; /* Smooth transition effect */
 }
 
 
@@ -312,18 +325,19 @@ code {
   overflow: break-word;
 }
 
+/* Code Block Styling */
 pre {
-  line-height: 1.5;
-  padding: 0.5em;
+  background-color: var(--code-bg);
+  color: var(--code-fg);
+  padding: 0.5rem;
+  border-radius: var(--radius);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
+
 
 pre code {
   background-color: transparent;
   color: inherit;
-  font-size: 100%;
-  padding: 0;
-  display: block;
-  overflow-x: auto;
 }
 
 .highlight pre code {
@@ -516,6 +530,27 @@ details[open] div {
     display: none;
   }
 }
+
+.quick-tip {
+  background-color: rgba(0, 122, 255, 0.1); /* Light blue background */
+  border-left: 5px solid #007acc; /* Blue left border */
+  padding: 15px;
+  border-radius: 8px; /* Rounded corners */
+  margin: 20px 0; /* Spacing above and below */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  font-style: italic;
+  position: relative;
+}
+
+.quick-tip::before {
+  content: "💡 Quick Tip";
+  font-weight: bold;
+  font-style: normal;
+  color: #007acc; /* Accent color */
+  display: block;
+  margin-bottom: 10px; /* Spacing between the title and content */
+}
+
 
 .main-menu a.lnk:hover, .socials-icon svg:hover {
   color: var(--link-color);
@@ -845,21 +880,20 @@ pre:hover .copy-button {
   content: none;
 }
 
+/* Callout Styling */
 .callout {
-  padding: .75rem;
+  padding: 0.75rem;
   margin: 1em 0;
-  background: var(--secondary-color-dark);
+  background: rgba(0, 122, 255, 0.1);
   border-radius: var(--radius);
-  display: flex;
-  align-items: center;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  opacity: 0.85;
 }
 
 .callout svg {
-  padding-top: 0.3em;
+  margin-right: 0.5em;
   width: 1em;
   height: 1em;
-  margin-right: 0.5em;
 }
 
 .icon {
