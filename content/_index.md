@@ -19,11 +19,11 @@ description: "Code & Canvas of Krish."
             </a>
             <i class="fas fa-phone" style="color: red; margin-left: 5px;"></i>
         </p>
-        <div id="recruiterText" style="cursor: pointer; padding: 10px; border-radius: 10px; background-color: rgba(255, 255, 0, 0.2); margin-top: 20px; border-left: 5px solid #007acc;">
-            <p style="margin: 0; font-size: 0.9em; color: var(--primary-color);">
-                🌟 Recruiter? Click here for quick access <i class="fas fa-arrow-right"></i>.
-            </p>
-        </div>
+    <div id="recruiterText" style="cursor: pointer; padding: 10px; border-radius: 10px; background-color: rgba(255, 255, 0, 0.2); margin-top: 20px; border-left: 5px solid #007acc;">
+<p style="margin: 0; font-size: 0.9em; color: var(--primary-color);">
+    Click here for quick access to research and qualifications <i class="fas fa-arrow-right"></i>.
+</p>
+</div>
         <div id="recruiterLinks" style="display: none; margin-top: 15px;">
             <ul style="list-style-type: none; padding: 0;">
                 <!-- add a portfolio  -->
