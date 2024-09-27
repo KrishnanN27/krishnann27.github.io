@@ -267,26 +267,28 @@ h1, h2, h3, h4, h5, h6 {
 
 
 h2 {
-  font-size: 1rem;
-  padding: 0.3rem 0.5rem;
-  background-color: rgba(0, 122, 255, 0.1); /* Light blue background with opacity */
-  border-radius: 6px; /* Rounded corners for a smoother look */
-  display: inline-block; /* Ensure the background fits the text only */
-  margin-bottom: 1rem; /* Space between the heading and the content */
+  font-size: clamp(0.9rem, 4vw, 1rem);
+  font-weight: 600;
+  color: var(--primary-color);
+  /* border-bottom: 2px solid var(--tertiary-color); Thin underline */
+  padding-bottom: 0.25rem;
+  margin-bottom: 1.5rem;
+  transition: border-color 0.3s ease;
 }
 
 h2:hover {
-  background-color: rgba(0, 122, 255, 0.2); /* Slightly darker on hover */
-  transition: background-color 0.3s ease; /* Smooth transition effect */
+  border-color: var(--link-color); /* Color change on hover */
 }
 
 
+
+/* 
 h1::before { content: '# '; }
-h2::before { content: '## '; }
-h3::before { content: '### '; }
+/* h2::before { content: '## '; } */
+/* h3::before { content: '### '; }
 h4::before { content: '#### '; }
 h5::before { content: '##### '; }
-h6::before { content: '###### '; }
+h6::before { content: '###### '; } */ */
 
 ul {
   list-style-type: none;
@@ -485,9 +487,9 @@ details[open] div {
   vertical-align: text-top;
 }
 
-#main-menu a.active {
+/* #main-menu a.active {
   border-bottom: 1px solid var(--tertiary-color); /* Thinner active underline */
-}
+/* } */ */
 
 
 #main-menu a.active {
@@ -713,6 +715,8 @@ body:not(.dark) #sun {
   padding: 0;
   margin: 0px;
 }
+
+
 
 /* Meta */
 .meta p, .meta a {
