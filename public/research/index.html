@@ -458,7 +458,7 @@
     
     </h1>
     <!-- DATA-DRIVEN CPS LAB -->
-<details class="work-details" open style="margin-top: 20px;"> <!-- Added margin-top for spacing -->
+<details class="work-details" open style="margin-top: 20px;">
   <summary class="work-summary">
     <span style="font-style: italic;">DATA-DRIVEN CPS LAB, Research Assistant</span> | Golden, CO | Aug 2023 – Present 
     <a href="https://datadrivencps.github.io/website/" target="_blank" class="work-link">
@@ -471,7 +471,16 @@
       <li>Working under <a href="https://gtf.fyi/" style="color: #007acc; text-decoration: none;">Dr. Gabe Fierro</a>, focusing on SHACL validation and inference in RDF graphs.</li>
       <li>Developing novel algebra for SHACL validation to streamline and optimize data manipulation.</li>
     </ul>
-    <!-- Image section with consistent aspect ratio -->
+    <div id="abstract-container" style="border: 1px solid #007acc; border-radius: 10px; padding: 10px 15px; margin-top: 20px; cursor: pointer;" onclick="toggleAbstract()">
+  <h4 id="abstract-title" style="margin: 0; font-size: 1rem; color: #007acc; font-weight: 400;">
+    Thesis Abstract: Flow-SHACL (click to expand) <i id="toggle-icon" class="fas fa-chevron-down" style="font-size: 0.9rem;"></i>
+  </h4>
+</div>
+    <div id="abstract-content" style="display: none; margin-top: 10px; padding-left: 10px;">
+  <p><strong>Flow-SHACL</strong> addresses the limitations of existing SHACL validators. SHACL (Shapes Constraint Language) is a W3C standard used to validate RDF (Resource Description Framework) data against a set of conditions or "shapes."</p>
+  <p>Traditional SHACL validators face performance challenges, especially as <a href="https://www.ontotext.com/knowledgehub/fundamentals/what-is-a-knowledge-graph/" target="_blank" style="color: #007acc; text-decoration: none;">knowledge graphs</a> scale to millions or billions of nodes. <strong>Flow-SHACL</strong> tackles this issue with a dataflow-based approach, constructing an optimized data structure that maps SHACL operations as a dataflow graph.</p>
+  <p>This novel approach not only improves performance but also enables inference capabilities, providing deeper insights into the validation process and offering a more scalable solution for handling large knowledge graphs.</p>
+</div>
     <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px;">
       <!-- First image (r1) -->
       <div style="flex: 1; min-width: 280px;">
@@ -490,6 +499,56 @@
     </div>
   </div>
 </details>
+<script>
+  function toggleAbstract() {
+    var content = document.getElementById('abstract-content');
+    var icon = document.getElementById('toggle-icon');
+    var title = document.getElementById('abstract-title');
+    
+    if (content.style.display === "none" || content.style.display === "") {
+      content.style.display = "block";
+      icon.classList.remove("fa-chevron-down");
+      icon.classList.add("fa-chevron-up");
+      title.innerHTML = 'Thesis Abstract: Flow-SHACL (click to collapse) <i id="toggle-icon" class="fas fa-chevron-up" style="font-size: 0.9rem;"></i>';
+    } else {
+      content.style.display = "none";
+      icon.classList.remove("fa-chevron-up");
+      icon.classList.add("fa-chevron-down");
+      title.innerHTML = 'Thesis Abstract: Flow-SHACL (click to expand) <i id="toggle-icon" class="fas fa-chevron-down" style="font-size: 0.9rem;"></i>';
+    }
+  }
+</script>
+<!-- CSS for consistent image sizes and dropdown -->
+<style>
+  /* Image styling */
+  .award-images {
+      display: flex;
+      gap: 20px;
+      justify-content: space-between;
+      flex-wrap: wrap;
+  }
+
+  /* Styling for images to maintain uniformity */
+  .uniform-img {
+      width: 45%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 8px;
+  }
+
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+      .uniform-img {
+          width: 100%;
+          height: auto;
+      }
+  }
+
+  /* Smooth transition for dropdown content */
+  #abstract-content {
+    transition: max-height 0.3s ease;
+  }
+</style>
 <!-- SLOAN PROJECT Frontend Developer -->
 <details class="work-details" open>
   <summary class="work-summary">
