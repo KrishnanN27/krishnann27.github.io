@@ -1,12 +1,12 @@
 {{ if .Site.Params.enableSearch | default false }}
 <!-- Search Open Button -->
-<button id="search-open" class="menu-btn" aria-label="Search button">
+<button id="search-open" class="menu-btn" aria-label="Search button" style="font-size: 1.2em;">
   {{ partial "icon.html" "search" }}
 </button>
 {{ end }}
 
 <!-- Search Container -->
-<div id="search-container" data-url="{{ "" | absURL }}" style="display: none;">
+<div id="search-container" data-url="{{ "" | absURL }}" style="display: none; ">
   <div class="search" style="position: relative;">
     <div class="panel">
       <form>

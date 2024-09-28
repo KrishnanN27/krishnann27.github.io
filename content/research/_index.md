@@ -110,7 +110,7 @@ description: "Overview of my thesis work and research projects at Colorado Schoo
   </summary>
   <div>
     <p>Developed a community energy dashboard for residents to monitor and compare energy usage with peers.</p>
-    <h2><strong>Features I Am Proud Of:</strong></h2>
+    <h3><strong>Features I Am Proud Of:</strong></h3>
     <ul>
       <li><strong>Real-time comparison:</strong> Users can track their energy usage against neighbors.</li>
       <li><strong>Accessibility:</strong> Dark/light mode and language toggle for better UX.</li>

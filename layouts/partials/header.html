@@ -37,10 +37,10 @@
                 {{ partial "search.html" . }}
                 {{ if .Site.Params.showThemeSwitcher | default false }}
                 <button id="theme-switcher" class="menu-btn" aria-label="Theme switcher">
-                    <div id="moon">
+                    <div id="moon" style="font-size: 1.3em;">
                         {{ partial "icon.html" "moon" }}
                     </div>
-                    <div id="sun">
+                    <div id="sun" style="font-size: 1.3em;">
                         {{ partial "icon.html" "sun" }}
                     </div>
                 </button>
