@@ -52,6 +52,47 @@
             </button>
         </div>
     </div>
+
+    <script>
+        (function() {
+            document.addEventListener('DOMContentLoaded', function() {
+                const openBtn = document.getElementById('mob-hb-icon');
+                const closeBtn = document.getElementById('mob-x-icon');
+                const mainMenu = document.getElementById('main-menu');
+                const body = document.body;
+        
+                openBtn.addEventListener('click', function() {
+                    mainMenu.classList.replace('mm-normal', 'mm-mobile-open');
+                    closeBtn.style.display = 'block';
+                    body.style.overflow = 'hidden';
+                });
+        
+                closeBtn.addEventListener('click', function() {
+                    mainMenu.classList.replace('mm-mobile-open', 'mm-normal');
+                    closeBtn.style.display = 'none';
+                    body.style.overflow = '';
+                });
+            });
+        })();
+        </script>
+        
+        {{ if .Site.Params.highlightCurrentMenu }}
+        <script>
+        (function() {
+            var mainmenu = document.getElementById('main-menu');
+            if (!mainmenu) return;
+        
+            var path = window.location.pathname;
+            var links = mainmenu.querySelectorAll('a');
+        
+            links.forEach(function(link) {
+                if (link.getAttribute('href') === path) {
+                    link.classList.add('active');
+                }
+            });
+        })();
+        </script>
+        {{ end }}
   </header>
   
   

@@ -405,6 +405,47 @@
             </button>
         </div>
     </div>
+
+    <script>
+        (function() {
+            document.addEventListener('DOMContentLoaded', function() {
+                const openBtn = document.getElementById('mob-hb-icon');
+                const closeBtn = document.getElementById('mob-x-icon');
+                const mainMenu = document.getElementById('main-menu');
+                const body = document.body;
+        
+                openBtn.addEventListener('click', function() {
+                    mainMenu.classList.replace('mm-normal', 'mm-mobile-open');
+                    closeBtn.style.display = 'block';
+                    body.style.overflow = 'hidden';
+                });
+        
+                closeBtn.addEventListener('click', function() {
+                    mainMenu.classList.replace('mm-mobile-open', 'mm-normal');
+                    closeBtn.style.display = 'none';
+                    body.style.overflow = '';
+                });
+            });
+        })();
+        </script>
+        
+        
+        <script>
+        (function() {
+            var mainmenu = document.getElementById('main-menu');
+            if (!mainmenu) return;
+        
+            var path = window.location.pathname;
+            var links = mainmenu.querySelectorAll('a');
+        
+            links.forEach(function(link) {
+                if (link.getAttribute('href') === path) {
+                    link.classList.add('active');
+                }
+            });
+        })();
+        </script>
+        
   </header>
   
   
@@ -481,11 +522,14 @@
     </div>
     <div style="padding: 0 20px;">
         <p style="font-size: 1.05rem; line-height: 1.8em; margin: 0 0 15px 0;">
-            I'm <strong>Sowndarya Krishnan</strong>, currently pursuing a <em>Master’s Thesis</em> in <strong>Computer Science</strong> at the <a href="https://www.mines.edu/" style="color: #007acc; text-decoration: none;">Colorado School of Mines</a>. My work specializes in <strong>Cyber-physical systems</strong> with a focus on <em>Data & Metadata management</em>.
+            I'm <strong>Sowndarya Krishnan</strong>, currently pursuing a <em>Master’s Thesis</em> in <strong>Computer Science</strong> at the <a href="https://www.mines.edu/" style="color: #007acc; text-decoration: none;">Colorado School of Mines</a>.
         </p>
         <p style="font-size: 1.05rem; line-height: 1.8em; margin: 0 0 15px 0;">
-            I am working on advancing <em>SHACL validation</em> and <em>inference in RDF graphs</em>, under the guidance of <a href="https://gtf.fyi/" style="color: #007acc; text-decoration: none;">Dr. Gabe Fierro</a> at the <a href="https://datadrivencps.github.io/website/" style="color: #007acc; text-decoration: none;">DataDrivenCPS lab</a>. Learn more about my research <a href="/research/" style="color: #007acc; ">here</a>.
+            I hold a <strong>B.E. in Electronics and Communication Engineering</strong> from <a href="https://www.annauniv.edu/" target="_blank" style="color: #007acc; text-decoration: none;">Anna University</a>.
         </p>
+        <p style="font-size: 1.05rem; line-height: 1.8em; margin: 0 0 15px 0;">
+    I am also a <strong>Research Assistant</strong>, working under the guidance of <a href="https://gtf.fyi/" style="color: #007acc; text-decoration: none;">Dr. Gabe Fierro</a> at the <a href="https://datadrivencps.github.io/website/" style="color: #007acc; text-decoration: none;">DataDrivenCPS lab</a>. Learn more about my research <a href="/research/" style="color: #007acc; text-decoration: none;">here</a>.
+</p>
         <p style="font-size: 1.05rem; line-height: 1.8em; margin: 0 0 15px 0;">
             Former <strong style="color: #007acc;">Mobile</strong>, <strong style="color: #007acc;">Frontend</strong>, and <strong style="color: #007acc;">Cloud Engineer</strong> at <a href="https://ncompass.inc/" target="_blank" style="color: #007acc; text-decoration: none;">NCompass Tech Studio</a>.
         </p>
