@@ -23,6 +23,7 @@ draft: true
   </summary>
   <div>
     <p><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Chennai, India</p>
+    <p><strong>Roles:</strong> <span style="color: #007acc;">Mobile Engineer, Frontend Engineer & Cloud Engineer</span></p>
     <ul>
       <li>Improved UI/UX for an Android app, increasing downloads by 35% in the Play Store.</li>
       <li>Developed custom components, boosting internal tool adoption by 25%.</li>
@@ -39,6 +40,7 @@ draft: true
 </div>
 
 
+
 ## Notable Awards & Participation
 
 <details class="work-details" open>
@@ -50,12 +52,12 @@ draft: true
     <ul>
       <li>Awarded 1st Place in the Beginner Category and LGBTQIA+ Category for developing an impactful social platform.</li>
     </ul>
-    <div style="display: flex; gap: 10px; justify-content: space-between; flex-wrap: wrap;">
-      <img src="/images/hb/h6.jpeg" alt="Echoes of Equality Project" style="width:45%; max-width:300px; max-height:250px; object-fit: cover; margin-top:10px;"/>
-      <img src="/images/hb/h7.jpeg" alt="Hackathon Award" style="width:45%; max-width:300px; max-height:250px; object-fit: cover; margin-top:10px;"/>
+    <div class="award-images">
+      <img src="/images/hb/h6.jpeg" alt="Echoes of Equality Project" class="uniform-img"/>
+      <img src="/images/hb/h7.jpeg" alt="Hackathon Award" class="uniform-img"/>
     </div>
   </div>
-  </details>
+</details>
 
 <details class="work-details" open>
   <summary class="work-summary">
@@ -66,16 +68,39 @@ draft: true
     <ul>
       <li>Delivered a compelling 45-second research pitch and earned recognition.</li>
     </ul>
-    <div style="display: flex; gap: 10px; justify-content: space-between; flex-wrap: wrap;">
-      <div style="flex-basis: 45%; max-width: 300px; max-height: 250px; display: flex; align-items: center; justify-content: center;">
-        <img src="/images/research/r1.jpg" alt="C-MAPP Event Presentation" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
-      </div>
-      <div style="flex-basis: 45%; max-width: 300px; max-height: 250px; display: flex; align-items: center; justify-content: center;">
-        <img src="/images/research/r2.jpg" alt="Undergraduate Research Symposium" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
-      </div>
+    <div class="award-images">
+      <img src="/images/research/r1.jpg" alt="C-MAPP Event Presentation" class="uniform-img"/>
+      <img src="/images/research/r2.jpg" alt="Undergraduate Research Symposium" class="uniform-img"/>
     </div>
   </div>
 </details>
+
+<!-- CSS for uniform image sizes -->
+<style>
+  .award-images {
+      display: flex;
+      gap: 10px;
+      justify-content: space-between;
+      flex-wrap: wrap;
+  }
+
+  /* Make all images uniform in size */
+  .uniform-img {
+      width: 45%;
+      height: 250px; /* Set a fixed height for uniformity */
+      object-fit: cover;
+      border-radius: 8px;
+  }
+
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+      .uniform-img {
+          width: 100%; /* Make the images take full width on mobile */
+          height: auto; /* Allow height to adjust with the aspect ratio */
+      }
+  }
+</style>
+
 
 
 <details class="work-details" open>
