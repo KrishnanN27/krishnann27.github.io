@@ -7,7 +7,7 @@
 
 {{ if $showRecent }}
 <div class="featured" style="margin-top: 30px;">
-  <h2 style="border-bottom: 2px solid #007acc; padding-bottom: 10px;">{{ $showRecentLabel }}</h2>
+  <h2 style="border-bottom: 2px solid #007acc; display: inline-block; padding-bottom: 5px; margin-bottom: 10px;">{{ $showRecentLabel }}</h2>
   
   {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
   {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}

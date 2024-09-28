@@ -1,0 +1,17 @@
+{{ $showDate := .showDate }}
+{{ $lvl := .lvl }}
+{{ with .page }}
+<li>
+    <h3> <!-- Change this from h{{$lvl}} to h3 -->
+    {{ with .Params.externalUrl }}
+        <a href="{{ . }}" target="_blank" rel="external">
+    {{ else }}
+        <a href="{{ .RelPermalink }}">
+    {{ end }}
+    {{ .LinkTitle | emojify }} </a>
+    </h3>
+    {{ partial "single/meta.html" . }}
+    {{ template "partials/home/pg-desc.html" . }}
+</li>
+
+{{ end }}

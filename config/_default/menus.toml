@@ -54,10 +54,16 @@ url = "/gallery/"
 weight = 6
 
 [[main]]
+name = "Connect"
+title = "Connect"
+url = "/connect/"
+weight = 7
+
+[[main]]
 name = "tags"
 title = "Tags"
 url = "/tags/"
-weight = 7
+weight = 8
 
 
 
