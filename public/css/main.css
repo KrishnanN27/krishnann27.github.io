@@ -1,9 +1,47 @@
 @import url("theme.css");
 
+body, p {
+  font-size: 0.95rem; /* Slightly larger for general text */
+  line-height: 1.6; /* Comfortable line height for readability */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--ff); /* Consistent font */
+  font-weight: 700; /* Bold headings */
+  margin-bottom: 0.75rem; /* Spacing below headings */
+  line-height: 1.3; /* Compact line height for headings */
+}
+
+h1 {
+  font-size: 1.4rem; /* Reduced size for H1 to avoid being too large */
+}
+
+h2 {
+  font-size: 1.35rem; /* Slightly larger for section headings */
+  font-weight: 600; /* Lighter than H1 */
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.15rem; /* Balanced size for subheadings */
+}
+
+h4 {
+  font-size: 1.1rem; /* Slightly larger than body text */
+}
+
+h5, h6 {
+  font-size: 1rem; /* Same size as body text but bold */
+}
+
+
+
+
 html {
   line-height: 1.5rem;
   scroll-behavior:smooth
 }
+
 
 
 /* Education Section Styling */
@@ -234,61 +272,7 @@ footer {
   margin-top: 1rem;
   padding-top: 1rem;
 }
-h1 {
-  font-size: 1.2rem; /* Adjust as needed */
-}
 
-
-
-h3 {
-  font-size: 0.9rem;
-}
-
-h4 {
-  font-size: 1rem;
-}
-
-h5 {
-  font-size: 1rem;
-}
-
-h6 {
-  font-size: 0.9rem;
-}
-
-p, body {
-  font-size: 0.9rem; /* Adjust the general body font size if needed */
-}
-
-h1, h2, h3, h4, h5, h6 {
-  margin-top: 1.2rem;
-  line-height: 1.3; /* Adjust line-height to control spacing between lines */
-}
-
-
-h2 {
-  font-size: clamp(0.9rem, 4vw, 1rem);
-  font-weight: 600;
-  color: var(--primary-color);
-  /* border-bottom: 2px solid var(--tertiary-color); Thin underline */
-  padding-bottom: 0.25rem;
-  margin-bottom: 1.5rem;
-  transition: border-color 0.3s ease;
-}
-
-h2:hover {
-  border-color: var(--link-color); /* Color change on hover */
-}
-
-
-
-/* 
-h1::before { content: '# '; }
-/* h2::before { content: '## '; } */
-/* h3::before { content: '### '; }
-h4::before { content: '#### '; }
-h5::before { content: '##### '; }
-h6::before { content: '###### '; } */ */
 
 ul {
   list-style-type: none;

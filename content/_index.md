@@ -11,22 +11,20 @@ description: "Code & Canvas of Krish."
     </div>
     <!-- Right: Content -->
     <div style="flex: 2 1 500px; padding: 10px;">
-        <h1 style="margin-top: 0;">Welcome to my personal website</h1>
-        <p style="line-height: 1.8;">
+        <p style="line-height: 1.8; margin-bottom: 1rem;">
             Here, you'll find my thoughts, experiences, and projects across various areas of interest. Feel free to explore the different sections below to learn more about my work and writings, or 
             <a href="/connect/" style="color: #007acc; text-decoration: none; font-weight: bold;">
-                connect with me 
+                connect with me
             </a>
             <i class="fas fa-phone" style="color: red; margin-left: 5px;"></i>
         </p>
-    <div id="recruiterText" style="cursor: pointer; padding: 10px; border-radius: 10px; background-color: rgba(255, 255, 0, 0.2); margin-top: 20px; border-left: 5px solid #007acc;">
-<p style="margin: 0; font-size: 0.9em; color: var(--primary-color);">
-    Click here for quick access to research and qualifications <i class="fas fa-arrow-right"></i>.
-</p>
-</div>
+        <div id="recruiterText" style="cursor: pointer; padding: 10px; border-radius: 10px; background-color: rgba(255, 255, 0, 0.2); margin-top: 20px; border-left: 5px solid #007acc;">
+            <p style="margin: 0; font-size: 0.9em; color: var(--primary-color);">
+                Click here for quick access to research and qualifications <i class="fas fa-arrow-right"></i>.
+            </p>
+        </div>
         <div id="recruiterLinks" style="display: none; margin-top: 15px;">
             <ul style="list-style-type: none; padding: 0;">
-                <!-- add a portfolio  -->
                 <li><a href="/portfolio" style="color: #007acc; text-decoration: none; font-weight: bold;">Check My Portfolio</a></li>
                 <li><a href="/CV_Sowndarya_Krishnan.pdf" style="color: #007acc; text-decoration: none; font-weight: bold;">Download My Resume</a></li>
                 <li><a href="/research" style="color: #007acc; text-decoration: none; font-weight: bold;">View My Research</a></li>

@@ -3,6 +3,7 @@ title: "Updates"
 date: 2024-09-01
 ---
 
+- 🧑‍⚖️ Served as a Judge in "Undergraduate Research Symposium" in Sept 2024
 - 🎯 Planning to propose my MS thesis in Spring 2025 and graduate in May 2025.
 - 🔍 Contributed to the Brickschema Ontology project in June 2024.
 - 🛠 Started contributing to the Sloan Project as a Frontend Developer in May 2024.
