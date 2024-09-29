@@ -1,5 +1,5 @@
 :root {
-  --ff: 'Fira Code', monospace, sans-serif; /* Added fallback font */
+  --ff: 'Ubuntu', sans-serif; /* Updated to Ubuntu */
   --radius: 6px;
   --primary-color: #292929;
   --secondary-color: #EFEFE6;
@@ -13,8 +13,6 @@
   --code-scroll-thumb: #525252;
   --scrollbar-track: #EFEFE6;
   --scrollbar-thumb: #B7B78F;
-
-  
 
   /* Dynamic font sizes for responsiveness */
   --font-size-base: clamp(1rem, 1.5vw, 1.2rem); /* Responsive base font size */
@@ -34,8 +32,8 @@
 
 @font-face {
   font-display: optional; /* Swaps fonts only if necessary */
-  font-family: 'Fira Code';
+  font-family: 'Ubuntu'; /* Updated to Ubuntu */
   font-style: normal;
-  font-weight: 300;
-  src: url('../fonts/FiraCode-Regular.woff2') format('woff2');
+  font-weight: 400; /* Adjusted for regular weight */
+  src: url('../fonts/Ubuntu-Regular.woff2') format('woff2'); /* Updated font file */
 }

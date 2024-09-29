@@ -73,7 +73,8 @@
   {{ end }}
 
   {{/* Preload Fonts */}}
-  {{ $fonts := .Site.Params.preloadFonts | default (slice "fonts/FiraCode-Regular.woff2") }}
+  {{ $fonts := .Site.Params.preloadFonts | default (slice "fonts/Ubuntu-Regular.woff2") }}
+
   {{ range $fonts }}
     <link rel="preload" href="{{ . | absURL }}" as="font" type="font/woff2" crossorigin>
   {{ end }}
