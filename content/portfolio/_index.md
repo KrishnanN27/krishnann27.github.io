@@ -121,30 +121,114 @@ draft: true
 </details>
 
 
-## Education
+<h2 id="education">Education</h2>
 
-<div class="education-section">
-   <div class="education-item">
-      <summary class="work-summary">
-         Colorado School of Mines | Colorado, USA | Expected: May 2025
-         <span class="degree">
-            <i class="fas fa-graduation-cap"></i> MS in Computer Science
-         </span>
-      </summary>
-      <p class="details">
-         <i class="fas fa-map-marker-alt"></i> Colorado, USA | GPA: 3.7 / 4.0
-      </p>
-   </div>
+<!-- First Education Item -->
+<details class="education-item" open>
+  <summary class="education-summary">
+    <h3>MS in Computer Science</h3>
+    <span class="education-info">
+      <a href="https://mines.edu" target="_blank">Colorado School of Mines</a> | Expected: May 2025 | GPA: 3.7 / 4.0
+    </span>
+  </summary>
+  <div class="education-details">
+    <p>I am pursuing my MS Thesis in Computer Science with a focus on <strong>Data Driven Cyber-physical systems</strong> 
+    <p>Currently working under <a href="https://gtf.fyi/" target="_blank">Dr. Gabe Fierro</a> at the <a href="https://datadrivencps.github.io/website/" target="_blank">DataDrivenCPS lab</a>.</p>
+    <p><strong>Notable classes I took include:</strong></p>
+    <ul>
+      <li>Algorithms</li>
+      <li>Principles of Programming Languages</li>
+      <li>Operating Systems</li>
+      <li>Advanced Computer Architecture</li>
+      <li>Discrete Math</li>
+      <li>Advanced Machine Learning</li>
+      <li>Theory of Computation</li>
+    </ul>
+    <div style="padding-bottom: 15px;"></div>
+  </div>
+</details>
 
-   <div class="education-item">
-      <summary class="work-summary">
-         Anna University | Chennai, India | Aug 2022
-         <span class="degree">
-            <i class="fas fa-graduation-cap"></i> B.E in Electronics & Communication Engineering
-         </span>
-      </summary>
-      <p class="details">
-         <i class="fas fa-map-marker-alt"></i> Chennai, India | GPA: 8.56 / 10
-      </p>
-   </div>
-</div>
+<!-- Second Education Item -->
+<details class="education-item">
+  <summary class="education-summary">
+    <h3>B.E. in Electronics & Communication Engineering</h3>
+    <span class="education-info">
+      <a href="https://annauniv.edu" target="_blank">Anna University</a> | Aug 2022 | GPA: 8.56 / 10
+    </span>
+  </summary>
+  <!-- <div class="education-details">
+    <p>I specialized in communications systems and signal processing during my undergraduate studies.</p>
+    <p><strong>Notable classes I took include:</strong></p>
+    <ul>
+      <li>Digital Signal Processing</li>
+      <li>Wireless Communication</li>
+      <li>Microcontrollers and Applications</li>
+    </ul>
+  </div> -->
+</details>
+
+<style>
+  /* Main container */
+  .education-item {
+    margin-bottom: 20px;
+    padding: 0;
+    border-left: none; /* No borders or backgrounds for the section */
+  }
+
+  /* Summary (title) without grey background */
+  .education-summary {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+
+  /* Heading for each degree */
+  h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #007acc; /* Emphasis with your brand color */
+    display: inline-block;
+  }
+
+  /* Info section (school, date, GPA) */
+  .education-info {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 5px;
+    display: block;
+  }
+
+  .education-info a {
+    color: #007acc;
+    text-decoration: none;
+  }
+
+  /* Details section for additional information */
+  .education-details {
+    margin-top: 10px;
+    padding-left: 15px;
+  }
+
+  /* List styles */
+  ul {
+    list-style-type: disc;
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  /* Open details to display content */
+  details[open] .education-details {
+    display: block;
+  }
+
+  /* Responsive design */
+  @media (max-width: 768px) {
+    h3 {
+      font-size: 1.1rem;
+    }
+
+    .education-info {
+      font-size: 0.8rem;
+    }
+  }
+</style>
