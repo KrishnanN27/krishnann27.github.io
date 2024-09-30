@@ -44,9 +44,19 @@ draft: true
   </p>
 </div>
 
-
-
 ## Notable Awards & Participation
+
+<details class="work-details" close>
+  <summary class="work-summary">
+    UNDERGRADUATE RESEARCH SYMPOSIUM | Judge (Sept 2024)
+  </summary>
+  <div>
+    <p><strong>Colorado School of Mines</strong></p>
+    <ul>
+      <li>Served as a Judge in the “Undergraduate Research Symposium” evaluating and providing feedback to participants.</li>
+    </ul>
+  </div>
+</details>
 
 <details class="work-details" open>
   <summary class="work-summary">
@@ -56,6 +66,11 @@ draft: true
     <p><strong>Colorado School of Mines</strong></p>
     <ul>
       <li>Awarded 1st Place in the Beginner Category and LGBTQIA+ Category for developing an impactful social platform.</li>
+      <li>
+        <a href="https://devpost.com/software/echoes-of-equality" target="_blank" style="color: #007acc; text-decoration: none;">
+          View Project <i class="fas fa-external-link-alt" style="margin-left: 5px;"></i>
+        </a>
+      </li>
     </ul>
     <div class="award-images">
       <img src="/images/hb/h6.jpeg" alt="Echoes of Equality Project" class="uniform-img"/>
@@ -79,6 +94,25 @@ draft: true
     </div>
   </div>
 </details>
+
+
+
+
+
+<details class="work-details" open>
+  <summary class="work-summary">
+    UNDERGRADUATE RESEARCH SYMPOSIUM | Judge (April 2022)
+  </summary>
+  <div>
+    <p><strong>CO, US</strong></p>
+    <ul>
+      <li>Served as a Judge in the “Undergraduate Research Symposium” evaluating and providing feedback to participants.</li>
+    </ul>
+  </div>
+</details>
+
+
+
 
 <!-- CSS for uniform image sizes -->
 <style>
@@ -106,19 +140,6 @@ draft: true
   }
 </style>
 
-
-
-<details class="work-details" open>
-  <summary class="work-summary">
-    UNDERGRADUATE RESEARCH SYMPOSIUM | Judge (April 2022)
-  </summary>
-  <div>
-    <p><strong>CO, US</strong></p>
-    <ul>
-      <li>Acted as a judge for research poster presentations.</li>
-    </ul>
-  </div>
-</details>
 
 
 <h2 id="education">Education</h2>
