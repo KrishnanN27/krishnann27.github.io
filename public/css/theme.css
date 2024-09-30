@@ -18,6 +18,12 @@
   --font-size-base: clamp(1rem, 1.5vw, 1.2rem); /* Responsive base font size */
   --heading-size-h1: clamp(1.8rem, 2.5vw, 2.2rem);
   --heading-size-h2: clamp(1.4rem, 2vw, 1.8rem);
+
+
+  --note-bg-light: rgba(0, 122, 204, 0.1);
+  --note-bg-dark: rgba(0, 122, 204, 0.2);
+  --note-color-light: #007acc; /* Dark blue for light mode */
+  --note-color-dark: #ADD8E6; /* Light blue for dark mode */
 }
 
 .dark {

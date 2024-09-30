@@ -4,13 +4,18 @@ date: 2024-09-01
 draft: true
 ---
 
-<div class="red-callout">
-   This page provides an in-depth overview of my work experience and projects. For a concise summary, please refer to my <a href="/CV_Sowndarya-Krishnan.pdf" target="_blank" style="color: #007acc; text-decoration: none; font-weight: bold;">resume</a>.
+<div class="note">
+  <span class="note-icon"><i class="fas fa-info-circle"></i></span> <!-- Info circle icon -->
+  <div>
+    <div class="note-content">Note</div>
+    <div class="note-text">
+      This page provides an in-depth overview of my work experience and projects. For a concise summary, please refer to my 
+      <a href="/CV_Sowndarya-Krishnan.pdf" target="_blank">CV</a>.
+    </div>
+  </div>
 </div>
 
-<!-- <div style="padding: 5px; margin-top: 5px; text-align: center;">
-   <p style="color: #cc6600; font-weight: bold;">Seeking full-time roles starting May 2025</p>
-</div> -->
+
 
 ## Work Experience
 
