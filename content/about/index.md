@@ -16,8 +16,8 @@ showComments: false
     </div>
     <div style="padding: 0 20px;">
         <p style="font-size: 1.05rem; line-height: 1.8em; margin: 0 0 15px 0;">
-            I'm <strong>Sowndarya Krishnan</strong> (short name: <em>Krish</em> or <em>Chris</em>), currently pursuing a <em>Master’s Thesis</em> in <strong>Computer Science</strong> at the <a href="https://www.mines.edu/" style="color: #007acc; text-decoration: none;">Colorado School of Mines</a>.
-        </p>
+    I'm <strong>Sowndarya Krishnan</strong><span style="display: inline-block; margin-left: 10px; font-style: italic; color: #666;">(pronounced: Sown-dar-yeh Krish-nun)</span> — short name: <em>Krish</em> or <em>Chris</em>, currently pursuing a <em>Master’s Thesis</em> in <strong>Computer Science</strong> at the <a href="https://www.mines.edu/" style="color: #007acc; text-decoration: none;">Colorado School of Mines</a>.
+</p>
         <p style="font-size: 1.05rem; line-height: 1.8em; margin: 0 0 15px 0;">
             I hold a <strong>B.E. in Electronics and Communication Engineering</strong> from <a href="https://www.annauniv.edu/" target="_blank" style="color: #007acc; text-decoration: none;">Anna University</a>.
         </p>
