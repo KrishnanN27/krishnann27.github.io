@@ -21,12 +21,14 @@
 
 
   --note-bg-light: rgba(0, 122, 204, 0.1);
-  --note-bg-dark: rgba(0, 122, 204, 0.2);
+  
   --note-color-light: #007acc; /* Dark blue for light mode */
   --note-color-dark: #ADD8E6; /* Light blue for dark mode */
+  --summary-open-bg: rgba(0, 0, 0, 0.1); /* Light mode background */
 }
 
 .dark {
+  --note-bg-dark: rgba(0, 122, 204, 0.2);
   --primary-color: #F0F0F0; /* Lighter text color for dark mode */
   --secondary-color: #292929;
   --tertiary-color: #FF7F11;
@@ -34,6 +36,7 @@
   --secondary-color-dark: #4A4A3D; /* Lighter for better contrast */
   --scrollbar-track: #292929;
   --scrollbar-thumb: #737373; /* Lighter thumb for better contrast */
+  --summary-open-bg: rgba(255, 255, 255, 0.1);
 }
 
 @font-face {

@@ -499,7 +499,8 @@
       
     
     </h1>
-    <div class="note">
+    <div class="section-spacing"></div>
+<div class="note">
   <span class="note-icon"><i class="fas fa-info-circle"></i></span> <!-- Info circle icon -->
   <div>
     <div class="note-content">Note</div>
@@ -509,6 +510,7 @@
     </div>
   </div>
 </div>
+<div class="section-spacing"></div>
 
 <h2 id="work-experience">
   Work Experience
@@ -528,7 +530,7 @@
       <i class="fas fa-external-link-alt"></i>
     </a>
   </summary>
-  <div>
+  <div class="work-content">
     <p><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Chennai, India</p>
     <p><strong>Roles:</strong> <span style="color: #007acc;">Mobile Engineer, Frontend Engineer & Cloud Engineer</span></p>
     <ul>
@@ -538,12 +540,81 @@
     </ul>
   </div>
 </details>
-<div style="padding: 15px; border-radius: 10px; background-color: rgba(255, 255, 0, 0.2); margin-top: 20px; border-left: 5px solid #007acc;">
-  <p style="margin: 0; font-size: 1em; color: var(--primary-color);">
-    Alongside my thesis, I'm working on several development-oriented side projects. You can explore more about my research and these projects <a href="/research" style="color: #007acc; font-weight: bold; text-decoration: none;">here</a> 
-    <i class="fas fa-arrow-right"></i>.
-  </p>
+<div class="section-spacing"></div>
+<style>
+
+  
+
+  /* Custom Collapsible Style for Work Experience */
+.work-details {
+  background-color: transparent; /* Remove background color */
+  border: 1px solid var(--primary-color); /* Primary color border */
+  margin-bottom: 15px;
+  border-radius: var(--radius); /* Keep rounded corners */
+  padding: 0px; /* Remove extra padding */
+}
+
+.work-summary {
+  font-weight: bold;
+  color: var(--primary-color); /* Primary color for work titles */
+  cursor: pointer;
+  padding: 10px; /* Add padding for summary block */
+  background-color: transparent; /* Default no background */
+  display: flex;
+  align-items: center; /* Vertically align arrow and text */
+  transition: background-color 0.3s ease; /* Transition for background color */
+  border-radius: 0; /* Remove the corner rounding effect */
+}
+
+.work-summary::before {
+  content: '\25B6'; /* Unicode for right-pointing arrow */
+  margin-right: 10px; /* Space between arrow and text */
+  transition: transform 0.3s ease;
+}
+
+.work-details[open] .work-summary {
+  background-color: var(--summary-open-bg); /* Background color when expanded */
+}
+
+.work-details[open] .work-summary::before {
+  transform: rotate(90deg); /* Rotate to down-pointing arrow */
+}
+
+.work-link i {
+  margin-left: 10px;
+  color: var(--link-color); /* Match link color to link color variable */
+}
+
+.work-details div {
+  margin-top: 10px;
+  padding-left: 15px; /* Indent content slightly */
+  color: var(--primary-color); /* Ensure all text is primary color */
+}
+
+.work-details ul {
+  margin: 0;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.work-details p i {
+  margin-right: 5px; /* Add space between icon and text */
+  color: var(--link-color); /* Use the link color for icons */
+}
+
+</style>
+<div class="section-spacing"></div>
+<div class="note">
+  <span class="note-icon"><i class="fas fa-laptop-code"></i></span> <!-- Laptop code icon for software engineering -->
+  <div>
+    <div class="note-content">Software Engineering in Research</div> <!-- Updated title -->
+    <div class="note-text">
+      Alongside my thesis, I'm working on several development-oriented side projects, integrating software engineering principles within my research. You can explore more about my research and these projects 
+      <a href="/research" style="color: #007acc; font-weight: bold; text-decoration: none;">here</a>.
+    </div>
+  </div>
 </div>
+<div class="section-spacing"></div>
 
 <h2 id="notable-awards--participation">
   Notable Awards &amp; Participation
@@ -615,29 +686,41 @@
 </details>
 <!-- CSS for uniform image sizes -->
 <style>
-  .award-images {
-      display: flex;
-      gap: 10px;
-      justify-content: space-between;
-      flex-wrap: wrap;
-  }
+/* Styling the container holding the images */
+/* Styling the container holding the images */
+.award-images {
+  display: flex;
+  gap: 20px; /* Increase the gap between images for better spacing */
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 15px; /* Add spacing between text and images */
+  margin-bottom: 30px; /* Add more space below the image container */
+  padding: 10px; /* Add padding around the container */
+  border-radius: 10px; /* Add rounded corners to the image container */
+  background-color: rgba(240, 240, 240, 0.5); /* Light background for image container */
+}
 
-  /* Make all images uniform in size */
+/* Make all images uniform in size */
+.uniform-img {
+  width: 45%;
+  height: 250px; /* Set a fixed height for uniformity */
+  object-fit: cover;
+  border-radius: 8px; /* Keep images rounded */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
   .uniform-img {
-      width: 45%;
-      height: 250px; /* Set a fixed height for uniformity */
-      object-fit: cover;
-      border-radius: 8px;
+    width: 100%; /* Make the images take full width on mobile */
+    height: auto; /* Allow height to adjust with the aspect ratio */
   }
+}
 
-  /* Responsive design for smaller screens */
-  @media (max-width: 768px) {
-      .uniform-img {
-          width: 100%; /* Make the images take full width on mobile */
-          height: auto; /* Allow height to adjust with the aspect ratio */
-      }
-  }
+
 </style>
+<div class="section-spacing"></div>
 <h2 id="education">Education</h2>
 <!-- First Education Item -->
 <details class="education-item" open>
@@ -671,19 +754,9 @@
       <a href="https://annauniv.edu" target="_blank">Anna University</a> | Aug 2022 | GPA: 8.56 / 10
     </span>
   </summary>
-  <!-- <div class="education-details">
-    <p>I specialized in communications systems and signal processing during my undergraduate studies.</p>
-    <p><strong>Notable classes I took include:</strong></p>
-    <ul>
-      <li>Digital Signal Processing</li>
-      <li>Wireless Communication</li>
-      <li>Microcontrollers and Applications</li>
-    </ul>
-  </div> -->
 </details>
 <style>
-  /* Main container */
-  .education-item {
+ .education-item {
     margin-bottom: 20px;
     padding: 0;
     border-left: none; /* No borders or backgrounds for the section */
@@ -693,27 +766,34 @@
   .education-summary {
     padding: 10px 15px;
     cursor: pointer;
-    transition: color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    color: var(--primary-color); /* Always use the primary text color */
+    background-color: var(--summary-open-bg);
+  }
+
+  /* Apply background when details are open */
+  details[open] .education-summary {
+    background-color: var(--summary-open-bg); /* Background color for the open state */
   }
 
   /* Heading for each degree */
   h3 {
     margin: 0;
     font-size: 1.2rem;
-    color: #007acc; /* Emphasis with your brand color */
+    /* color: var(--primary-color); Primary color for headings */
     display: inline-block;
   }
 
   /* Info section (school, date, GPA) */
   .education-info {
     font-size: 0.9rem;
-    color: #666;
+    /* color: var(--primary-color); Always primary color for the text */
     margin-top: 5px;
     display: block;
   }
 
   .education-info a {
-    color: #007acc;
+    color: #007acc; /* Link color */
     text-decoration: none;
   }
 
@@ -721,6 +801,7 @@
   .education-details {
     margin-top: 10px;
     padding-left: 15px;
+    color: var(--primary-color); Primary color for details text
   }
 
   /* List styles */
@@ -728,11 +809,6 @@
     list-style-type: disc;
     margin: 0;
     padding-left: 20px;
-  }
-
-  /* Open details to display content */
-  details[open] .education-details {
-    display: block;
   }
 
   /* Responsive design */
