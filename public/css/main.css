@@ -59,7 +59,14 @@
     color: var(--link-color); /* Use the link color for icons */
   }
   
+/* Remove the default disclosure triangle */
+summary::-webkit-details-marker {
+  display: none;
+}
 
+summary::marker {
+  display: none; /* For browsers supporting the newer ::marker pseudo-element */
+}
 
 
 .section-spacing {

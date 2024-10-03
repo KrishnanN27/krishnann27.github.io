@@ -21,7 +21,7 @@ description: "Code & Canvas of Krish."
         <!-- Recruiter Section with border and dropdown links -->
         <div id="recruiterText" style="cursor: pointer; padding: 10px; border-radius: 10px; margin-top: 10px; border: 2px solid #007acc;">
             <p style="margin: 0; font-size: 1em; color: #007acc; font-weight: bold;">
-                <i class="fas fa-caret-right" style="margin-right: 5px;"></i> Click for research and qualifications
+                <i class="fas fa-caret-right" style="margin-right: 5px;"></i> Click here to quickly check my qualifications
             </p>
         </div>
         <!-- Dropdown links with height animation -->

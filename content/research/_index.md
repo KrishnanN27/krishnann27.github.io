@@ -101,7 +101,7 @@ description: "Overview of my thesis work and research projects at Colorado Schoo
   }
 </style>
 
-
+<div class="section-spacing"></div>
 
 <!-- SLOAN PROJECT Frontend Developer -->
 <details class="work-details" open>
@@ -131,6 +131,7 @@ description: "Overview of my thesis work and research projects at Colorado Schoo
   </div>
 </details>
 
+<div class="section-spacing"></div>
 
 <!-- SLOAN PROJECT Backend Engineer -->
 <details class="work-details">
@@ -150,7 +151,7 @@ description: "Overview of my thesis work and research projects at Colorado Schoo
 </details>
 
 
-
+<div class="section-spacing"></div>
 
 
 <!-- RDF Toolkit -->
