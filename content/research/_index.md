@@ -68,39 +68,43 @@ description: "Overview of my thesis work and research projects at Colorado Schoo
   }
 </script>
 
-
-<!-- CSS for consistent image sizes and dropdown -->
+<!-- CSS for uniform image sizes -->
 <style>
-  /* Image styling */
-  .award-images {
-      display: flex;
-      gap: 20px;
-      justify-content: space-between;
-      flex-wrap: wrap;
-  }
+/* Styling the container holding the images */
+/* Styling the container holding the images */
+.award-images {
+  display: flex;
+  gap: 20px; /* Increase the gap between images for better spacing */
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 15px; /* Add spacing between text and images */
+  margin-bottom: 30px; /* Add more space below the image container */
+  margin-right: 30px; /* Add more space below the image container */
+  padding: 10px; /* Add padding around the container */
+  border-radius: 10px; /* Add rounded corners to the image container */
+  /* background-color: rgba(240, 240, 240, 0.5); Light background for image container */
+}
 
-  /* Styling for images to maintain uniformity */
+/* Make all images uniform in size */
+.uniform-img {
+  width: 45%;
+  height: 250px; /* Set a fixed height for uniformity */
+  object-fit: cover;
+  border-radius: 8px; /* Keep images rounded */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
   .uniform-img {
-      width: 45%;
-      height: 250px;
-      object-fit: cover;
-      border-radius: 8px;
+    width: 100%; /* Make the images take full width on mobile */
+    height: auto; /* Allow height to adjust with the aspect ratio */
   }
+}
 
-  /* Responsive design for smaller screens */
-  @media (max-width: 768px) {
-      .uniform-img {
-          width: 100%;
-          height: auto;
-      }
-  }
 
-  /* Smooth transition for dropdown content */
-  #abstract-content {
-    transition: max-height 0.3s ease;
-  }
 </style>
-
 <div class="section-spacing"></div>
 
 <!-- SLOAN PROJECT Frontend Developer -->

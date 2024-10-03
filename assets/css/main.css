@@ -2,72 +2,65 @@
 
 
 
-/* Custom Collapsible Style for Work Experience */
-.work-details {
-  background-color: transparent; /* Remove background color */
-  border: 1px solid var(--primary-color); /* Primary color border */
-  margin-bottom: 15px;
-  border-radius: var(--radius); /* Keep rounded corners */
-  padding: 0px; /* Remove extra padding */
-}
+  /* Custom Collapsible Style for Work Experience */
+  .work-details {
+    background-color: transparent; /* Remove background color */
+    border: 1px solid var(--primary-color); /* Primary color border */
+    margin-bottom: 15px;
+    border-radius: var(--radius); /* Keep rounded corners */
+    padding: 0px; /* Remove extra padding */
+  }
+  
+  .work-summary {
+    font-weight: bold;
+    color: var(--primary-color); /* Primary color for work titles */
+    cursor: pointer;
+    padding: 10px; /* Add padding for summary block */
+    background-color: transparent; /* Default no background */
+    display: flex;
+    align-items: center; /* Vertically align arrow and text */
+    transition: background-color 0.3s ease; /* Transition for background color */
+    border-radius: 0; /* Remove the corner rounding effect */
+  }
+  
+  .work-summary::before {
+    content: '\25B6'; /* Unicode for right-pointing arrow */
+    margin-right: 10px; /* Space between arrow and text */
+    transition: transform 0.3s ease;
+  }
+  
+  .work-details[open] .work-summary {
+    background-color: var(--summary-open-bg); /* Background color when expanded */
+  }
+  
+  .work-details[open] .work-summary::before {
+    transform: rotate(90deg); /* Rotate to down-pointing arrow */
+  }
+  
+  .work-link i {
+    margin-left: 10px;
+    color: var(--link-color); /* Match link color to link color variable */
+  }
+  
+  .work-details div {
+    margin-top: 10px;
+    padding-left: 15px; /* Indent content slightly */
+    color: var(--primary-color); /* Ensure all text is primary color */
+  }
+  
+  .work-details ul {
+    margin: 0;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .work-details p i {
+    margin-right: 5px; /* Add space between icon and text */
+    color: var(--link-color); /* Use the link color for icons */
+  }
+  
 
-.work-summary {
-  font-weight: bold;
-  color: var(--primary-color); /* Primary color for work titles */
-  cursor: pointer;
-  padding: 10px; /* Add padding for summary block */
-  background-color: transparent; /* Default no background */
-  display: flex;
-  align-items: center; /* Vertically align arrow and text */
-  transition: background-color 0.3s ease; /* Transition for background color */
-  border-radius: 0; /* Remove the corner rounding effect */
-}
 
-/* Custom arrow instead of default */
-.work-summary::before {
-  content: '\25B6'; /* Unicode for right-pointing arrow */
-  margin-right: 10px; /* Space between arrow and text */
-  transition: transform 0.3s ease;
-}
-
-.work-details[open] .work-summary {
-  background-color: var(--summary-open-bg); /* Background color when expanded */
-}
-
-.work-details[open] .work-summary::before {
-  transform: rotate(90deg); /* Rotate to down-pointing arrow */
-}
-
-.work-link i {
-  margin-left: 10px;
-  color: var(--link-color); /* Match link color to link color variable */
-}
-
-.work-details div {
-  margin-top: 10px;
-  padding-left: 15px; /* Indent content slightly */
-  color: var(--primary-color); /* Ensure all text is primary color */
-}
-
-.work-details ul {
-  margin: 0;
-  padding-left: 20px;
-  margin-bottom: 20px;
-}
-
-.work-details p i {
-  margin-right: 5px; /* Add space between icon and text */
-  color: var(--link-color); /* Use the link color for icons */
-}
-
-/* Hide the default disclosure triangle */
-summary::-webkit-details-marker {
-  display: none;
-}
-
-summary::marker {
-  display: none; /* For newer browsers supporting the ::marker pseudo-element */
-}
 
 .section-spacing {
   margin-top: 40px; /* Adjust the space as needed */
