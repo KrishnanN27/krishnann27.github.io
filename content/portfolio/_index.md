@@ -12,7 +12,7 @@ draft: true
     <div class="note-content">Note</div>
     <div class="note-text">
       This page provides an in-depth overview of my work experience and projects. For a concise summary, please refer to my 
-      <a href="/CV_Sowndarya-Krishnan.pdf" target="_blank">CV</a>.
+      <a href="/CV_Sowndarya_Krishnan.pdf" target="_blank">CV</a>.
     </div>
   </div>
 </div>
