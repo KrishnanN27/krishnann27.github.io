@@ -3,6 +3,7 @@ title: "Updates"
 date: 2024-09-01
 ---
 
+- 🏆 Won the Best Poster Presentation Award at the CMAPP Honors Event for delivering the best pitch and presenting the best poster.
 - 🧑‍⚖️ Served as a Judge in "Undergraduate Research Symposium" in Sept 2024
 - 🎯 Planning to propose my MS thesis in Spring 2025 and graduate in May 2025.
 - 🔍 Contributed to the Brickschema Ontology project in June 2024.
