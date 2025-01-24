@@ -65,6 +65,14 @@ title = "Tags"
 url = "/tags/"
 weight = 8
 
+#make one for music
+# [[main]]
+# name = "music"
+# title = "music"
+# url = "/music/"
+# weight = 9
+
+
 
 
 [[main]]

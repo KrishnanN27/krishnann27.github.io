@@ -61,15 +61,34 @@ draft: true
 
 ## Notable Awards & Participation
 
-<details class="work-details" close>
+<details class="work-details" open>
   <summary class="work-summary">
-    UNDERGRADUATE RESEARCH SYMPOSIUM | Judge (Sept 2024)
+    BEST POSTER PRESENTATION AWARD | CMAPP Honors Event (Jan 2025)
   </summary>
   <div>
     <p><strong>Colorado School of Mines</strong></p>
     <ul>
-      <li>Served as a Judge in the “Undergraduate Research Symposium” evaluating and providing feedback to participants.</li>
+      <li>
+        Won the Best Poster Presentation Award at the CMAPP Honors Event for delivering the 
+        <strong><em>Best Pitch</em></strong> and presenting the 
+        <strong><em>Best Poster</em></strong>.
+      </li>
+     <li> 
+      📄 <a href="/flowshacl.pdf" target="_blank" style="color: #007acc; text-decoration: none;">
+        View FlowSHACL Poster
+    </p>
+    </li>
     </ul>
+    <div class="award-images" style="display: flex; justify-content: space-around; align-items: center; gap: 20px;">
+      <div style="text-align: center;">
+        <img src="/images/cmapp/placeholder1.jpeg" alt="Best Poster Presentation Award" class="uniform-img" style="width: 200px; height: auto; border: 1px solid #ccc; border-radius: 5px;"/>
+        <p style="color: #666; margin-top: 10px;">Image coming soon</p>
+      </div>
+      <div style="text-align: center;">
+        <img src="/images/cmapp/placeholder2.jpeg" alt="CMAPP Event" class="uniform-img" style="width: 200px; height: auto; border: 1px solid #ccc; border-radius: 5px;"/>
+        <p style="color: #666; margin-top: 10px;">Image coming soon</p>
+      </div>
+    </div>
   </div>
 </details>
 
@@ -96,6 +115,20 @@ draft: true
 
 <details class="work-details" open>
   <summary class="work-summary">
+    UNDERGRADUATE RESEARCH SYMPOSIUM | Judge (x2: April 2022 & Sept 2024)
+  </summary>
+  <div>
+    <p><strong>Colorado School of Mines</strong></p>
+    <ul>
+      <li>Served as a Judge in the “Undergraduate Research Symposium” twice, evaluating and providing feedback to participants.</li>
+      <li>Dates: <em>April 2022</em> and <em>September 2024</em>.</li>
+    </ul>
+  </div>
+</details>
+
+
+<details class="work-details" open>
+  <summary class="work-summary">
     C-MAPP EVENT | Presenter (Jan 2022)
   </summary>
   <div>
@@ -113,18 +146,6 @@ draft: true
 
 
 
-
-<details class="work-details" open>
-  <summary class="work-summary">
-    UNDERGRADUATE RESEARCH SYMPOSIUM | Judge (April 2022)
-  </summary>
-  <div>
-    <p><strong>CO, US</strong></p>
-    <ul>
-      <li>Served as a Judge in the “Undergraduate Research Symposium” evaluating and providing feedback to participants.</li>
-    </ul>
-  </div>
-</details>
 
 
 
