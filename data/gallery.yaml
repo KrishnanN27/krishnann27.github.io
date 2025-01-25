@@ -1,5 +1,16 @@
 images:
-  # New images for 2025
+  - src: "/images/2025/re1.webp"
+    alt: "Recap 1"
+  - src: "/images/2025/re2.webp"
+    alt: "Recap 2"
+  - src: "/images/2025/re3.webp"
+    alt: "Recap 3"
+  - src: "/images/2025/re4.webp"
+    alt: "Recap 4"
+  - src: "/images/2025/re5.webp"
+    alt: "Recap 5"
+  - src: "/images/2025/re6.webp"
+    alt: "Recap 6"
   - src: "/images/2025/wi_1.webp"
     alt: "2025 Winter Image 1"
   - src: "/images/2025/wi_2.webp"
