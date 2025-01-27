@@ -3,6 +3,7 @@ title: "Connect"
 date: 2024-09-01
 description: "Let's get in touch!"
 showReadingTime : false
+externalURL: false
 ---
 
 <p>If you'd like to reach out, here are a few ways to get in touch with me:</p>

@@ -73,24 +73,23 @@ draft: true
         <strong><em>Best Pitch</em></strong> and presenting the 
         <strong><em>Best Poster</em></strong>.
       </li>
-     <li> 
-      📄 <a href="/flowshacl.pdf" target="_blank" style="color: #007acc; text-decoration: none;">
-        View FlowSHACL Poster
-    </p>
-    </li>
+      <li> 
+        📄 <a href="/flowshacl.pdf" target="_blank" style="color: #007acc; text-decoration: none;">
+          View FlowSHACL Poster
+        </a>
+      </li>
     </ul>
     <div class="award-images" style="display: flex; justify-content: space-around; align-items: center; gap: 20px;">
       <div style="text-align: center;">
-        <img src="/images/cmapp/placeholder1.jpeg" alt="Best Poster Presentation Award" class="uniform-img" style="width: 200px; height: auto; border: 1px solid #ccc; border-radius: 5px;"/>
-        <p style="color: #666; margin-top: 10px;">Image coming soon</p>
+        <img src="/images/2025/p1.jpg" alt="Best Poster Presentation Award" class="uniform-img" style="width: 400px; height: auto; border: 1px solid #ccc; border-radius: 5px;"/>
       </div>
       <div style="text-align: center;">
-        <img src="/images/cmapp/placeholder2.jpeg" alt="CMAPP Event" class="uniform-img" style="width: 200px; height: auto; border: 1px solid #ccc; border-radius: 5px;"/>
-        <p style="color: #666; margin-top: 10px;">Image coming soon</p>
+        <img src="/images/2025/p2.jpg" alt="CMAPP Event" class="uniform-img" style="width: 400px; height: auto; border: 1px solid #ccc; border-radius: 5px;"/>
       </div>
     </div>
   </div>
 </details>
+
 
 <details class="work-details" open>
   <summary class="work-summary">
