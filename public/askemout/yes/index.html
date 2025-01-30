@@ -29,8 +29,8 @@
 
   
   
-  <title>Ask &#39;Em Out &middot;  - Sowndarya Krishnan Navaneetha Kannan</title>
-  <meta name="title" content="Ask &#39;Em Out &middot;  - Sowndarya Krishnan Navaneetha Kannan" />
+  <title>Good Choice 😎🔥 &middot;  - Sowndarya Krishnan Navaneetha Kannan</title>
+  <meta name="title" content="Good Choice 😎🔥 &middot;  - Sowndarya Krishnan Navaneetha Kannan" />
   
 
   
@@ -38,7 +38,7 @@
   <meta name="description" content="A Hugo Theme - Sowndarya Krishnan Navaneetha Kannan's portfolio and work." />
   
   
-  <link rel="canonical" href="//localhost:1313/askemout/" />
+  <link rel="canonical" href="//localhost:1313/askemout/yes/" />
 
   
 
@@ -102,19 +102,20 @@
 
 
   
-  <meta property="og:url" content="//localhost:1313/askemout/">
-  <meta property="og:title" content="Ask &#39;Em Out">
-  <meta property="og:description" content="Your browser does not support the audio element.">
+  <meta property="og:url" content="//localhost:1313/askemout/yes/">
+  <meta property="og:title" content="Good Choice 😎🔥">
+  <meta property="og:description" content="Good choice!">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
+    <meta property="article:section" content="askemout">
 
   
 
   
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Ask &#39;Em Out">
-  <meta name="twitter:description" content="Your browser does not support the audio element.">
+  <meta name="twitter:title" content="Good Choice 😎🔥">
+  <meta name="twitter:description" content="Good choice!">
 
   
 
@@ -471,7 +472,7 @@
 
 
 
-<h1 class="pg-title">Ask 'Em Out</h1>
+<h1 class="pg-title">Good Choice 😎🔥</h1>
 
 
 <div class="meta">
@@ -482,6 +483,20 @@
 <p>
 
 
+
+  <span class="meta-icon">
+
+    <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg width="800px" height="800px" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12ZM3.00683 12C3.00683 16.9668 7.03321 20.9932 12 20.9932C16.9668 20.9932 20.9932 16.9668 20.9932 12C20.9932 7.03321 16.9668 3.00683 12 3.00683C7.03321 3.00683 3.00683 7.03321 3.00683 12Z" fill="currentColor"/>
+<path d="M12 5C11.4477 5 11 5.44771 11 6V12.4667C11 12.4667 11 12.7274 11.1267 12.9235C11.2115 13.0898 11.3437 13.2343 11.5174 13.3346L16.1372 16.0019C16.6155 16.278 17.2271 16.1141 17.5032 15.6358C17.7793 15.1575 17.6155 14.5459 17.1372 14.2698L13 11.8812V6C13 5.44772 12.5523 5 12 5Z" fill="currentColor"/>
+</svg>
+
+
+</span>
+  
+    1 min
+  
 
 
 </p>
@@ -494,222 +509,206 @@
 
 
 
+
+
+
 <div id="valentine-container">
-  <!-- Background Music -->
-  <audio id="bg-music" autoplay loop>
-    <source src="/music/rizz song.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-  </audio>
-  <!-- Music Toggle Button -->
-<p><button id="music-toggle">🔊 Pause Music</button></p>
-  <img src="/gif/dawg.gif" alt="Cute Dog GIF" class="responsive-gif" />
-  <div class="message">
-    <h1 class="crazy-text">Since Feb 14 is coming up...<br>Why don’t you be the <span class="highlight">1 4</span> me? 💘</h1>
-    <h2>Will you be my Valentine? 💕</h2>
+  <h1 class="headline">Good choice! Fine huzz. 😎🔥</h1>
+  <img src="/gif/shrek-rizz.gif" alt="Shrek Rizz GIF" class="responsive-gif" />
+  <p class="message">Something magical is about to happen... 💫</p>
+  <!-- Step 1: Enter Your Name -->
+  <div class="name-section">
+    <h2>📝 Your Name:</h2>
+    <input type="text" id="your-name" placeholder="Enter your name" />
   </div>
-  <div class="buttons">
-    <button id="yes-btn" onclick="sayYes()">Yes ❤️</button>
-    <button id="no-btn" onclick="shrinkNo()">No 😢</button>
+  <!-- Step 2: Time Picker -->
+  <div class="time-section">
+    <h2>⏳ Choose Your Time (5 PM - 9 PM)</h2>
+    <select id="date-time">
+      <option value="">Select Time</option>
+      <option value="5:00 PM">5:00 PM</option>
+      <option value="5:30 PM">5:30 PM</option>
+      <option value="6:00 PM">6:00 PM</option>
+      <option value="6:30 PM">6:30 PM</option>
+      <option value="7:00 PM">7:00 PM</option>
+      <option value="7:30 PM">7:30 PM</option>
+      <option value="8:00 PM">8:00 PM</option>
+      <option value="8:30 PM">8:30 PM</option>
+      <option value="9:00 PM">9:00 PM</option>
+    </select>
+  </div>
+  <!-- Step 3: Date Idea Selection -->
+  <div id="date-options">
+    <h2>🌷 Pick a Plan:</h2>
+    <ul id="date-ideas-list"></ul>
+  </div>
+  <!-- Step 4: Send Invitation -->
+  <div class="send-section">
+    <button class="send-invite-button" onclick="sendInvite()">📩 Send Invitation</button>
+    <p id="send-status" class="hidden success-message">✅ Sent!</p>
+  </div>
+  <!-- Final Confirmation Box -->
+  <div id="selected-date" class="hidden confirmation-box">
+    <h2>💞 It's Set!</h2>
+    <p id="final-date-text"></p>
   </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script>
-  // "No" Button Shrinking Logic
-  const noBtn = document.getElementById("no-btn");
-  let noBtnSize = 100;
+  emailjs.init("eahHL2QpzyenwxZO8"); // Your EmailJS Public Key
 
-  function shrinkNo() {
-    noBtnSize = Math.max(10, noBtnSize - 20);
-    noBtn.style.transform = `scale(${noBtnSize / 100})`;
+  const dateIdeas = [
+    "🍕 Grab some pizza and drive up to Lookout Mountain to enjoy the view.",
+    "👩‍🍳 Cook together and then cuddle up to binge-watch *The Chosen*.",
+    "⛪ Go to church and worship together.",
+    "🎨 Go to a paint-and-sip and accidentally create a masterpiece.",
+    "💃 Take a dance class and instantly become pros (or not).",
+    "🍷 Go wine tasting and pretend we know the difference between flavors.",
+    "🚗 I pick you up, forget to drop you back, and suddenly we’ve moved to Italy. 🇮🇹✨"
+  ];
 
-    if (noBtnSize === 10) {
-      noBtn.disabled = true;
-      noBtn.innerText = "Too late! 😜";
-    }
+  function populateDateIdeas() {
+    const dateList = document.getElementById("date-ideas-list");
+    dateList.innerHTML = ""; 
+
+    dateIdeas.forEach((idea, index) => {
+      let listItem = document.createElement("li");
+      let button = document.createElement("button");
+
+      button.innerText = idea;
+      button.classList.add("idea-button");
+      button.setAttribute("data-index", index);
+      button.onclick = function () {
+        selectDatePlan(this, idea);
+      };
+
+      listItem.appendChild(button);
+      dateList.appendChild(listItem);
+    });
   }
 
-  // "Yes" Button Redirect
-  function sayYes() {
-    window.location.href = "/askemout/yes";
+  function selectDatePlan(selectedButton, idea) {
+    const time = document.getElementById("date-time").value;
+    if (!time) {
+      alert("Pick a time first, darling! ⏰");
+      return;
+    }
+
+    document.querySelectorAll(".idea-button").forEach(btn => btn.classList.remove("selected"));
+    selectedButton.classList.add("selected");
+
+    document.getElementById("final-date-text").innerText = `📅 At ${time}, ${idea}`;
+    document.getElementById("selected-date").dataset.time = time;
+    document.getElementById("selected-date").dataset.idea = idea;
   }
 
-  // Background Music Control
-  const music = document.getElementById("bg-music");
-  const musicToggle = document.getElementById("music-toggle");
-
-  music.volume = 0.5; // Set volume to 50%
-
-  musicToggle.addEventListener("click", () => {
-    if (music.paused) {
-      music.play();
-      musicToggle.innerText = "🔊 Pause Music";
-    } else {
-      music.pause();
-      musicToggle.innerText = "🔈 Play Music";
+  function sendInvite() {
+    const yourName = document.getElementById("your-name").value;
+    if (!yourName) {
+      alert("Enter your name first! 💖");
+      return;
     }
-  });
+
+    const time = document.getElementById("selected-date").dataset.time;
+    const idea = document.getElementById("selected-date").dataset.idea;
+
+    if (!time || !idea) {
+      alert("Pick a date and a plan first! 💖");
+      return;
+    }
+
+    sendEmailInvite(yourName, time, idea);
+    
+    document.getElementById("selected-date").classList.remove("hidden");
+  }
+
+  function sendEmailInvite(yourName, time, idea) {
+    const emailParams = {
+      from_name: yourName,
+      to_name: "Your Email",
+      to_email: "your-email@example.com",
+      time: time,
+      plan: idea,
+    };
+
+    emailjs.send("service_lce9t4k", "template_wv1ezv9", emailParams)
+      .then(function (response) {
+        console.log("✅ Invite sent successfully", response.status, response.text);
+      })
+      .catch(function (error) {
+        console.log("❌ Invite failed to send:", error);
+        alert("❌ Email could not be sent.");
+      });
+  }
+
+  populateDateIdeas();
 </script>
 <style>
+  /* Valentine Theme */
   #valentine-container {
-    background: linear-gradient(to bottom right, #ff007f, #ff4a6e, #ff9a9e);
-    font-family: "Comic Sans MS", cursive, sans-serif;
-    color: #fff;
+    background: rgba(255, 240, 245, 0.95);
+    backdrop-filter: blur(10px);
+    font-family: "Playfair Display", serif;
+    color: #5a3e36;
     text-align: center;
-    width: 100%;
+    width: 90%;
     max-width: 600px;
     margin: 50px auto;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
-    animation: pulse 2s infinite;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   }
 
-  /* Crazy Glow Animation */
-  @keyframes pulse {
-    0% { box-shadow: 0 0 20px #ff007f; }
-    50% { box-shadow: 0 0 40px #ff4a6e; }
-    100% { box-shadow: 0 0 20px #ff007f; }
-  }
-
-  /* Music Toggle Button (Better Contrast & Mobile-Friendly) */
-  #music-toggle {
-    background: #ffffff;
-    color: #ff007f;
-    font-size: 1rem;
-    padding: 10px 20px;
-    border: 2px solid #ff007f;
-    border-radius: 50px;
-    cursor: pointer;
-    margin-bottom: 15px;
-    transition: all 0.3s ease;
-  }
-
-  #music-toggle:hover {
-    background: #ff007f;
+  /* Send Invitation Button */
+  .send-invite-button {
+    background: linear-gradient(45deg, #ff758c, #ff7eb3);
     color: white;
-  }
-
-  /* Reduce GIF size */
-  .responsive-gif {
-    width: 70%;
-    max-width: 250px;
-    height: auto;
-    border-radius: 15px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    animation: wobble 2s infinite alternate;
-  }
-
-  @keyframes wobble {
-    0% { transform: rotate(-3deg); }
-    100% { transform: rotate(3deg); }
-  }
-
-  .message {
-    margin-top: 20px;
-  }
-
-  .message h1 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    text-shadow: 0 0 10px #ff007f;
-  }
-
-  .highlight {
-    color: yellow;
-    font-weight: bold;
-    text-shadow: 0 0 10px yellow;
-  }
-
-  .message h2 {
-    font-size: 1.3rem;
-    margin-bottom: 20px;
-  }
-
-  .buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-  }
-
-  .buttons button {
-    padding: 15px 30px;
-    font-size: 1.2rem;
+    padding: 12px 20px;
     border: none;
-    border-radius: 50px;
+    border-radius: 25px;
+    font-size: 1rem;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: 0.3s ease-in-out;
+    width: 100%;
+    margin-top: 15px;
   }
 
-  /* Highlighted "Yes" Button */
-  #yes-btn {
-    background: gold;
-    color: black;
-    font-weight: bold;
-    border: 3px solid white;
-    box-shadow: 0 0 10px gold;
+  .send-invite-button:hover {
+    background: linear-gradient(45deg, #ff7eb3, #ff758c);
+    transform: scale(1.05);
   }
 
-  #yes-btn:hover {
-    background: yellow;
-    transform: scale(1.1);
-    box-shadow: 0 0 15px yellow;
-  }
-
-  /* "No" Button is Less Visible */
-  #no-btn {
-    background: #ff4a6e;
+  /* Idea Buttons */
+  .idea-button {
+    background: #e8a1a0;
     color: white;
-    opacity: 0.6;
-    transition: transform 0.2s ease, opacity 0.3s ease;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    width: 100%;
+    margin: 10px 0;
   }
 
-  #no-btn:hover {
-    opacity: 1;
+  .idea-button:hover, .idea-button.selected {
+    background: #d88a9b;
+    transform: scale(1.05);
   }
 
-  #no-btn:disabled {
-    background: #aaa;
-    cursor: not-allowed;
+  /* Confirmation Box */
+  .confirmation-box {
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
 
-  /* Mobile Optimization */
-  @media (max-width: 600px) {
-    #valentine-container {
-      padding: 15px;
-      margin: 30px auto;
-    }
-
-    .responsive-gif {
-      border-radius: 10px;
-      margin-bottom: 20px;
-    }
-
-    .message h1 {
-      font-size: 1.5rem;
-    }
-
-    .message h2 {
-      font-size: 1.1rem;
-      margin-bottom: 15px;
-    }
-
-    .buttons {
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .buttons button {
-      padding: 12px 25px;
-      font-size: 1rem;
-    }
-
-    #music-toggle {
-      width: 90%;
-    }
+  /* Hidden Class */
+  .hidden {
+    display: none !important;
   }
 </style>
 

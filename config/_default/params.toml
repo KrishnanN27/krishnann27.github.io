@@ -71,7 +71,7 @@ showReadingTime = true
 # Whether to display tags mentioned in the front matter.
 showTags = true
 # Whether to display next/previous article links in the article footer.
-showPagination = true
+showPagination = false
 # Whether to reverse the direction of next/previous article links.
 invertPagination = true
 # Whether to display the table of contents on articles.

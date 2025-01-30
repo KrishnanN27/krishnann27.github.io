@@ -85,5 +85,12 @@
       <guid>//localhost:1313/posts/know_your_worth/</guid>
       <description>A thoughtful analogy on how our value depends on the environment we are in and how to avoid settling for less.</description>
     </item>
+    <item>
+      <title>Ask &#39;Em Out</title>
+      <link>//localhost:1313/askemout/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/askemout/</guid>
+      <description>Your browser does not support the audio element.</description>
+    </item>
   </channel>
 </rss>
