@@ -37,6 +37,6 @@ externalURL: false
     </p>
 </div>
 
-<h2>Need Professional Photos?</h2>
+<h2>Need Professional Photos.?</h2>
 
 <p>If you're planning on inviting me somewhere or require professional photos for any reason, feel free to <a href="/professional/" style="color: #007acc; text-decoration: none; font-weight: bold;">view and download my professional photos here</a>.</p>
