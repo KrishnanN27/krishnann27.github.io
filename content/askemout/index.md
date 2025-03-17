@@ -23,7 +23,7 @@ hidden: true
   <img src="/gif/dawg.gif" alt="Cute Dog GIF" class="responsive-gif" />
 
   <div class="message">
-    <h1 class="crazy-text">Since Feb 14 is coming up...<br>Why don’t you be  the <span class="highlight">1 4</span> me? 💘</h1>
+    <h1 class="crazy-text">Since Feb 14 is coming up.asdads..<br>Why don’t you be  the <span class="highlight">1 4</span> me? 💘</h1>
     <h2>Will you be my Valentine? 💕</h2>
   </div>
 
