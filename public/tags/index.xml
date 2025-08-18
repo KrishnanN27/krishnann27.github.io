@@ -2,178 +2,143 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on </title>
-    <link>/tags/</link>
+    <link>//localhost:1313/tags/</link>
     <description>Recent content in Tags on </description>
-    <generator>Hugo -- 0.131.0</generator>
+    <generator>Hugo -- 0.148.2</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 12 Sep 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>DNS Configuration</title>
-      <link>/tags/dns-configuration/</link>
-      <pubDate>Thu, 12 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/dns-configuration/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Domain Hosting</title>
-      <link>/tags/domain-hosting/</link>
-      <pubDate>Thu, 12 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/domain-hosting/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>GitHub Pages</title>
-      <link>/tags/github-pages/</link>
-      <pubDate>Thu, 12 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/github-pages/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Guidance</title>
-      <link>/tags/guidance/</link>
-      <pubDate>Thu, 12 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/guidance/</guid>
-      <description></description>
-    </item>
+    <atom:link href="//localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Index</title>
-      <link>/tags/index/</link>
+      <link>//localhost:1313/tags/index/</link>
       <pubDate>Thu, 12 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/index/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>SSL</title>
-      <link>/tags/ssl/</link>
-      <pubDate>Thu, 12 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/ssl/</guid>
+      <guid>//localhost:1313/tags/index/</guid>
       <description></description>
     </item>
     <item>
       <title>Distraction</title>
-      <link>/tags/distraction/</link>
+      <link>//localhost:1313/tags/distraction/</link>
       <pubDate>Sun, 08 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/distraction/</guid>
+      <guid>//localhost:1313/tags/distraction/</guid>
       <description></description>
     </item>
     <item>
       <title>Experience</title>
-      <link>/tags/experience/</link>
+      <link>//localhost:1313/tags/experience/</link>
       <pubDate>Sun, 08 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/experience/</guid>
+      <guid>//localhost:1313/tags/experience/</guid>
       <description></description>
     </item>
     <item>
       <title>Focus</title>
-      <link>/tags/focus/</link>
+      <link>//localhost:1313/tags/focus/</link>
       <pubDate>Sun, 08 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/focus/</guid>
+      <guid>//localhost:1313/tags/focus/</guid>
       <description></description>
     </item>
     <item>
       <title>Help</title>
-      <link>/tags/help/</link>
+      <link>//localhost:1313/tags/help/</link>
       <pubDate>Sun, 08 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/help/</guid>
+      <guid>//localhost:1313/tags/help/</guid>
       <description></description>
     </item>
     <item>
       <title>Productivity</title>
-      <link>/tags/productivity/</link>
+      <link>//localhost:1313/tags/productivity/</link>
       <pubDate>Sun, 08 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/productivity/</guid>
+      <guid>//localhost:1313/tags/productivity/</guid>
       <description></description>
     </item>
     <item>
       <title>Self-Improvement</title>
-      <link>/tags/self-improvement/</link>
+      <link>//localhost:1313/tags/self-improvement/</link>
       <pubDate>Sun, 08 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/self-improvement/</guid>
+      <guid>//localhost:1313/tags/self-improvement/</guid>
       <description></description>
     </item>
     <item>
       <title>Students</title>
-      <link>/tags/students/</link>
+      <link>//localhost:1313/tags/students/</link>
       <pubDate>Sun, 08 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/students/</guid>
+      <guid>//localhost:1313/tags/students/</guid>
       <description></description>
     </item>
     <item>
       <title>Achievement</title>
-      <link>/tags/achievement/</link>
+      <link>//localhost:1313/tags/achievement/</link>
       <pubDate>Mon, 02 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/achievement/</guid>
+      <guid>//localhost:1313/tags/achievement/</guid>
       <description></description>
     </item>
     <item>
       <title>Coding</title>
-      <link>/tags/coding/</link>
+      <link>//localhost:1313/tags/coding/</link>
       <pubDate>Mon, 02 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/coding/</guid>
+      <guid>//localhost:1313/tags/coding/</guid>
       <description></description>
     </item>
     <item>
       <title>Hackathon</title>
-      <link>/tags/hackathon/</link>
+      <link>//localhost:1313/tags/hackathon/</link>
       <pubDate>Mon, 02 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/hackathon/</guid>
+      <guid>//localhost:1313/tags/hackathon/</guid>
       <description></description>
     </item>
     <item>
       <title>India</title>
-      <link>/tags/india/</link>
+      <link>//localhost:1313/tags/india/</link>
       <pubDate>Mon, 02 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/india/</guid>
+      <guid>//localhost:1313/tags/india/</guid>
       <description></description>
     </item>
     <item>
       <title>International Students</title>
-      <link>/tags/international-students/</link>
+      <link>//localhost:1313/tags/international-students/</link>
       <pubDate>Mon, 02 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/international-students/</guid>
+      <guid>//localhost:1313/tags/international-students/</guid>
       <description></description>
     </item>
     <item>
       <title>Travel</title>
-      <link>/tags/travel/</link>
+      <link>//localhost:1313/tags/travel/</link>
       <pubDate>Mon, 02 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/travel/</guid>
+      <guid>//localhost:1313/tags/travel/</guid>
       <description></description>
     </item>
     <item>
       <title>US</title>
-      <link>/tags/us/</link>
+      <link>//localhost:1313/tags/us/</link>
       <pubDate>Mon, 02 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/us/</guid>
+      <guid>//localhost:1313/tags/us/</guid>
       <description></description>
     </item>
     <item>
       <title>Life-Lessons</title>
-      <link>/tags/life-lessons/</link>
+      <link>//localhost:1313/tags/life-lessons/</link>
       <pubDate>Fri, 02 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/life-lessons/</guid>
+      <guid>//localhost:1313/tags/life-lessons/</guid>
       <description></description>
     </item>
     <item>
       <title>Mindset</title>
-      <link>/tags/mindset/</link>
+      <link>//localhost:1313/tags/mindset/</link>
       <pubDate>Fri, 02 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/mindset/</guid>
+      <guid>//localhost:1313/tags/mindset/</guid>
       <description></description>
     </item>
     <item>
       <title>Motivation</title>
-      <link>/tags/motivation/</link>
+      <link>//localhost:1313/tags/motivation/</link>
       <pubDate>Fri, 02 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/motivation/</guid>
+      <guid>//localhost:1313/tags/motivation/</guid>
       <description></description>
     </item>
     <item>
       <title>Personal-Growth</title>
-      <link>/tags/personal-growth/</link>
+      <link>//localhost:1313/tags/personal-growth/</link>
       <pubDate>Fri, 02 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/personal-growth/</guid>
+      <guid>//localhost:1313/tags/personal-growth/</guid>
       <description></description>
     </item>
   </channel>

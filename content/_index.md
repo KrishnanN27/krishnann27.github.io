@@ -12,7 +12,7 @@ description: "Code & Canvas of Krish."
     <!-- Right: Content -->
     <div style="flex: 2 1 500px; padding: 10px;">
         <p style="line-height: 1.8; margin-bottom: 1rem; margin-top: 0;">
-            Here, you'll find my thoughts, experiences, and projects across various areas of interest. Feel free to explore the different sections below to learn more about my work and writings, or 
+            Here, you'll find my thoughts, experiences, and projects across various areas of interest. Feel free to explore the different sections below to learn more about my work and writings, or
             <a href="/connect/" style="color: #007acc; text-decoration: none; font-weight: bold;">
                 connect with me
             </a>

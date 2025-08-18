@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>GitHub Pages on </title>
-    <link>/tags/github-pages/</link>
+    <link>//localhost:1313/tags/github-pages/</link>
     <description>Recent content in GitHub Pages on </description>
-    <generator>Hugo -- 0.131.0</generator>
+    <generator>Hugo -- 0.148.2</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 12 Sep 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/github-pages/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/tags/github-pages/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How I Finally Hosted a Domain: Patience is Key</title>
-      <link>/posts/finally_i_got_a_domain_for_myself/</link>
+      <link>//localhost:1313/posts/finally_i_got_a_domain_for_myself/</link>
       <pubDate>Thu, 12 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>/posts/finally_i_got_a_domain_for_myself/</guid>
+      <guid>//localhost:1313/posts/finally_i_got_a_domain_for_myself/</guid>
       <description>A step-by-step guide to hosting a custom domain on GitHub Pages, including tips, challenges, and solutions.</description>
     </item>
   </channel>
