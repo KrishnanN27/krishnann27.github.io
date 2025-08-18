@@ -6,10 +6,9 @@ description = "A recount of my first hackathon experience where I not only parti
 tags = ["hackathon", "experience", "achievement", "coding"]
 +++
 
-Participating in my first-ever hackathon was a **wild ride**.<!--more--> As someone *new* to the hackathon scene, I didn’t really know what to expect. But with some **determination**, **teamwork**, and a little bit of luck, my team and I managed not just to participate—but actually **win**!
+Participating in my first-ever hackathon was a **wild ride**.<!--more--> As someone _new_ to the hackathon scene, I didn’t really know what to expect. But with some **determination**, **teamwork**, and a little bit of luck, my team and I managed not just to participate—but actually **win**!
 
-
-{{< figure src="/images/hb/h.jpeg" alt="Hackathon Image 1" caption="The Hackathon Kickoff!" style="width: 50%; height: auto; margin: auto;" >}}
+<!-- {{< figure src="/images/hb/h.jpeg" alt="Hackathon Image 1" caption="The Hackathon Kickoff!" style="width: 50%; height: auto; margin: auto;" >}} -->
 
 ## The Journey Begins
 
@@ -21,7 +20,7 @@ When I got into the car, my friend casually mentioned, “Let’s just have a go
 
 When the hackathon kicked off, while the other teams were diving into their projects, we were still trying to figure out what to build. But we had one advantage: we were all grad students. I had some app development experience, so I suggested we use **Flutter**. The first few hours were spent watching tutorials just to get it installed. My friend and I also procrastinated a bit—we still had homework to do—so it wasn’t an easy start. It’s funny looking back now, but there was definitely some tension in the air.
 
-## Building the Project: *Echoes of Equality*
+## Building the Project: _Echoes of Equality_
 
 With my background in app development, I took charge of setting up the architecture and showing everyone what was possible with Flutter. As we started implementing features, we all began to feel a bit more confident.
 
