@@ -31,10 +31,10 @@ buildFuture = true
 # The types of outputs to generate for the homepage.
 # RSS is required to create RSS feeds, and JSON is needed for the search to function.
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
-  section = ["HTML", "RSS"]
+  home     = ["HTML", "RSS", "JSON"]
+  section  = ["HTML", "RSS"]
   taxonomy = ["HTML", "RSS"]
-  taxonomyTerm = ["HTML", "RSS"]
+
 
 
 # Sitemap setting
