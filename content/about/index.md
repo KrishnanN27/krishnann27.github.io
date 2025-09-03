@@ -1,9 +1,6 @@
 ---
 title: "Get to Know More"
 date: 2024-09-01
-hidden: false
-externalURL: false
-showComments: false
 ---
 
 <div style="max-width: 720px; margin: 0 auto; padding: 30px 0;">
@@ -46,8 +43,6 @@ showComments: false
     </div>
 </div>
 
-
-
 <!-- JavaScript to handle image loading -->
 <!-- JavaScript to handle image loading properly -->
 <script>
@@ -76,7 +71,7 @@ showComments: false
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
   }
-  
+
   /* Ensure image is responsive and maintains proper aspect ratio */
   @media (max-width: 768px) {
     div[style*="max-width: 720px"] {
