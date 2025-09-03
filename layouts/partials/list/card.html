@@ -1,17 +1,27 @@
-{{ $showDate := .showDate }}
-{{ $lvl := .lvl }}
-{{ with .page }}
-<li>
-    <h3> <!-- Change this from h{{$lvl}} to h3 -->
-    {{ with .Params.externalUrl }}
-        <a href="{{ . }}" target="_blank" rel="external">
-    {{ else }}
-        <a href="{{ .RelPermalink }}">
-    {{ end }}
-    {{ .LinkTitle | emojify }} </a>
-    </h3>
-    {{ partial "single/meta.html" . }}
-    {{ template "partials/home/pg-desc.html" . }}
+{{/* layouts/partials/list/card.html */}} {{ $p := .page }}
+<li class="post-card">
+  <a class="post-link" href="{{ $p.RelPermalink }}">
+    {{ $img := or $p.Params.featuredImage (or $p.Params.cover (or
+    $p.Params.image nil)) }} {{ if not $img }} {{ with $p.Resources.GetMatch
+    "featured.*" }}{{ $img = .RelPermalink }}{{ end }} {{ end }}
+    <div class="post-media">
+      {{ if $img }}<img src="{{ $img }}" alt="{{ $p.Title }}" />{{ end }}
+    </div>
+    <div class="post-body">
+      <p class="post-eyebrow">
+        {{ $p.Date.Format "Jan 2, 2006" }}{{ with $p.ReadingTime }} · {{ . }}
+        min read{{ end }}
+      </p>
+      <h3 class="post-title">{{ $p.Title }}</h3>
+      <p class="post-desc">
+        {{ with $p.Params.description }}{{ . }}{{ else }}{{ $p.Summary |
+        plainify | truncate 140 }}{{ end }}
+      </p>
+      <div class="post-meta">
+        {{ with $p.Params.tags }} {{ range first 3 . }}<span class="tag"
+          >#{{ . }}</span
+        >{{ end }} {{ end }}
+      </div>
+    </div>
+  </a>
 </li>
-
-{{ end }}

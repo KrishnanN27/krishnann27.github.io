@@ -1,11 +1,4 @@
-{{ define "main" }}
-    {{ if templates.Exists "partials/homepage.html" }}
-        {{ partial "homepage.html" . }}
-    {{ else }}
-        {{ partial "home/profile.html" . }}
-    {{ end }}
-    {{ partial "home/updates.html" . }}
-    {{ partial "home/recents.html" . }}
-    
-
-{{ end }}
+{{ define "main" }} {{ if templates.Exists "partials/homepage.html" }} {{
+partial "homepage.html" . }} {{ else }} {{ partial "home/profile.html" . }} {{
+end }} {{/* {{ partial "home/updates.html" . }} */}} {{ partial
+"home/recents.html" . }} {{ end }}

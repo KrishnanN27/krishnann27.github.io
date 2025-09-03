@@ -1,25 +1,38 @@
-{{ $showRecent := .Site.Params.homepage.showRecent | default true }}
-{{ $showRecentLabel := .Site.Params.homepage.showRecentLabel | default "Recent" }}
-{{ $showRecentItems := .Site.Params.homepage.showRecentItems | default 3 }}
-{{ $showReadMore := .Site.Params.homepage.showReadMore | default true }}
-{{ $showMore := .Site.Params.homepage.showMore | default false }}
-{{ $showMoreDest := .Site.Params.homepage.showMoreDest | default "/posts" }}
+{{ $showRecent := .Site.Params.homepage.showRecent | default true }} {{
+$showRecentLabel := .Site.Params.homepage.showRecentLabel | default "Recent" }}
+{{ $showRecentItems := .Site.Params.homepage.showRecentItems | default 3 }} {{
+$showReadMore := .Site.Params.homepage.showReadMore | default true }} {{
+$showMore := .Site.Params.homepage.showMore | default false }} {{ $showMoreDest
+:= .Site.Params.homepage.showMoreDest | default "/posts" }} {{ if $showRecent }}
+<div class="featured" style="margin-top: 30px">
+  <h2
+    style="
+      border-bottom: 2px solid #007acc;
+      display: inline-block;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+    "
+  >
+    {{ $showRecentLabel }}
+  </h2>
 
-{{ if $showRecent }}
-<div class="featured" style="margin-top: 30px;">
-  <h2 style="border-bottom: 2px solid #007acc; display: inline-block; padding-bottom: 5px; margin-bottom: 10px;">{{ $showRecentLabel }}</h2>
-  
   {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
   {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
-  
-  <ul class="lst-card" style="list-style-type: none; padding: 0; margin: 20px 0;">
-    {{ range first $showRecentItems $paginator.Pages }}
-      {{ partial "list/card.html" (dict "page" . "lvl" 2) }}
-    {{ end }}
+
+  <ul
+    class="lst-card"
+    style="list-style-type: none; padding: 0; margin: 20px 0"
+  >
+    {{ range first $showRecentItems $paginator.Pages }} {{ partial
+    "list/card.html" (dict "page" . "lvl" 2) }} {{ end }}
   </ul>
 
   {{ if $showMore }}
-  <p style="margin-top: 15px;"><a href="{{ $showMoreDest }}" style="color: #007acc; text-decoration: none;">Show more posts</a></p>
+  <p style="margin-top: 15px">
+    <a href="{{ $showMoreDest }}" style="color: #007acc; text-decoration: none"
+      >Show more posts</a
+    >
+  </p>
   {{ end }}
 </div>
 {{ end }}
