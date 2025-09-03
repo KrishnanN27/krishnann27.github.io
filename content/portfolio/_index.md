@@ -1,9 +1,8 @@
 ---
-
 title: "Portfolio"
 date: 2024-09-01
-draft: true
 ---
+
 <div class="section-spacing"></div>
 
 <div class="note">
@@ -11,7 +10,7 @@ draft: true
   <div>
     <div class="note-content">Note</div>
     <div class="note-text">
-      This page provides an in-depth overview of my work experience and projects. For a concise summary, please refer to my 
+      This page provides an in-depth overview of my work experience and projects. For a concise summary, please refer to my
       <a href="/CV_Sowndarya_Krishnan.pdf" target="_blank">CV</a>.
     </div>
   </div>
@@ -41,8 +40,6 @@ draft: true
 
 <div class="section-spacing"></div>
 
-
-
 <div class="section-spacing"></div>
 
 <div class="note">
@@ -50,14 +47,13 @@ draft: true
   <div>
     <div class="note-content">Software Engineering in Research</div> <!-- Updated title -->
     <div class="note-text">
-      Alongside my thesis, I'm working on several development-oriented side projects, integrating software engineering principles within my research. You can explore more about my research and these projects 
+      Alongside my thesis, I'm working on several development-oriented side projects, integrating software engineering principles within my research. You can explore more about my research and these projects
       <a href="/research" style="color: #007acc; font-weight: bold; text-decoration: none;">here</a>.
     </div>
   </div>
 </div>
 
 <div class="section-spacing"></div>
-
 
 ## Notable Awards & Participation
 
@@ -69,11 +65,11 @@ draft: true
     <p><strong>Colorado School of Mines</strong></p>
     <ul>
       <li>
-        Won the Best Poster Presentation Award at the CMAPP Honors Event for delivering the 
-        <strong><em>Best Pitch</em></strong> and presenting the 
+        Won the Best Poster Presentation Award at the CMAPP Honors Event for delivering the
+        <strong><em>Best Pitch</em></strong> and presenting the
         <strong><em>Best Poster</em></strong>.
       </li>
-      <li> 
+      <li>
         📄 <a href="/flowshacl.pdf" target="_blank" style="color: #007acc; text-decoration: none;">
           View FlowSHACL Poster
         </a>
@@ -89,7 +85,6 @@ draft: true
     </div>
   </div>
 </details>
-
 
 <details class="work-details" open>
   <summary class="work-summary">
@@ -125,7 +120,6 @@ draft: true
   </div>
 </details>
 
-
 <details class="work-details" open>
   <summary class="work-summary">
     C-MAPP EVENT | Presenter (Jan 2022)
@@ -141,13 +135,6 @@ draft: true
     </div>
   </div>
 </details>
-
-
-
-
-
-
-
 
 <!-- CSS for uniform image sizes -->
 <style>
@@ -188,7 +175,6 @@ draft: true
 
 <div class="section-spacing"></div>
 
-
 <h2 id="education">Education</h2>
 
 <!-- First Education Item -->
@@ -200,7 +186,7 @@ draft: true
     </span>
   </summary>
   <div class="education-details">
-    <p>I am pursuing my MS Thesis in Computer Science with a focus on <strong>Data Driven Cyber-physical systems</strong> 
+    <p>I am pursuing my MS Thesis in Computer Science with a focus on <strong>Data Driven Cyber-physical systems</strong>
     <p>Currently working under <a href="https://gtf.fyi/" target="_blank">Dr. Gabe Fierro</a> at the <a href="https://datadrivencps.github.io/website/" target="_blank">DataDrivenCPS lab</a>.</p>
     <p><strong>Notable classes I took include:</strong></p>
     <ul>
