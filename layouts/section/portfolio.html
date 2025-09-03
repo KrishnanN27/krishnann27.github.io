@@ -1,9 +1,8 @@
 {{ define "main" }}
 
 <!-- SCOPED RESET: stop main.css from bleeding into the CV area -->
+<!-- SCOPED RESET: stop main.css from bleeding into the CV area -->
 <style>
-  /* Reset everything *inside* the CV to browser defaults,
-       then let portfolio.css re-apply intended styling */
   /* --- CV: active TOC link --- */
   .cv-shell .cv-toc a.active {
     background: var(--secondary-color-dark);
@@ -35,7 +34,6 @@
   }
 
   /* --- CV: “current section” box so you see where you are --- */
-  /* add class="cv-section" to your h2/h3 wrappers (or sections) in the content */
   .cv-shell .cv-body .cv-section.inview {
     background: var(--secondary-color-dark);
     outline: 1px solid var(--border-color);
@@ -43,7 +41,6 @@
     transition: background 120ms ease, outline-color 120ms ease;
   }
 
-  /* some comfy spacing inside highlighted sections */
   .cv-shell .cv-body .cv-section.inview > *:first-child {
     margin-top: 0.5rem;
   }
@@ -51,20 +48,47 @@
     margin-bottom: 0.5rem;
   }
 
-  /* --- CV: sticky TOC (nice QoL) --- */
+  /* --- CV: sticky TOC --- */
   .cv-shell .cv-toc-wrap {
     position: sticky;
     top: 1rem;
     align-self: start;
   }
 
-  /* keep buttons/pills using your theme tokens even after reset */
+  /* keep buttons/pills themed */
   .cv-shell .btn,
   .cv-shell .pill {
     background: var(--background-fg);
     border: 1px solid var(--border-color);
     color: var(--primary-color);
     border-radius: var(--radius);
+  }
+
+  /* --- REMOVE prefixes (hyphens/arrows) inside CV --- */
+  .cv-shell ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .cv-shell ul li::before {
+    content: none !important;
+  }
+
+  .cv-shell h1::before,
+  .cv-shell h2::before,
+  .cv-shell h3::before,
+  .cv-shell h4::before,
+  .cv-shell h5::before,
+  .cv-shell h6::before,
+  .cv-shell figure h4::before {
+    content: none !important;
+  }
+
+  .cv-shell .cv-toc ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .cv-shell .cv-toc li::before {
+    content: none !important;
   }
 </style>
 

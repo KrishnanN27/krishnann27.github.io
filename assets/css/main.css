@@ -5,6 +5,24 @@ p {
   font-size: 0.95rem; /* Slightly larger for general text */
   line-height: 1.6; /* Comfortable line height for readability */
 }
+/* REMOVE all underlines and border-bottoms from links */
+a,
+a:hover,
+a:focus,
+a:active,
+a:visited,
+#main-menu a,
+#main-menu a:hover,
+#main-menu a.active,
+.main-menu a.lnk,
+.meta a,
+.socials a,
+.breadcrumbs a,
+.pg-title a,
+.pagination a {
+  text-decoration: none !important;
+  border: none !important;
+}
 
 body {
   font-family: var(--ff-body);
@@ -336,7 +354,7 @@ details[open] div {
 
 .content {
   margin: 0 auto;
-  max-width: 900px;
+  width: min(90%, 1200px); /* fluid up to 1200px, with side gutters */
 }
 
 /* Header */

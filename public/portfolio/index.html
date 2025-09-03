@@ -466,8 +466,8 @@
         
 
 
+
 <style>
-   
    
   .cv-shell .cv-toc a.active {
     background: var(--secondary-color-dark);
@@ -499,7 +499,6 @@
   }
 
    
-   
   .cv-shell .cv-body .cv-section.inview {
     background: var(--secondary-color-dark);
     outline: 1px solid var(--border-color);
@@ -507,7 +506,6 @@
     transition: background 120ms ease, outline-color 120ms ease;
   }
 
-   
   .cv-shell .cv-body .cv-section.inview > *:first-child {
     margin-top: 0.5rem;
   }
@@ -529,6 +527,33 @@
     border: 1px solid var(--border-color);
     color: var(--primary-color);
     border-radius: var(--radius);
+  }
+
+   
+  .cv-shell ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .cv-shell ul li::before {
+    content: none !important;
+  }
+
+  .cv-shell h1::before,
+  .cv-shell h2::before,
+  .cv-shell h3::before,
+  .cv-shell h4::before,
+  .cv-shell h5::before,
+  .cv-shell h6::before,
+  .cv-shell figure h4::before {
+    content: none !important;
+  }
+
+  .cv-shell .cv-toc ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .cv-shell .cv-toc li::before {
+    content: none !important;
   }
 </style>
 
