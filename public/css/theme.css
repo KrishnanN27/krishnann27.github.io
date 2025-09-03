@@ -1,48 +1,127 @@
 :root {
-  --ff: 'Ubuntu', sans-serif; /* Updated to Ubuntu */
+  /* keep your font + sizing system */
+  --ff-body: "JetBrains Mono", monospace;
+  --ff-heading: "JetBrains Mono", monospace;
+  --ff-code: "JetBrains Mono", monospace;
   --radius: 6px;
-  --primary-color: #292929;
-  --secondary-color: #EFEFE6;
-  --tertiary-color: #E0002D;
-  --link-color: #449DD1;
-  --tertiary-color-light: #FFB370;
-  --secondary-color-dark: #DFDFCD;
-  --black: #292929;
-  --code-bg: #272822; /*Monokai*/
-  --code-fg: #f8f8f2; /*Monokai*/
-  --code-scroll-thumb: #525252;
-  --scrollbar-track: #EFEFE6;
-  --scrollbar-thumb: #B7B78F;
 
-  /* Dynamic font sizes for responsiveness */
-  --font-size-base: clamp(1rem, 1.5vw, 1.2rem); /* Responsive base font size */
+  /* map to LIGHT palette */
+  /* text color on light bg */
+  --primary-color: #355265; /* = --color */
+  /* page background */
+  --secondary-color: #ffffff; /* = --background */
+  /* panels / cards / code / separators */
+  --secondary-color-dark: #ebebeb; /* = --background-fg2 */
+  /* accent stays your red unless you want to switch it */
+  --tertiary-color: #e0002d; /* keep your brand accent */
+  --tertiary-color-light: #ffb370; /* keep (used for subtle accents) */
+
+  /* links + hovers */
+  --link-color: #4b9dd0; /* = --color-hover (used on :hover in your CSS) */
+
+  /* misc shared vars you already use */
+  --black: #292929;
+
+  /* code colors (unchanged; you can swap later if you want) */
+  --code-bg: #272822; /* Monokai */
+  --code-fg: #f8f8f2; /* Monokai */
+
+  /* scrollbars */
+  --scrollbar-track: #f7f7f7; /* ~ --background-fg */
+  --scrollbar-thumb: #dddddd; /* ~ --border-color */
+
+  /* notes */
+  --note-bg-light: rgba(0, 122, 204, 0.1);
+  --note-color-light: #007acc; /* dark blue for light mode */
+  --note-color-dark: #add8e6; /* used only in .dark */
+  --summary-open-bg: rgba(0, 0, 0, 0.06); /* subtle expand bg on light */
+
+  /* responsive type (unchanged) */
+  --font-size-base: clamp(1rem, 1.5vw, 1.2rem);
   --heading-size-h1: clamp(1.8rem, 2.5vw, 2.2rem);
   --heading-size-h2: clamp(1.4rem, 2vw, 1.8rem);
-
-
-  --note-bg-light: rgba(0, 122, 204, 0.1);
-  
-  --note-color-light: #007acc; /* Dark blue for light mode */
-  --note-color-dark: #ADD8E6; /* Light blue for dark mode */
-  --summary-open-bg: rgba(0, 0, 0, 0.1); /* Light mode background */
 }
 
 .dark {
+  /* map to NIGHT palette */
+  /* text color on dark bg */
+  --primary-color: #cccccc; /* = night --color */
+  /* page background */
+  --secondary-color: #333333; /* = night --background */
+  /* panels / cards / code / separators */
+  --secondary-color-dark: #3a3a3a; /* = night --background-fg2 */
+
+  /* accent can stay your brand, but you can swap if you prefer cooler tones */
+  --tertiary-color: #ff7f11; /* you had this already; keep or set to #E0002D */
+  --tertiary-color-light: #a34c00;
+
+  /* link emphasis on dark. twilight’s cool cyan reads well */
+  --link-color: #66cccc; /* from night’s base16 (0C) */
+
+  /* scrollbars */
+  --scrollbar-track: #333333; /* match bg */
+  --scrollbar-thumb: #666666; /* lighter for contrast */
+
+  /* code colors (you’re using Monokai; keep for now) */
+  --code-bg: #272822;
+  --code-fg: #f8f8f2;
+  --code-scroll-thumb: #525252;
+
+  /* notes / open summary bg tuned for dark */
   --note-bg-dark: rgba(0, 122, 204, 0.2);
-  --primary-color: #F0F0F0; /* Lighter text color for dark mode */
-  --secondary-color: #292929;
-  --tertiary-color: #FF7F11;
-  --tertiary-color-light: #A34C00;
-  --secondary-color-dark: #4A4A3D; /* Lighter for better contrast */
-  --scrollbar-track: #292929;
-  --scrollbar-thumb: #737373; /* Lighter thumb for better contrast */
-  --summary-open-bg: rgba(255, 255, 255, 0.1);
+  --summary-open-bg: rgba(255, 255, 255, 0.08);
 }
 
+/* JetBrains Mono Regular */
 @font-face {
-  font-display: optional; /* Swaps fonts only if necessary */
-  font-family: 'Ubuntu'; /* Updated to Ubuntu */
+  font-family: "JetBrains Mono";
+  src: url("/fonts/JetBrainsMono-Regular.ttf") format("truetype");
+  font-weight: 400;
   font-style: normal;
-  font-weight: 400; /* Adjusted for regular weight */
-  src: url('../fonts/Ubuntu-Regular.woff2') format('woff2'); /* Updated font file */
+  font-display: swap;
+}
+
+/* JetBrains Mono Italic */
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/JetBrainsMono-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* JetBrains Mono Medium */
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/JetBrainsMono-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* JetBrains Mono Medium Italic */
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/JetBrainsMono-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* JetBrains Mono Bold */
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/JetBrainsMono-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* JetBrains Mono Bold Italic */
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/JetBrainsMono-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
 }

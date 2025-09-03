@@ -1,72 +1,66 @@
 @import url("theme.css");
 
+/* Custom Collapsible Style for Work Experience */
+.work-details {
+  background-color: transparent; /* Remove background color */
+  border: 1px solid var(--primary-color); /* Primary color border */
+  margin-bottom: 15px;
+  border-radius: var(--radius); /* Keep rounded corners */
+  padding: 0px; /* Remove extra padding */
+}
 
+.work-summary {
+  font-weight: bold;
+  color: var(--primary-color); /* Primary color for work titles */
+  cursor: pointer;
+  padding: 10px; /* Add padding for summary block */
+  background-color: transparent; /* Default no background */
+  display: flex;
+  align-items: center; /* Vertically align arrow and text */
+  transition: background-color 0.3s ease; /* Transition for background color */
+  border-radius: 0; /* Remove the corner rounding effect */
+}
 
-  /* Custom Collapsible Style for Work Experience */
-  .work-details {
-    background-color: transparent; /* Remove background color */
-    border: 1px solid var(--primary-color); /* Primary color border */
-    margin-bottom: 15px;
-    border-radius: var(--radius); /* Keep rounded corners */
-    padding: 0px; /* Remove extra padding */
-  }
-  
-  .work-summary {
-    font-weight: bold;
-    color: var(--primary-color); /* Primary color for work titles */
-    cursor: pointer;
-    padding: 10px; /* Add padding for summary block */
-    background-color: transparent; /* Default no background */
-    display: flex;
-    align-items: center; /* Vertically align arrow and text */
-    transition: background-color 0.3s ease; /* Transition for background color */
-    border-radius: 0; /* Remove the corner rounding effect */
-  }
-  
-  .work-summary::before {
-    content: '\25B6'; /* Unicode for right-pointing arrow */
-    margin-right: 10px; /* Space between arrow and text */
-    transition: transform 0.3s ease;
-  }
-  
-  .work-details[open] .work-summary {
-    background-color: var(--summary-open-bg); /* Background color when expanded */
-  }
-  
-  .work-details[open] .work-summary::before {
-    transform: rotate(90deg); /* Rotate to down-pointing arrow */
-  }
-  
-  .work-link i {
-    margin-left: 10px;
-    color: var(--link-color); /* Match link color to link color variable */
-  }
-  
-  .work-details div {
-    margin-top: 10px;
-    padding-left: 15px; /* Indent content slightly */
-    color: var(--primary-color); /* Ensure all text is primary color */
-  }
-  
-  .work-details ul {
-    margin: 0;
-    padding-left: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .work-details p i {
-    margin-right: 5px; /* Add space between icon and text */
-    color: var(--link-color); /* Use the link color for icons */
-  }
-  
+.work-summary::before {
+  content: "\25B6"; /* Unicode for right-pointing arrow */
+  margin-right: 10px; /* Space between arrow and text */
+  transition: transform 0.3s ease;
+}
 
+.work-details[open] .work-summary {
+  background-color: var(--summary-open-bg); /* Background color when expanded */
+}
 
+.work-details[open] .work-summary::before {
+  transform: rotate(90deg); /* Rotate to down-pointing arrow */
+}
+
+.work-link i {
+  margin-left: 10px;
+  color: var(--link-color); /* Match link color to link color variable */
+}
+
+.work-details div {
+  margin-top: 10px;
+  padding-left: 15px; /* Indent content slightly */
+  color: var(--primary-color); /* Ensure all text is primary color */
+}
+
+.work-details ul {
+  margin: 0;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.work-details p i {
+  margin-right: 5px; /* Add space between icon and text */
+  color: var(--link-color); /* Use the link color for icons */
+}
 
 .section-spacing {
   margin-top: 40px; /* Adjust the space as needed */
   margin-bottom: 40px;
 }
-
 
 /* Note down  */
 .note {
@@ -108,18 +102,28 @@
   text-decoration: underline;
 }
 
-
-
-body, p {
+body,
+p {
   font-size: 0.95rem; /* Slightly larger for general text */
   line-height: 1.6; /* Comfortable line height for readability */
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--ff); /* Consistent font */
-  font-weight: 700; /* Bold headings */
-  margin-bottom: 0.75rem; /* Spacing below headings */
-  line-height: 1.3; /* Compact line height for headings */
+body {
+  font-family: var(--ff-body);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--ff-heading);
+}
+code,
+pre,
+kbd,
+samp {
+  font-family: var(--ff-code);
 }
 
 h1 {
@@ -140,19 +144,15 @@ h4 {
   font-size: 1.2rem; /* Slightly larger than body text */
 }
 
-h5, h6 {
+h5,
+h6 {
   font-size: 1rem; /* Same size as body text but bold */
 }
 
-
-
-
 html {
   line-height: 1.5rem;
-  scroll-behavior:smooth
+  scroll-behavior: smooth;
 }
-
-
 
 /* Education Section Styling */
 .custom-title .section-title {
@@ -202,10 +202,14 @@ html {
   margin-top: 8px;
 }
 
-
 /* Red Callout (Header Section) with Blue Accent */
 .red-callout {
-  background-color: rgba(255, 59, 48, 0.2); /* Light red for a softer highlight */
+  background-color: rgba(
+    255,
+    59,
+    48,
+    0.2
+  ); /* Light red for a softer highlight */
   padding: 15px;
   border-radius: 12px;
   color: var(--primary-color);
@@ -238,12 +242,19 @@ html {
 
 .project-summary:hover {
   color: var(--link-color); /* Change to link color on hover */
-  background-color: var(--secondary-color-dark); /* Darker background on hover */
+  background-color: var(
+    --secondary-color-dark
+  ); /* Darker background on hover */
   border-radius: 8px; /* Keep corners rounded on hover */
 }
 
 .project-details[open] .project-summary {
-  background-color: rgba(0, 122, 204, 0.4); /* Light blue background with 80% opacity */
+  background-color: rgba(
+    0,
+    122,
+    204,
+    0.4
+  ); /* Light blue background with 80% opacity */
   color: #fff; /* White text when opened */
   border-radius: 8px; /* Keep rounded corners */
 }
@@ -269,12 +280,8 @@ html {
   color: var(--link-color); /* Use the same color for icons */
 }
 
-
-
-
-
 body {
-  font-family: var(--ff);
+  /* font-family: var(--ff); */
   background: var(--secondary-color);
   color: var(--primary-color);
   margin: 0 8px;
@@ -282,18 +289,10 @@ body {
   transition: background 50ms ease-in-out, color 50ms ease-in-out;
 }
 
-
-
-
-
 p i {
   margin-right: 5px; /* Add space between icon and text */
   color: #007acc; /* Same blue for icons */
 }
-
-
-
-
 
 header {
   display: flex;
@@ -333,7 +332,6 @@ footer {
   padding-top: 1rem;
 }
 
-
 ul {
   list-style-type: none;
   padding-left: 20px;
@@ -359,13 +357,13 @@ figcaption {
 }
 
 figure h4::before {
-  content: '↳ ';
+  content: "↳ ";
 }
 
 /* Code blocks */
 code {
   background-color: var(--secondary-color-dark);
-  padding: .1em .2em;
+  padding: 0.1em 0.2em;
   word-break: break-word;
   word-wrap: break-word;
   overflow: break-word;
@@ -379,7 +377,6 @@ pre {
   border-radius: var(--radius);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
-
 
 pre code {
   background-color: transparent;
@@ -397,8 +394,8 @@ pre:has(code) {
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
-.highlight>pre,
-.highlight>div {
+.highlight > pre,
+.highlight > div {
   border-radius: var(--radius);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
   overflow-x: auto;
@@ -419,13 +416,13 @@ table {
   border-collapse: collapse;
 }
 
-table th{
+table th {
   padding: 6px;
   border-bottom: 2px solid var(--tertiary-color);
   font-size: large;
 }
 
-table td{
+table td {
   padding: 6px;
   border-top: 1px solid var(--secondary-color-dark);
 }
@@ -450,8 +447,12 @@ details {
 
 /* Custom animation */
 @keyframes revealContent {
-0% { opacity: 0; }
-100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 details[open] div {
@@ -465,8 +466,8 @@ details[open] div {
 
 .header-cntr {
   display: flex;
-  justify-content:space-between;
-  width: 100%
+  justify-content: space-between;
+  width: 100%;
 }
 
 .content {
@@ -533,37 +534,34 @@ details[open] div {
 
 /* #main-menu a.active {
   border-bottom: 1px solid var(--tertiary-color); /* Thinner active underline */
-/* } */ */
-
-
-#main-menu a.active {
+/* } */
+/* */
+*/ #main-menu a.active {
   border-bottom: 2px solid var(--tertiary-color);
 }
 
 .mm-normal {
-  display: inline
+  display: inline;
 }
 
-.mm-mobile-open ul {
-  position: fixed;
-  padding: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(var(--secondary-color), 0.7);
-  z-index: 30;
-  transition: transform 0.3s ease-in-out;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+:root {
+  /* overlay tokens */
+  --overlay-scrim: rgba(0, 0, 0, 0.6);
+  --overlay-scrim-light: rgba(
+    255,
+    255,
+    255,
+    0.6
+  ); /* if you ever want a light scrim */
 }
 
-#mob-hb-icon, #mob-x-icon {
+.mm-mobile-open ul,
+#search-container {
+  background-color: var(--overlay-scrim);
+}
+
+#mob-hb-icon,
+#mob-x-icon {
   display: none;
   background-color: inherit;
 }
@@ -597,14 +595,14 @@ details[open] div {
   margin-bottom: 10px; /* Spacing between the title and content */
 }
 
-
-.main-menu a.lnk:hover, .socials-icon svg:hover {
+.main-menu a.lnk:hover,
+.socials-icon svg:hover {
   color: var(--link-color);
   border-bottom: 2px solid var(--tertiary-color);
 }
 
 .menu-btn svg,
-.copy-button svg{
+.copy-button svg {
   height: 1.1em;
   width: 1.1em;
   vertical-align: text-top;
@@ -690,8 +688,8 @@ body:not(.dark) #sun {
 }
 
 .socials-icon svg {
-  height:1.5em;
-  width:1.5em;
+  height: 1.5em;
+  width: 1.5em;
   border-bottom: 2px solid var(--secondary-color);
 }
 
@@ -707,7 +705,7 @@ body:not(.dark) #sun {
 
 .lst-basic,
 .lst-card {
-  margin-top: .2em;
+  margin-top: 0.2em;
 }
 
 .lst-card {
@@ -760,10 +758,9 @@ body:not(.dark) #sun {
   margin: 0px;
 }
 
-
-
 /* Meta */
-.meta p, .meta a {
+.meta p,
+.meta a {
   margin: 0;
   color: var(--primary-color);
 }
@@ -784,7 +781,7 @@ body:not(.dark) #sun {
   border: 1px solid var(--tertiary-color);
   padding: 2px;
   border-radius: var(--radius);
-  background: var(--tertiary-color-light );
+  background: var(--tertiary-color-light);
   margin: 0 2px;
 }
 
@@ -801,12 +798,13 @@ body:not(.dark) #sun {
 }
 
 .highlight-wrapper {
-  display:block;
+  display: block;
   border-radius: var(--radius);
 }
 
-pre, .highlight {
-  position:relative;
+pre,
+.highlight {
+  position: relative;
 }
 
 div.highlight:hover .copy-button,
@@ -817,12 +815,12 @@ pre:hover .copy-button {
 .copy-button {
   opacity: 0.8;
   display: none;
-  position:absolute;
-  top:2px;
-  right:2px;
-  z-index:10;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  z-index: 10;
   /*padding: 0.25rem 0.5rem;*/
-  cursor:pointer;
+  cursor: pointer;
   background-color: inherit;
   color: var(--code-fg);
   border: none;
@@ -833,9 +831,9 @@ pre:hover .copy-button {
 }
 
 .copy-textarea {
-  position:absolute;
-  z-index:-10;
-  opacity:0.05
+  position: absolute;
+  z-index: -10;
+  opacity: 0.05;
 }
 
 .showmore {
@@ -847,7 +845,7 @@ pre:hover .copy-button {
   color: var(--primary-color);
   background-color: var(--secondary-color);
   font-size: 1em;
-  padding: .2em .4em;
+  padding: 0.2em 0.4em;
   border-radius: var(--radius);
 }
 
@@ -863,7 +861,8 @@ pre:hover .copy-button {
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
-.pagenav .prev, .pagenav .next {
+.pagenav .prev,
+.pagenav .next {
   width: 50%;
   border: none;
   padding: 10px 20px;
@@ -888,7 +887,8 @@ pre:hover .copy-button {
   opacity: 0.5;
 }
 
-.pagenav .prev:hover, .pagenav .next:hover {
+.pagenav .prev:hover,
+.pagenav .next:hover {
   background-color: var(--tertiary-color-light);
   color: var(--primary-color);
 }
@@ -1034,7 +1034,7 @@ h4:hover .anchor,
 h5:hover .anchor,
 h6:hover .anchor {
   display: inline;
-  opacity: .7;
+  opacity: 0.7;
   color: var(--primary-color);
   user-select: none;
   text-decoration: none;
@@ -1050,7 +1050,8 @@ h6:hover .anchor {
   margin-bottom: 2px;
 }
 
-.gist .markdown-body .highlight pre, .gist .markdown-body pre {
+.gist .markdown-body .highlight pre,
+.gist .markdown-body pre {
   box-shadow: none;
 }
 
@@ -1076,20 +1077,20 @@ h6:hover .anchor {
 }
 
 .highlight pre::-webkit-scrollbar-track,
-.highlight>div::-webkit-scrollbar-track,
+.highlight > div::-webkit-scrollbar-track,
 pre code::-webkit-scrollbar-track {
   background: var(--code-bg) !important;
 }
 
 .highlight pre::-webkit-scrollbar-thumb,
-.highlight>div::-webkit-scrollbar-thumb,
+.highlight > div::-webkit-scrollbar-thumb,
 pre code::-webkit-scrollbar-thumb {
   background: var(--code-scroll-thumb) !important;
 }
 
 ::-webkit-scrollbar-thumb:hover,
 .highlight pre::-webkit-scrollbar-thumb:hover,
-.highlight>div::-webkit-scrollbar-thumb:hover,
+.highlight > div::-webkit-scrollbar-thumb:hover,
 pre code::-webkit-scrollbar-thumb:hover {
   background: var(--tertiary-color-light) !important;
 }
@@ -1173,7 +1174,7 @@ pre code::-webkit-scrollbar-thumb:hover {
 #search-query::-webkit-search-decoration,
 #search-query::-webkit-search-results-button,
 #search-query::-webkit-search-results-decoration {
-  display:none
+  display: none;
 }
 
 .search {
@@ -1231,7 +1232,7 @@ pre code::-webkit-scrollbar-thumb:hover {
 #search-results {
   background-color: var(--secondary-color-dark);
   flex-grow: 0;
-  margin: 10px .5em;
+  margin: 10px 0.5em;
   padding: 0;
   border-radius: var(--radius);
   overflow: auto;
@@ -1278,7 +1279,6 @@ pre code::-webkit-scrollbar-thumb:hover {
 #search-results a:hover {
   color: inherit;
 }
-
 
 .srch-title {
   font-size: 1.1em;

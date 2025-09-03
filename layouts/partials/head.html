@@ -1,5 +1,5 @@
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <meta http-equiv="content-language" content="{{ .Site.LanguageCode }}" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -22,94 +22,99 @@
       "knowsAbout": ["Computer Science", "SHACL", "Data-Driven CPS", "RDF"],
       "alumniOf": "Meenakshi Sundararajan Engineering College"
     }
-    </script>
-    
+  </script>
 
-  {{/* Title */}}
-  {{ if .IsHome }}
-  <title>{{ .Site.Title | emojify }} &middot; Sowndarya Krishnan Navaneetha Kannan - Home</title>
-  <meta name="title" content="{{ .Site.Title | emojify }} - Sowndarya Krishnan Navaneetha Kannan" />
+  {{/* Title */}} {{ if .IsHome }}
+  <title>
+    {{ .Site.Title | emojify }} &middot; Sowndarya Krishnan Navaneetha Kannan -
+    Home
+  </title>
+  <meta
+    name="title"
+    content="{{ .Site.Title | emojify }} - Sowndarya Krishnan Navaneetha Kannan"
+  />
   {{ else }}
-  <title>{{ .Title | emojify }} &middot; {{ .Site.Title | emojify }} - Sowndarya Krishnan Navaneetha Kannan</title>
-  <meta name="title" content="{{ .Title | emojify }} &middot; {{ .Site.Title | emojify }} - Sowndarya Krishnan Navaneetha Kannan" />
-  {{ end }}
-
-  {{/* Metadata */}}
-  {{ with (.Params.Summary | default .Params.Description) | default .Site.Params.description }}
-  <meta name="description" content="{{ . }} - Sowndarya Krishnan Navaneetha Kannan's portfolio and work." />
-  {{ end }}
-  {{ with .Params.Tags | default .Site.Params.keywords -}}
-  <meta name="keywords" content="Sowndarya Krishnan Navaneetha Kannan, Portfolio, Computer Science, Research, SHACL, DataDrivenCPS, {{ range . }}{{ . }}, {{ end -}}" />
+  <title>
+    {{ .Title | emojify }} &middot; {{ .Site.Title | emojify }} - Sowndarya
+    Krishnan Navaneetha Kannan
+  </title>
+  <meta
+    name="title"
+    content="{{ .Title | emojify }} &middot; {{ .Site.Title | emojify }} - Sowndarya Krishnan Navaneetha Kannan"
+  />
+  {{ end }} {{/* Metadata */}} {{ with (.Params.Summary | default
+  .Params.Description) | default .Site.Params.description }}
+  <meta
+    name="description"
+    content="{{ . }} - Sowndarya Krishnan Navaneetha Kannan's portfolio and work."
+  />
+  {{ end }} {{ with .Params.Tags | default .Site.Params.keywords -}}
+  <meta
+    name="keywords"
+    content="Sowndarya Krishnan Navaneetha Kannan, Portfolio, Computer Science, Research, SHACL, DataDrivenCPS, {{ range . }}{{ . }}, {{ end -}}"
+  />
   {{- end }}
   <link rel="canonical" href="{{ .Permalink }}" />
 
-  {{ partialCached "head/css.html" . }}
-  {{ partialCached "head/js.html" . }}
+  {{/* Preload Fonts (JetBrains Mono) */}} {{ $fonts :=
+  .Site.Params.preloadFonts | default (slice "fonts/JetBrainsMono-Regular.ttf"
+  "fonts/JetBrainsMono-Bold.ttf" "fonts/JetBrainsMono-Italic.ttf" ) }} {{ range
+  $fonts }} {{ $ext := lower (path.Ext .) }} {{ $type := cond (eq $ext ".woff2")
+  "font/woff2" (cond (eq $ext ".woff") "font/woff" "font/ttf") }}
+  <link
+    rel="preload"
+    href="{{ . | absURL }}"
+    as="font"
+    type="{{ $type }}"
+    crossorigin
+  />
+  {{ end }} {{/* Core CSS & JS */}} {{ partialCached "head/css.html" . }} {{
+  partialCached "head/js.html" . }} {{/* Icons */}} {{ if templates.Exists
+  "partials/favicons.html" }} {{ partialCached "favicons.html" .Site }} {{ else
+  }} <link rel="preload" href="{{ "icons/chrome.png" | relURL }}" as="image"
+  type="image/png"> <link rel="apple-touch-icon" sizes="180x180" href="{{
+  "icons/chrome.png" | relURL }}" /> <link rel="icon" type="image/png"
+  sizes="32x32" href="{{ "icons/chrome.png" | relURL }}" /> <link rel="icon"
+  type="image/png" sizes="16x16" href="{{ "icons/chrome.png" | relURL }}" />
+  <link rel="manifest" href="{{ "site.webmanifest" | relURL }}" /> {{ end }}
+  {{/* Open Graph Meta Tags */}} {{ template "_internal/opengraph.html" . }} {{
+  with .Params.coverImg }}
+  <meta property="og:image" content="{{ . | absURL }}" />
+  {{ end }} {{/* Twitter Card Meta Tags */}} {{ template
+  "_internal/twitter_cards.html" . }} {{ with .Params.coverImg }}
+  <meta name="twitter:image" content="{{ . | absURL }}" />
+  {{ end }} {{/* Additional Scripts */}} {{ partial "head/vendor.html" . }} {{/*
+  Analytics */}} {{ partialCached "analytics/main.html" . }} {{/* Site
+  Verification Meta Tags */}} {{ with .Site.Params.verification.google }}
+  <meta name="google-site-verification" content="{{ . }}" />
+  {{ end }} {{ with .Site.Params.verification.bing }}
+  <meta name="msvalidate.01" content="{{ . }}" />
+  {{ end }} {{ with .Site.Params.verification.pinterest }}
+  <meta name="p:domain_verify" content="{{ . }}" />
+  {{ end }} {{ with .Site.Params.verification.yandex }}
+  <meta name="yandex-verification" content="{{ . }}" />
+  {{ end }} {{/* Extend Head if Needed */}} {{ if templates.Exists
+  "partials/extend-head.html" }} {{ partialCached "extend-head.html" .Site }} {{
+  end }} {{/* RSS Feed Link */}} {{ with .OutputFormats.Get "rss" -}} {{ printf
+  `
+  <link rel="%q" type="%q" href="%q" title="%q" />
+  ` .Rel .MediaType.Type .Permalink site.Title | safeHTML }} {{ end }}
 
-  {{/* Icons */}}
-  {{/* Icons */}}
-  {{ if templates.Exists "partials/favicons.html" }}
-    {{ partialCached "favicons.html" .Site }}
-  {{ else }}
-    <link rel="preload" href="{{ "icons/chrome.png" | relURL }}" as="image" type="image/png">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ "icons/chrome.png" | relURL }}" />
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ "icons/chrome.png" | relURL }}" />
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ "icons/chrome.png" | relURL }}" />
-    <link rel="manifest" href="{{ "site.webmanifest" | relURL }}" />
-  {{ end }}
-
-
-  {{/* Open Graph Meta Tags */}}
-  {{ template "_internal/opengraph.html" . }}
-  {{ with .Params.coverImg }}
-    <meta property="og:image" content="{{ . | absURL }}" />
-  {{ end }}
-
-  {{/* Twitter Card Meta Tags */}}
-  {{ template "_internal/twitter_cards.html" . }}
-  {{ with .Params.coverImg }}
-    <meta name="twitter:image" content="{{ . | absURL }}" />
-  {{ end }}
-
-  {{/* Preload Fonts */}}
-  {{ $fonts := .Site.Params.preloadFonts | default (slice "fonts/Ubuntu-Regular.woff2") }}
-
-  {{ range $fonts }}
-    <link rel="preload" href="{{ . | absURL }}" as="font" type="font/woff2" crossorigin>
-  {{ end }}
-
-  {{/* Additional Scripts */}}
-  {{ partial "head/vendor.html" . }}
-
-  {{/* Analytics */}}
-  {{ partialCached "analytics/main.html" . }}
-
-  {{/* Site Verification Meta Tags */}}
-  {{ with .Site.Params.verification.google }}
-    <meta name="google-site-verification" content="{{ . }}" />
-  {{ end }}
-  {{ with .Site.Params.verification.bing }}
-    <meta name="msvalidate.01" content="{{ . }}" />
-  {{ end }}
-  {{ with .Site.Params.verification.pinterest }}
-    <meta name="p:domain_verify" content="{{ . }}" />
-  {{ end }}
-  {{ with .Site.Params.verification.yandex }}
-    <meta name="yandex-verification" content="{{ . }}" />
-  {{ end }}
-
-  {{/* Extend Head if Needed */}}
-  {{ if templates.Exists "partials/extend-head.html" }}
-  {{ partialCached "extend-head.html" .Site }}
-  {{ end }}
-
-  {{/* RSS Feed Link */}}
-  {{ with .OutputFormats.Get "rss" -}}
-    {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
-  {{ end }}
-  
   <!-- Add Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  />
+
+  <!-- Theme colors for browser chrome -->
+  <meta
+    name="theme-color"
+    media="(prefers-color-scheme: light)"
+    content="#ffffff"
+  />
+  <meta
+    name="theme-color"
+    media="(prefers-color-scheme: dark)"
+    content="#333333"
+  />
 </head>
