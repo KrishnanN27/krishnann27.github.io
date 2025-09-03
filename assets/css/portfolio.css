@@ -1,0 +1,212 @@
+/* Undo global list/link tweaks that break the CV */
+.cv-body a {
+  border-bottom: 0 !important;
+  text-decoration: none;
+}
+.cv-body a:hover {
+  text-decoration: underline;
+}
+
+.cv-body ul {
+  list-style: disc !important;
+  margin: 0.4rem 0 1rem 1.2rem;
+  padding-left: 0;
+}
+.cv-body li::before {
+  content: none !important;
+} /* cancels the global "-" bullets */
+
+.cv-body code,
+.cv-body pre {
+  box-shadow: none;
+  border-radius: 6px;
+} /* ignore site code block chrome */
+
+/* Keep your headings, sizes, and spacing safe */
+.cv-body h1,
+.cv-body h2,
+.cv-body h3,
+.cv-body h4,
+.cv-body h5,
+.cv-body h6 {
+  font-family: inherit; /* don't let main.css swap fonts */
+}
+
+/* --- Layout --- */
+.cv-shell {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+@media (max-width: 900px) {
+  .cv-shell {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .cv-toc-wrap {
+    position: static;
+    border-left: 0;
+    padding-left: 0;
+  }
+}
+
+/* --- Main content --- */
+.cv-body {
+  min-width: 0;
+  font-size: 1rem;
+  line-height: 1.75;
+  letter-spacing: 0.01em;
+  color: var(--color);
+}
+.cv-body h2 {
+  font-size: 1.6rem;
+  margin: 2rem 0 0.8rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.3rem;
+  font-weight: 600;
+}
+/* Role / Project headers (all h3) */
+.cv-body h3 {
+  font-size: 1rem;
+  margin: 1.4rem 0 0.4rem;
+  padding: 6px 10px;
+  background: var(--background-fg);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-weight: 600;
+  color: var(--color);
+}
+.cv-body .meta {
+  display: block;
+  font-size: 0.92rem;
+  color: var(--color3);
+  margin: 0.15rem 0 0.4rem;
+}
+.cv-body hr {
+  border: 0;
+  border-top: 1px solid var(--border-color);
+  margin: 18px 0 26px;
+}
+.cv-body p,
+.cv-body li {
+  line-height: 1.75;
+}
+.cv-body ul {
+  margin: 0.4rem 0 1rem 1.2rem;
+  padding: 0;
+}
+.cv-body li {
+  margin: 0.2rem 0;
+}
+
+/* --- Button --- */
+.btn {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 10px;
+  background: var(--background-fg);
+  color: var(--color);
+}
+
+/* --- TOC (H2 only) --- */
+.cv-toc-wrap {
+  position: sticky;
+  top: 90px;
+  align-self: start;
+  padding-left: 24px;
+  border-left: 1px solid var(--border-color);
+}
+.cv-toc {
+  font-size: 0.98rem;
+  color: var(--color);
+}
+.cv-toc #TableOfContents {
+  margin: 0;
+  padding: 0;
+}
+.cv-toc ul {
+  list-style: none;
+  margin: 8px 0;
+  padding-left: 0;
+}
+/* Show only top-level items (H2s). Hide nested lists (H3+) */
+.cv-toc ul ul {
+  display: none;
+}
+/* Spacing for top-level items */
+.cv-toc > #TableOfContents > ul > li {
+  margin: 8px 0;
+}
+/* Links */
+.cv-toc a {
+  display: block;
+  text-decoration: none;
+  color: var(--color);
+  border-radius: 8px;
+  padding: 6px 8px;
+  line-height: 1.4;
+  white-space: normal;
+  word-break: break-word;
+}
+/* Hover/active */
+.cv-toc a:hover,
+.cv-toc a.active {
+  background: var(--background-fg2);
+}
+
+/* --- Skills grid --- */
+.skills-grid {
+  display: grid;
+  gap: 16px;
+  margin-top: 0.5rem;
+}
+.skill-row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 16px;
+  align-items: start;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--border-color);
+}
+.skill-row:last-child {
+  border-bottom: 0;
+}
+@media (max-width: 640px) {
+  .skill-row {
+    grid-template-columns: 1fr;
+  }
+}
+.skill-cat {
+  font-weight: 600;
+  color: var(--color2);
+}
+.skill-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.pill {
+  display: inline-block;
+  padding: 6px 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  font-size: 0.92rem;
+  line-height: 1;
+  background: var(--background-fg2);
+  white-space: nowrap;
+  color: var(--color);
+}
+.cert-list {
+  margin: 0.5rem 0 0 0;
+  padding-left: 1.1rem;
+}
+.cert-list li {
+  margin: 0.35rem 0;
+}

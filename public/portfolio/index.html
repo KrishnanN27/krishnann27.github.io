@@ -120,13 +120,13 @@
   <link rel="manifest" href="/site.webmanifest" /> 
    <meta property="og:url" content="//localhost:1313/portfolio/">
   <meta property="og:title" content="Portfolio">
-  <meta property="og:description" content="NoteThis page provides an in-depth overview of my work experience and projects. For a concise summary, please refer to myCV.Work ExperienceSoftware Engineer - NCOMPASS TECH STUDIO PVT. LTD (May 2021 - May 2022)Location: Chennai, India">
+  <meta property="og:description" content="SummaryFirst-year PhD student in Computer Science at Colorado School of Mines, focusing on Quantum &amp; AI. Background in AI, knowledge graphs (RDF/SHACL), and scalable systems across research, interdisciplinary projects, and industry.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
    
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Portfolio">
-  <meta name="twitter:description" content="NoteThis page provides an in-depth overview of my work experience and projects. For a concise summary, please refer to myCV.Work ExperienceSoftware Engineer - NCOMPASS TECH STUDIO PVT. LTD (May 2021 - May 2022)Location: Chennai, India">
+  <meta name="twitter:description" content="SummaryFirst-year PhD student in Computer Science at Colorado School of Mines, focusing on Quantum &amp; AI. Background in AI, knowledge graphs (RDF/SHACL), and scalable systems across research, interdisciplinary projects, and industry.">
    
 
 
@@ -255,13 +255,6 @@
           </li>
           
           <li>
-            <a href="/research/" aria-label="Research" style="text-decoration: none; display: flex; align-items: center; gap: 0.25rem;">
-              
-              Research
-            </a>
-          </li>
-          
-          <li>
             <a href="/posts/" aria-label="Posts" style="text-decoration: none; display: flex; align-items: center; gap: 0.25rem;">
               
               Posts
@@ -272,20 +265,6 @@
             <a href="/gallery/" aria-label="Gallery" style="text-decoration: none; display: flex; align-items: center; gap: 0.25rem;">
               
               Gallery
-            </a>
-          </li>
-          
-          <li>
-            <a href="/connect/" aria-label="Connect" style="text-decoration: none; display: flex; align-items: center; gap: 0.25rem;">
-              
-              Connect
-            </a>
-          </li>
-          
-          <li>
-            <a href="/tags/" aria-label="tags" style="text-decoration: none; display: flex; align-items: center; gap: 0.25rem;">
-              
-              Tags
             </a>
           </li>
           
@@ -485,71 +464,201 @@
 
       <main>
         
-  
-  
-  
-  
-  
-  
+
+
+<style>
+   
+   
+  .cv-shell .cv-toc a.active {
+    background: var(--secondary-color-dark);
+    border: 1px solid var(--border-color);
+    color: var(--primary-color);
+    border-radius: var(--radius);
+  }
+
+   
+  .cv-shell .cv-toc a:hover {
+    background: var(--secondary-color-dark);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+  }
+
+   
+  .cv-shell .cv-body details[open] {
+    background: var(--summary-open-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 0.5rem 0.75rem;
+    margin: 0.5rem 0;
+  }
+
+   
+  .cv-shell .cv-body summary {
+    cursor: pointer;
+    color: var(--primary-color);
+  }
+
+   
+   
+  .cv-shell .cv-body .cv-section.inview {
+    background: var(--secondary-color-dark);
+    outline: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    transition: background 120ms ease, outline-color 120ms ease;
+  }
+
+   
+  .cv-shell .cv-body .cv-section.inview > *:first-child {
+    margin-top: 0.5rem;
+  }
+  .cv-shell .cv-body .cv-section.inview > *:last-child {
+    margin-bottom: 0.5rem;
+  }
+
+   
+  .cv-shell .cv-toc-wrap {
+    position: sticky;
+    top: 1rem;
+    align-self: start;
+  }
+
+   
+  .cv-shell .btn,
+  .cv-shell .pill {
+    background: var(--background-fg);
+    border: 1px solid var(--border-color);
+    color: var(--primary-color);
+    border-radius: var(--radius);
+  }
+</style>
 
 
 
+<link rel="stylesheet" href="/css/portfolio.min.38c25d9cce6c7d3a66022da5aa91269ab73ca666282e93990ae28247b8d5128b.css" />
 
-
-
-
-
-
-
-
-
+<div class="cv-shell">
+  <article class="cv-body">
     
-    
-    
-<ul class="breadcrumbs">
-  <li><a href="//localhost:1313/">
-
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="currentColor" d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></svg>
-
-
-</a></li>
+    <a class="btn" href="/files/Krish-CV.pdf" target="_blank" rel="noopener"
+      >📄 Download CV</a
+    >
+     
+<h2 id="summary">
+  Summary
   
-    
+  <a hidden class="anchor" href="#summary">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M172.5 131.1C228.1 75.51 320.5 75.51 376.1 131.1C426.1 181.1 433.5 260.8 392.4 318.3L391.3 319.9C381 334.2 361 337.6 346.7 327.3C332.3 317 328.9 297 339.2 282.7L340.3 281.1C363.2 249 359.6 205.1 331.7 177.2C300.3 145.8 249.2 145.8 217.7 177.2L105.5 289.5C73.99 320.1 73.99 372 105.5 403.5C133.3 431.4 177.3 435 209.3 412.1L210.9 410.1C225.3 400.7 245.3 404 255.5 418.4C265.8 432.8 262.5 452.8 248.1 463.1L246.5 464.2C188.1 505.3 110.2 498.7 60.21 448.8C3.741 392.3 3.741 300.7 60.21 244.3L172.5 131.1zM467.5 380C411 436.5 319.5 436.5 263 380C213 330 206.5 251.2 247.6 193.7L248.7 192.1C258.1 177.8 278.1 174.4 293.3 184.7C307.7 194.1 311.1 214.1 300.8 229.3L299.7 230.9C276.8 262.1 280.4 306.9 308.3 334.8C339.7 366.2 390.8 366.2 422.3 334.8L534.5 222.5C566 191 566 139.1 534.5 108.5C506.7 80.63 462.7 76.99 430.7 99.9L429.1 101C414.7 111.3 394.7 107.1 384.5 93.58C374.2 79.2 377.5 59.21 391.9 48.94L393.5 47.82C451 6.731 529.8 13.25 579.8 63.24C636.3 119.7 636.3 211.3 579.8 267.7L467.5 380z"/></svg>
+
+
+ </a>
   
+</h2>
+<p>First-year <strong>PhD student in Computer Science</strong> at <strong>Colorado School of Mines</strong>, focusing on <strong>Quantum &amp; AI</strong>.
+Background in AI, knowledge graphs (RDF/SHACL), and scalable systems across research, interdisciplinary projects, and industry.</p>
+<hr>
+
+<h2 id="education">
+  Education
+  
+  <a hidden class="anchor" href="#education">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M172.5 131.1C228.1 75.51 320.5 75.51 376.1 131.1C426.1 181.1 433.5 260.8 392.4 318.3L391.3 319.9C381 334.2 361 337.6 346.7 327.3C332.3 317 328.9 297 339.2 282.7L340.3 281.1C363.2 249 359.6 205.1 331.7 177.2C300.3 145.8 249.2 145.8 217.7 177.2L105.5 289.5C73.99 320.1 73.99 372 105.5 403.5C133.3 431.4 177.3 435 209.3 412.1L210.9 410.1C225.3 400.7 245.3 404 255.5 418.4C265.8 432.8 262.5 452.8 248.1 463.1L246.5 464.2C188.1 505.3 110.2 498.7 60.21 448.8C3.741 392.3 3.741 300.7 60.21 244.3L172.5 131.1zM467.5 380C411 436.5 319.5 436.5 263 380C213 330 206.5 251.2 247.6 193.7L248.7 192.1C258.1 177.8 278.1 174.4 293.3 184.7C307.7 194.1 311.1 214.1 300.8 229.3L299.7 230.9C276.8 262.1 280.4 306.9 308.3 334.8C339.7 366.2 390.8 366.2 422.3 334.8L534.5 222.5C566 191 566 139.1 534.5 108.5C506.7 80.63 462.7 76.99 430.7 99.9L429.1 101C414.7 111.3 394.7 107.1 384.5 93.58C374.2 79.2 377.5 59.21 391.9 48.94L393.5 47.82C451 6.731 529.8 13.25 579.8 63.24C636.3 119.7 636.3 211.3 579.8 267.7L467.5 380z"/></svg>
+
+
+ </a>
+  
+</h2>
+<p><strong>Ph.D., Computer Science</strong> — Colorado School of Mines, Golden, CO
+<span class="meta">Aug 2025 – Present • Focus: Quantum &amp; AI • GPA: 3.7</span></p>
+<p><strong>M.S., Computer Science</strong> — Colorado School of Mines, Golden, CO
+<span class="meta">May 2025 • GPA: 3.7</span></p>
+<p><strong>B.E., Electronics &amp; Communication Engineering</strong> — Anna University, Chennai, India
+<span class="meta">Aug 2018 – Jul 2022 • GPA: 8.56/10 • First Class with Distinction</span></p>
+<hr>
+
+<h2 id="research">
+  Research Experience
+  
+  <a hidden class="anchor" href="#research">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M172.5 131.1C228.1 75.51 320.5 75.51 376.1 131.1C426.1 181.1 433.5 260.8 392.4 318.3L391.3 319.9C381 334.2 361 337.6 346.7 327.3C332.3 317 328.9 297 339.2 282.7L340.3 281.1C363.2 249 359.6 205.1 331.7 177.2C300.3 145.8 249.2 145.8 217.7 177.2L105.5 289.5C73.99 320.1 73.99 372 105.5 403.5C133.3 431.4 177.3 435 209.3 412.1L210.9 410.1C225.3 400.7 245.3 404 255.5 418.4C265.8 432.8 262.5 452.8 248.1 463.1L246.5 464.2C188.1 505.3 110.2 498.7 60.21 448.8C3.741 392.3 3.741 300.7 60.21 244.3L172.5 131.1zM467.5 380C411 436.5 319.5 436.5 263 380C213 330 206.5 251.2 247.6 193.7L248.7 192.1C258.1 177.8 278.1 174.4 293.3 184.7C307.7 194.1 311.1 214.1 300.8 229.3L299.7 230.9C276.8 262.1 280.4 306.9 308.3 334.8C339.7 366.2 390.8 366.2 422.3 334.8L534.5 222.5C566 191 566 139.1 534.5 108.5C506.7 80.63 462.7 76.99 430.7 99.9L429.1 101C414.7 111.3 394.7 107.1 384.5 93.58C374.2 79.2 377.5 59.21 391.9 48.94L393.5 47.82C451 6.731 529.8 13.25 579.8 63.24C636.3 119.7 636.3 211.3 579.8 267.7L467.5 380z"/></svg>
+
+
+ </a>
+  
+</h2>
+
+<h3 id="research-assistant--data-driven-cps-lab-colorado-school-of-mines">
+  Research Assistant — Data-Driven CPS Lab, Colorado School of Mines
+  
+  <a hidden class="anchor" href="#research-assistant--data-driven-cps-lab-colorado-school-of-mines">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M172.5 131.1C228.1 75.51 320.5 75.51 376.1 131.1C426.1 181.1 433.5 260.8 392.4 318.3L391.3 319.9C381 334.2 361 337.6 346.7 327.3C332.3 317 328.9 297 339.2 282.7L340.3 281.1C363.2 249 359.6 205.1 331.7 177.2C300.3 145.8 249.2 145.8 217.7 177.2L105.5 289.5C73.99 320.1 73.99 372 105.5 403.5C133.3 431.4 177.3 435 209.3 412.1L210.9 410.1C225.3 400.7 245.3 404 255.5 418.4C265.8 432.8 262.5 452.8 248.1 463.1L246.5 464.2C188.1 505.3 110.2 498.7 60.21 448.8C3.741 392.3 3.741 300.7 60.21 244.3L172.5 131.1zM467.5 380C411 436.5 319.5 436.5 263 380C213 330 206.5 251.2 247.6 193.7L248.7 192.1C258.1 177.8 278.1 174.4 293.3 184.7C307.7 194.1 311.1 214.1 300.8 229.3L299.7 230.9C276.8 262.1 280.4 306.9 308.3 334.8C339.7 366.2 390.8 366.2 422.3 334.8L534.5 222.5C566 191 566 139.1 534.5 108.5C506.7 80.63 462.7 76.99 430.7 99.9L429.1 101C414.7 111.3 394.7 107.1 384.5 93.58C374.2 79.2 377.5 59.21 391.9 48.94L393.5 47.82C451 6.731 529.8 13.25 579.8 63.24C636.3 119.7 636.3 211.3 579.8 267.7L467.5 380z"/></svg>
+
+
+ </a>
+  
+</h3>
+<p><span class="meta">Aug 2023 – Present • Golden, CO</span></p>
+<ul>
+<li>Researched <strong>SHACL validation &amp; inference</strong> (RDF graph acceleration).</li>
+<li>Built scalable validation for <strong>real-time IoT / Smart-City</strong> data.</li>
 </ul>
 
-    
-    <h1 class="pg-title">
-    Portfolio
-    
-      
-        <a href="/portfolio/index.xml" title="RSS" aria-label="RSS">
-        
-
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 64C0 46.3 14.3 32 32 32c229.8 0 416 186.2 416 416c0 17.7-14.3 32-32 32s-32-14.3-32-32C384 253.6 226.4 96 32 96C14.3 96 0 81.7 0 64zM128 416c0 35.3-28.7 64-64 64s-64-28.7-64-64s28.7-64 64-64s64 28.7 64 64zM32 160c159.1 0 288 128.9 288 288c0 17.7-14.3 32-32 32s-32-14.3-32-32c0-123.7-100.3-224-224-224c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/></svg>
-
-
-        </a>
-      
-    
-    </h1>
-    <div class="section-spacing"></div>
-<div class="note">
-  <span class="note-icon"><i class="fas fa-info-circle"></i></span> <!-- Info circle icon -->
-  <div>
-    <div class="note-content">Note</div>
-    <div class="note-text">
-      This page provides an in-depth overview of my work experience and projects. For a concise summary, please refer to my
-      <a href="/CV_Sowndarya_Krishnan.pdf" target="_blank">CV</a>.
-    </div>
-  </div>
-</div>
-<div class="section-spacing"></div>
-
-<h2 id="work-experience">
-  Work Experience
+<h3 id="contributor--brickschema-ontology-data-driven-cps-lab">
+  Contributor — BrickSchema Ontology (Data-Driven CPS Lab)
   
-  <a hidden class="anchor" href="#work-experience">
+  <a hidden class="anchor" href="#contributor--brickschema-ontology-data-driven-cps-lab">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M172.5 131.1C228.1 75.51 320.5 75.51 376.1 131.1C426.1 181.1 433.5 260.8 392.4 318.3L391.3 319.9C381 334.2 361 337.6 346.7 327.3C332.3 317 328.9 297 339.2 282.7L340.3 281.1C363.2 249 359.6 205.1 331.7 177.2C300.3 145.8 249.2 145.8 217.7 177.2L105.5 289.5C73.99 320.1 73.99 372 105.5 403.5C133.3 431.4 177.3 435 209.3 412.1L210.9 410.1C225.3 400.7 245.3 404 255.5 418.4C265.8 432.8 262.5 452.8 248.1 463.1L246.5 464.2C188.1 505.3 110.2 498.7 60.21 448.8C3.741 392.3 3.741 300.7 60.21 244.3L172.5 131.1zM467.5 380C411 436.5 319.5 436.5 263 380C213 330 206.5 251.2 247.6 193.7L248.7 192.1C258.1 177.8 278.1 174.4 293.3 184.7C307.7 194.1 311.1 214.1 300.8 229.3L299.7 230.9C276.8 262.1 280.4 306.9 308.3 334.8C339.7 366.2 390.8 366.2 422.3 334.8L534.5 222.5C566 191 566 139.1 534.5 108.5C506.7 80.63 462.7 76.99 430.7 99.9L429.1 101C414.7 111.3 394.7 107.1 384.5 93.58C374.2 79.2 377.5 59.21 391.9 48.94L393.5 47.82C451 6.731 529.8 13.25 579.8 63.24C636.3 119.7 636.3 211.3 579.8 267.7L467.5 380z"/></svg>
+
+
+ </a>
+  
+</h3>
+<p><span class="meta">Jun 2024</span></p>
+<ul>
+<li>Implemented <strong>global search</strong> for the ontology, closing a key usability gap.</li>
+</ul>
+
+<h3 id="frontend-developer--community-energy-dashboard-sloan-foundation">
+  Frontend Developer — Community Energy Dashboard (Sloan Foundation)
+  
+  <a hidden class="anchor" href="#frontend-developer--community-energy-dashboard-sloan-foundation">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M172.5 131.1C228.1 75.51 320.5 75.51 376.1 131.1C426.1 181.1 433.5 260.8 392.4 318.3L391.3 319.9C381 334.2 361 337.6 346.7 327.3C332.3 317 328.9 297 339.2 282.7L340.3 281.1C363.2 249 359.6 205.1 331.7 177.2C300.3 145.8 249.2 145.8 217.7 177.2L105.5 289.5C73.99 320.1 73.99 372 105.5 403.5C133.3 431.4 177.3 435 209.3 412.1L210.9 410.1C225.3 400.7 245.3 404 255.5 418.4C265.8 432.8 262.5 452.8 248.1 463.1L246.5 464.2C188.1 505.3 110.2 498.7 60.21 448.8C3.741 392.3 3.741 300.7 60.21 244.3L172.5 131.1zM467.5 380C411 436.5 319.5 436.5 263 380C213 330 206.5 251.2 247.6 193.7L248.7 192.1C258.1 177.8 278.1 174.4 293.3 184.7C307.7 194.1 311.1 214.1 300.8 229.3L299.7 230.9C276.8 262.1 280.4 306.9 308.3 334.8C339.7 366.2 390.8 366.2 422.3 334.8L534.5 222.5C566 191 566 139.1 534.5 108.5C506.7 80.63 462.7 76.99 430.7 99.9L429.1 101C414.7 111.3 394.7 107.1 384.5 93.58C374.2 79.2 377.5 59.21 391.9 48.94L393.5 47.82C451 6.731 529.8 13.25 579.8 63.24C636.3 119.7 636.3 211.3 579.8 267.7L467.5 380z"/></svg>
+
+
+ </a>
+  
+</h3>
+<p><span class="meta">May 2024 – Present • Leadville, CO</span></p>
+<ul>
+<li>Designed a dashboard for <strong>community energy</strong> data with real-time viz, prioritizing <strong>usability &amp; accessibility</strong>.</li>
+</ul>
+
+<h3 id="backend-engineer--energy-data-pipelines-sloan-foundation">
+  Backend Engineer — Energy Data Pipelines (Sloan Foundation)
+  
+  <a hidden class="anchor" href="#backend-engineer--energy-data-pipelines-sloan-foundation">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M172.5 131.1C228.1 75.51 320.5 75.51 376.1 131.1C426.1 181.1 433.5 260.8 392.4 318.3L391.3 319.9C381 334.2 361 337.6 346.7 327.3C332.3 317 328.9 297 339.2 282.7L340.3 281.1C363.2 249 359.6 205.1 331.7 177.2C300.3 145.8 249.2 145.8 217.7 177.2L105.5 289.5C73.99 320.1 73.99 372 105.5 403.5C133.3 431.4 177.3 435 209.3 412.1L210.9 410.1C225.3 400.7 245.3 404 255.5 418.4C265.8 432.8 262.5 452.8 248.1 463.1L246.5 464.2C188.1 505.3 110.2 498.7 60.21 448.8C3.741 392.3 3.741 300.7 60.21 244.3L172.5 131.1zM467.5 380C411 436.5 319.5 436.5 263 380C213 330 206.5 251.2 247.6 193.7L248.7 192.1C258.1 177.8 278.1 174.4 293.3 184.7C307.7 194.1 311.1 214.1 300.8 229.3L299.7 230.9C276.8 262.1 280.4 306.9 308.3 334.8C339.7 366.2 390.8 366.2 422.3 334.8L534.5 222.5C566 191 566 139.1 534.5 108.5C506.7 80.63 462.7 76.99 430.7 99.9L429.1 101C414.7 111.3 394.7 107.1 384.5 93.58C374.2 79.2 377.5 59.21 391.9 48.94L393.5 47.82C451 6.731 529.8 13.25 579.8 63.24C636.3 119.7 636.3 211.3 579.8 267.7L467.5 380z"/></svg>
+
+
+ </a>
+  
+</h3>
+<p><span class="meta">Jan 2023 – May 2024 • Leadville, CO</span></p>
+<ul>
+<li>Built pipelines for <strong>large time-series</strong> energy data; optimized retrieval for fast analytics.</li>
+</ul>
+<hr>
+
+<h2 id="industry">
+  Industry
+  
+  <a hidden class="anchor" href="#industry">
 
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M172.5 131.1C228.1 75.51 320.5 75.51 376.1 131.1C426.1 181.1 433.5 260.8 392.4 318.3L391.3 319.9C381 334.2 361 337.6 346.7 327.3C332.3 317 328.9 297 339.2 282.7L340.3 281.1C363.2 249 359.6 205.1 331.7 177.2C300.3 145.8 249.2 145.8 217.7 177.2L105.5 289.5C73.99 320.1 73.99 372 105.5 403.5C133.3 431.4 177.3 435 209.3 412.1L210.9 410.1C225.3 400.7 245.3 404 255.5 418.4C265.8 432.8 262.5 452.8 248.1 463.1L246.5 464.2C188.1 505.3 110.2 498.7 60.21 448.8C3.741 392.3 3.741 300.7 60.21 244.3L172.5 131.1zM467.5 380C411 436.5 319.5 436.5 263 380C213 330 206.5 251.2 247.6 193.7L248.7 192.1C258.1 177.8 278.1 174.4 293.3 184.7C307.7 194.1 311.1 214.1 300.8 229.3L299.7 230.9C276.8 262.1 280.4 306.9 308.3 334.8C339.7 366.2 390.8 366.2 422.3 334.8L534.5 222.5C566 191 566 139.1 534.5 108.5C506.7 80.63 462.7 76.99 430.7 99.9L429.1 101C414.7 111.3 394.7 107.1 384.5 93.58C374.2 79.2 377.5 59.21 391.9 48.94L393.5 47.82C451 6.731 529.8 13.25 579.8 63.24C636.3 119.7 636.3 211.3 579.8 267.7L467.5 380z"/></svg>
 
@@ -557,41 +666,110 @@
  </a>
   
 </h2>
-<details class="work-details" open>
-  <summary class="work-summary">
-    Software Engineer - NCOMPASS TECH STUDIO PVT. LTD (May 2021 - May 2022)
-    <a href="https://ncompass.inc/" target="_blank" class="work-link" style="color: inherit; text-decoration: none;">
-      <i class="fas fa-external-link-alt"></i>
-    </a>
-  </summary>
-  <div class="work-content">
-    <p><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Chennai, India</p>
-    <p><strong>Roles:</strong> <span style="color: #007acc;">Mobile Engineer, Frontend Engineer & Cloud Engineer</span></p>
-    <ul>
-      <li>Improved UI/UX for an Android app, increasing downloads by 35% in the Play Store.</li>
-      <li>Developed custom components, boosting internal tool adoption by 25%.</li>
-      <li>Achieved a 98% bug-free release rate through rigorous test-driven development.</li>
-    </ul>
-  </div>
-</details>
-<div class="section-spacing"></div>
-<div class="section-spacing"></div>
-<div class="note">
-  <span class="note-icon"><i class="fas fa-laptop-code"></i></span> <!-- Laptop code icon for software engineering -->
-  <div>
-    <div class="note-content">Software Engineering in Research</div> <!-- Updated title -->
-    <div class="note-text">
-      Alongside my thesis, I'm working on several development-oriented side projects, integrating software engineering principles within my research. You can explore more about my research and these projects
-      <a href="/research" style="color: #007acc; font-weight: bold; text-decoration: none;">here</a>.
-    </div>
-  </div>
-</div>
-<div class="section-spacing"></div>
 
-<h2 id="notable-awards--participation">
+<h3 id="ncompass-tech-studio-pvt-ltd--chennai-india">
+  NCompass Tech Studio Pvt. Ltd — Chennai, India
+  
+  <a hidden class="anchor" href="#ncompass-tech-studio-pvt-ltd--chennai-india">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M172.5 131.1C228.1 75.51 320.5 75.51 376.1 131.1C426.1 181.1 433.5 260.8 392.4 318.3L391.3 319.9C381 334.2 361 337.6 346.7 327.3C332.3 317 328.9 297 339.2 282.7L340.3 281.1C363.2 249 359.6 205.1 331.7 177.2C300.3 145.8 249.2 145.8 217.7 177.2L105.5 289.5C73.99 320.1 73.99 372 105.5 403.5C133.3 431.4 177.3 435 209.3 412.1L210.9 410.1C225.3 400.7 245.3 404 255.5 418.4C265.8 432.8 262.5 452.8 248.1 463.1L246.5 464.2C188.1 505.3 110.2 498.7 60.21 448.8C3.741 392.3 3.741 300.7 60.21 244.3L172.5 131.1zM467.5 380C411 436.5 319.5 436.5 263 380C213 330 206.5 251.2 247.6 193.7L248.7 192.1C258.1 177.8 278.1 174.4 293.3 184.7C307.7 194.1 311.1 214.1 300.8 229.3L299.7 230.9C276.8 262.1 280.4 306.9 308.3 334.8C339.7 366.2 390.8 366.2 422.3 334.8L534.5 222.5C566 191 566 139.1 534.5 108.5C506.7 80.63 462.7 76.99 430.7 99.9L429.1 101C414.7 111.3 394.7 107.1 384.5 93.58C374.2 79.2 377.5 59.21 391.9 48.94L393.5 47.82C451 6.731 529.8 13.25 579.8 63.24C636.3 119.7 636.3 211.3 579.8 267.7L467.5 380z"/></svg>
+
+
+ </a>
+  
+</h3>
+<p><span class="meta">May 2021 – Aug 2023 • Mobile / Frontend / Cloud Engineer</span></p>
+<ul>
+<li>Improved <strong>Android UI/UX</strong>, increasing Play Store downloads by <strong>35%</strong>.</li>
+<li>Built <strong>custom components</strong>, boosting internal tool adoption by <strong>25%</strong>.</li>
+<li>Achieved <strong>98% bug-free</strong> releases via <strong>TDD + CI/CD</strong>.</li>
+<li>Full SDLC ownership; led code reviews &amp; pair programming.</li>
+</ul>
+<hr>
+
+<h2 id="projects">
+  Projects
+  
+  <a hidden class="anchor" href="#projects">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M172.5 131.1C228.1 75.51 320.5 75.51 376.1 131.1C426.1 181.1 433.5 260.8 392.4 318.3L391.3 319.9C381 334.2 361 337.6 346.7 327.3C332.3 317 328.9 297 339.2 282.7L340.3 281.1C363.2 249 359.6 205.1 331.7 177.2C300.3 145.8 249.2 145.8 217.7 177.2L105.5 289.5C73.99 320.1 73.99 372 105.5 403.5C133.3 431.4 177.3 435 209.3 412.1L210.9 410.1C225.3 400.7 245.3 404 255.5 418.4C265.8 432.8 262.5 452.8 248.1 463.1L246.5 464.2C188.1 505.3 110.2 498.7 60.21 448.8C3.741 392.3 3.741 300.7 60.21 244.3L172.5 131.1zM467.5 380C411 436.5 319.5 436.5 263 380C213 330 206.5 251.2 247.6 193.7L248.7 192.1C258.1 177.8 278.1 174.4 293.3 184.7C307.7 194.1 311.1 214.1 300.8 229.3L299.7 230.9C276.8 262.1 280.4 306.9 308.3 334.8C339.7 366.2 390.8 366.2 422.3 334.8L534.5 222.5C566 191 566 139.1 534.5 108.5C506.7 80.63 462.7 76.99 430.7 99.9L429.1 101C414.7 111.3 394.7 107.1 384.5 93.58C374.2 79.2 377.5 59.21 391.9 48.94L393.5 47.82C451 6.731 529.8 13.25 579.8 63.24C636.3 119.7 636.3 211.3 579.8 267.7L467.5 380z"/></svg>
+
+
+ </a>
+  
+</h2>
+
+<h3 id="llm-prompt-recovery">
+  LLM-Prompt-Recovery
+  
+  <a hidden class="anchor" href="#llm-prompt-recovery">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M172.5 131.1C228.1 75.51 320.5 75.51 376.1 131.1C426.1 181.1 433.5 260.8 392.4 318.3L391.3 319.9C381 334.2 361 337.6 346.7 327.3C332.3 317 328.9 297 339.2 282.7L340.3 281.1C363.2 249 359.6 205.1 331.7 177.2C300.3 145.8 249.2 145.8 217.7 177.2L105.5 289.5C73.99 320.1 73.99 372 105.5 403.5C133.3 431.4 177.3 435 209.3 412.1L210.9 410.1C225.3 400.7 245.3 404 255.5 418.4C265.8 432.8 262.5 452.8 248.1 463.1L246.5 464.2C188.1 505.3 110.2 498.7 60.21 448.8C3.741 392.3 3.741 300.7 60.21 244.3L172.5 131.1zM467.5 380C411 436.5 319.5 436.5 263 380C213 330 206.5 251.2 247.6 193.7L248.7 192.1C258.1 177.8 278.1 174.4 293.3 184.7C307.7 194.1 311.1 214.1 300.8 229.3L299.7 230.9C276.8 262.1 280.4 306.9 308.3 334.8C339.7 366.2 390.8 366.2 422.3 334.8L534.5 222.5C566 191 566 139.1 534.5 108.5C506.7 80.63 462.7 76.99 430.7 99.9L429.1 101C414.7 111.3 394.7 107.1 384.5 93.58C374.2 79.2 377.5 59.21 391.9 48.94L393.5 47.82C451 6.731 529.8 13.25 579.8 63.24C636.3 119.7 636.3 211.3 579.8 267.7L467.5 380z"/></svg>
+
+
+ </a>
+  
+</h3>
+<p><span class="meta">Dec 2024</span></p>
+<ul>
+<li>Fine-tuned GPT-2 for <strong>prompt generation</strong>; explored generalization strategies.</li>
+</ul>
+
+<h3 id="echoes-of-equality--blasterhacks-1st-place">
+  Echoes of Equality — <em>BlasterHacks, 1st Place</em>
+  
+  <a hidden class="anchor" href="#echoes-of-equality--blasterhacks-1st-place">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M172.5 131.1C228.1 75.51 320.5 75.51 376.1 131.1C426.1 181.1 433.5 260.8 392.4 318.3L391.3 319.9C381 334.2 361 337.6 346.7 327.3C332.3 317 328.9 297 339.2 282.7L340.3 281.1C363.2 249 359.6 205.1 331.7 177.2C300.3 145.8 249.2 145.8 217.7 177.2L105.5 289.5C73.99 320.1 73.99 372 105.5 403.5C133.3 431.4 177.3 435 209.3 412.1L210.9 410.1C225.3 400.7 245.3 404 255.5 418.4C265.8 432.8 262.5 452.8 248.1 463.1L246.5 464.2C188.1 505.3 110.2 498.7 60.21 448.8C3.741 392.3 3.741 300.7 60.21 244.3L172.5 131.1zM467.5 380C411 436.5 319.5 436.5 263 380C213 330 206.5 251.2 247.6 193.7L248.7 192.1C258.1 177.8 278.1 174.4 293.3 184.7C307.7 194.1 311.1 214.1 300.8 229.3L299.7 230.9C276.8 262.1 280.4 306.9 308.3 334.8C339.7 366.2 390.8 366.2 422.3 334.8L534.5 222.5C566 191 566 139.1 534.5 108.5C506.7 80.63 462.7 76.99 430.7 99.9L429.1 101C414.7 111.3 394.7 107.1 384.5 93.58C374.2 79.2 377.5 59.21 391.9 48.94L393.5 47.82C451 6.731 529.8 13.25 579.8 63.24C636.3 119.7 636.3 211.3 579.8 267.7L467.5 380z"/></svg>
+
+
+ </a>
+  
+</h3>
+<p><span class="meta">Feb 2022</span></p>
+<ul>
+<li>Social platform for <strong>LGBTQIA+ mentorship</strong>; won two tracks.</li>
+</ul>
+
+<h3 id="emi-calculator">
+  EMI Calculator
+  
+  <a hidden class="anchor" href="#emi-calculator">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M172.5 131.1C228.1 75.51 320.5 75.51 376.1 131.1C426.1 181.1 433.5 260.8 392.4 318.3L391.3 319.9C381 334.2 361 337.6 346.7 327.3C332.3 317 328.9 297 339.2 282.7L340.3 281.1C363.2 249 359.6 205.1 331.7 177.2C300.3 145.8 249.2 145.8 217.7 177.2L105.5 289.5C73.99 320.1 73.99 372 105.5 403.5C133.3 431.4 177.3 435 209.3 412.1L210.9 410.1C225.3 400.7 245.3 404 255.5 418.4C265.8 432.8 262.5 452.8 248.1 463.1L246.5 464.2C188.1 505.3 110.2 498.7 60.21 448.8C3.741 392.3 3.741 300.7 60.21 244.3L172.5 131.1zM467.5 380C411 436.5 319.5 436.5 263 380C213 330 206.5 251.2 247.6 193.7L248.7 192.1C258.1 177.8 278.1 174.4 293.3 184.7C307.7 194.1 311.1 214.1 300.8 229.3L299.7 230.9C276.8 262.1 280.4 306.9 308.3 334.8C339.7 366.2 390.8 366.2 422.3 334.8L534.5 222.5C566 191 566 139.1 534.5 108.5C506.7 80.63 462.7 76.99 430.7 99.9L429.1 101C414.7 111.3 394.7 107.1 384.5 93.58C374.2 79.2 377.5 59.21 391.9 48.94L393.5 47.82C451 6.731 529.8 13.25 579.8 63.24C636.3 119.7 636.3 211.3 579.8 267.7L467.5 380z"/></svg>
+
+
+ </a>
+  
+</h3>
+<p><span class="meta">May 2023</span></p>
+<ul>
+<li><strong>Flutter</strong> loan EMI calculator with PDF export.</li>
+</ul>
+
+<h3 id="auto-file-organizer">
+  Auto File Organizer
+  
+  <a hidden class="anchor" href="#auto-file-organizer">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M172.5 131.1C228.1 75.51 320.5 75.51 376.1 131.1C426.1 181.1 433.5 260.8 392.4 318.3L391.3 319.9C381 334.2 361 337.6 346.7 327.3C332.3 317 328.9 297 339.2 282.7L340.3 281.1C363.2 249 359.6 205.1 331.7 177.2C300.3 145.8 249.2 145.8 217.7 177.2L105.5 289.5C73.99 320.1 73.99 372 105.5 403.5C133.3 431.4 177.3 435 209.3 412.1L210.9 410.1C225.3 400.7 245.3 404 255.5 418.4C265.8 432.8 262.5 452.8 248.1 463.1L246.5 464.2C188.1 505.3 110.2 498.7 60.21 448.8C3.741 392.3 3.741 300.7 60.21 244.3L172.5 131.1zM467.5 380C411 436.5 319.5 436.5 263 380C213 330 206.5 251.2 247.6 193.7L248.7 192.1C258.1 177.8 278.1 174.4 293.3 184.7C307.7 194.1 311.1 214.1 300.8 229.3L299.7 230.9C276.8 262.1 280.4 306.9 308.3 334.8C339.7 366.2 390.8 366.2 422.3 334.8L534.5 222.5C566 191 566 139.1 534.5 108.5C506.7 80.63 462.7 76.99 430.7 99.9L429.1 101C414.7 111.3 394.7 107.1 384.5 93.58C374.2 79.2 377.5 59.21 391.9 48.94L393.5 47.82C451 6.731 529.8 13.25 579.8 63.24C636.3 119.7 636.3 211.3 579.8 267.7L467.5 380z"/></svg>
+
+
+ </a>
+  
+</h3>
+<p><span class="meta">Jan 2022</span></p>
+<ul>
+<li>Python script to <strong>auto-categorize downloads</strong>.</li>
+</ul>
+<p><em>More projects on <a href="https://github.com/KrishnanN27" target="_blank">GitHub</a>
+.</em></p>
+<hr>
+
+<h2 id="awards">
   Notable Awards &amp; Participation
   
-  <a hidden class="anchor" href="#notable-awards--participation">
+  <a hidden class="anchor" href="#awards">
 
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M172.5 131.1C228.1 75.51 320.5 75.51 376.1 131.1C426.1 181.1 433.5 260.8 392.4 318.3L391.3 319.9C381 334.2 361 337.6 346.7 327.3C332.3 317 328.9 297 339.2 282.7L340.3 281.1C363.2 249 359.6 205.1 331.7 177.2C300.3 145.8 249.2 145.8 217.7 177.2L105.5 289.5C73.99 320.1 73.99 372 105.5 403.5C133.3 431.4 177.3 435 209.3 412.1L210.9 410.1C225.3 400.7 245.3 404 255.5 418.4C265.8 432.8 262.5 452.8 248.1 463.1L246.5 464.2C188.1 505.3 110.2 498.7 60.21 448.8C3.741 392.3 3.741 300.7 60.21 244.3L172.5 131.1zM467.5 380C411 436.5 319.5 436.5 263 380C213 330 206.5 251.2 247.6 193.7L248.7 192.1C258.1 177.8 278.1 174.4 293.3 184.7C307.7 194.1 311.1 214.1 300.8 229.3L299.7 230.9C276.8 262.1 280.4 306.9 308.3 334.8C339.7 366.2 390.8 366.2 422.3 334.8L534.5 222.5C566 191 566 139.1 534.5 108.5C506.7 80.63 462.7 76.99 430.7 99.9L429.1 101C414.7 111.3 394.7 107.1 384.5 93.58C374.2 79.2 377.5 59.21 391.9 48.94L393.5 47.82C451 6.731 529.8 13.25 579.8 63.24C636.3 119.7 636.3 211.3 579.8 267.7L467.5 380z"/></svg>
 
@@ -599,229 +777,185 @@
  </a>
   
 </h2>
-<details class="work-details" open>
-  <summary class="work-summary">
-    BEST POSTER PRESENTATION AWARD | CMAPP Honors Event (Jan 2025)
-  </summary>
-  <div>
-    <p><strong>Colorado School of Mines</strong></p>
-    <ul>
-      <li>
-        Won the Best Poster Presentation Award at the CMAPP Honors Event for delivering the
-        <strong><em>Best Pitch</em></strong> and presenting the
-        <strong><em>Best Poster</em></strong>.
-      </li>
-      <li>
-        📄 <a href="/flowshacl.pdf" target="_blank" style="color: #007acc; text-decoration: none;">
-          View FlowSHACL Poster
-        </a>
-      </li>
-    </ul>
-    <div class="award-images" style="display: flex; justify-content: space-around; align-items: center; gap: 20px;">
-      <div style="text-align: center;">
-        <img src="/images/2025/p1.jpg" alt="Best Poster Presentation Award" class="uniform-img" style="width: 400px; height: auto; border: 1px solid #ccc; border-radius: 5px;"/>
-      </div>
-      <div style="text-align: center;">
-        <img src="/images/2025/p2.jpg" alt="CMAPP Event" class="uniform-img" style="width: 400px; height: auto; border: 1px solid #ccc; border-radius: 5px;"/>
-      </div>
+<ul>
+<li><strong>Best Poster Presentation</strong> — CMAPP Honors, CSM <span class="meta">(Jan 2025)</span></li>
+<li><strong>Hackathon Winner (x2)</strong> — Echoes of Equality, CSM <span class="meta">(Feb 2022)</span></li>
+<li><strong>Undergrad Research Symposium Judge (x2)</strong> — CSM <span class="meta">(Sept 2024 &amp; Apr 2024)</span></li>
+<li><strong>Best Presentation</strong> — ECUBE, MSR Engg College <span class="meta">(Mar 2022)</span></li>
+<li><strong>Hostel Rep &amp; Vice President</strong> — ECE Dept., MSR <span class="meta">(2016–2017)</span></li>
+</ul>
+<hr>
+
+<h2 id="skills">
+  Technical Skills &amp; Certifications
+  
+  <a hidden class="anchor" href="#skills">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M172.5 131.1C228.1 75.51 320.5 75.51 376.1 131.1C426.1 181.1 433.5 260.8 392.4 318.3L391.3 319.9C381 334.2 361 337.6 346.7 327.3C332.3 317 328.9 297 339.2 282.7L340.3 281.1C363.2 249 359.6 205.1 331.7 177.2C300.3 145.8 249.2 145.8 217.7 177.2L105.5 289.5C73.99 320.1 73.99 372 105.5 403.5C133.3 431.4 177.3 435 209.3 412.1L210.9 410.1C225.3 400.7 245.3 404 255.5 418.4C265.8 432.8 262.5 452.8 248.1 463.1L246.5 464.2C188.1 505.3 110.2 498.7 60.21 448.8C3.741 392.3 3.741 300.7 60.21 244.3L172.5 131.1zM467.5 380C411 436.5 319.5 436.5 263 380C213 330 206.5 251.2 247.6 193.7L248.7 192.1C258.1 177.8 278.1 174.4 293.3 184.7C307.7 194.1 311.1 214.1 300.8 229.3L299.7 230.9C276.8 262.1 280.4 306.9 308.3 334.8C339.7 366.2 390.8 366.2 422.3 334.8L534.5 222.5C566 191 566 139.1 534.5 108.5C506.7 80.63 462.7 76.99 430.7 99.9L429.1 101C414.7 111.3 394.7 107.1 384.5 93.58C374.2 79.2 377.5 59.21 391.9 48.94L393.5 47.82C451 6.731 529.8 13.25 579.8 63.24C636.3 119.7 636.3 211.3 579.8 267.7L467.5 380z"/></svg>
+
+
+ </a>
+  
+</h2>
+<div class="skills-grid">
+  <div class="skill-row">
+    <div class="skill-cat">Programming</div>
+    <div class="skill-items">
+      <span class="pill">Python</span><span class="pill">Java</span><span class="pill">C/C++</span>
+      <span class="pill">Rust</span><span class="pill">JavaScript</span><span class="pill">TypeScript</span>
+      <span class="pill">Node.js</span><span class="pill">React</span><span class="pill">Next.js</span>
+      <span class="pill">Angular.js</span><span class="pill">SQL</span><span class="pill">Flutter</span>
+      <span class="pill">LISP</span><span class="pill">OCaml</span><span class="pill">Go</span>
+      <span class="pill">HTML/CSS</span>
     </div>
   </div>
-</details>
-<details class="work-details" open>
-  <summary class="work-summary">
-    ECHOES OF EQUALITY | BlasterHacks Hackathon Winner (Feb 2022)
-  </summary>
-  <div>
-    <p><strong>Colorado School of Mines</strong></p>
-    <ul>
-      <li>Awarded 1st Place in the Beginner Category and LGBTQIA+ Category for developing an impactful social platform.</li>
-      <li>
-        <a href="https://devpost.com/software/echoes-of-equality" target="_blank" style="color: #007acc; text-decoration: none;">
-          View Project <i class="fas fa-external-link-alt" style="margin-left: 5px;"></i>
-        </a>
-      </li>
-    </ul>
-    <div class="award-images">
-      <img src="/images/hb/h6.jpeg" alt="Echoes of Equality Project" class="uniform-img"/>
-      <img src="/images/hb/h7.jpeg" alt="Hackathon Award" class="uniform-img"/>
+  <div class="skill-row">
+    <div class="skill-cat">Quantum</div>
+    <div class="skill-items">
+      <span class="pill">Qiskit</span><span class="pill">PennyLane</span><span class="pill">IBM Quantum</span>
+      <span class="pill">QASM</span><span class="pill">Cirq (basic)</span><span class="pill">Circuit simulators</span>
     </div>
   </div>
-</details>
-<details class="work-details" open>
-  <summary class="work-summary">
-    UNDERGRADUATE RESEARCH SYMPOSIUM | Judge (x2: April 2022 & Sept 2024)
-  </summary>
-  <div>
-    <p><strong>Colorado School of Mines</strong></p>
-    <ul>
-      <li>Served as a Judge in the “Undergraduate Research Symposium” twice, evaluating and providing feedback to participants.</li>
-      <li>Dates: <em>April 2022</em> and <em>September 2024</em>.</li>
-    </ul>
-  </div>
-</details>
-<details class="work-details" open>
-  <summary class="work-summary">
-    C-MAPP EVENT | Presenter (Jan 2022)
-  </summary>
-  <div>
-    <p><strong>CO, US</strong></p>
-    <ul>
-      <li>Delivered a compelling 45-second research pitch and earned recognition.</li>
-    </ul>
-    <div class="award-images">
-      <img src="/images/research/r1.jpg" alt="C-MAPP Event Presentation" class="uniform-img"/>
-      <img src="/images/research/r2.jpg" alt="Undergraduate Research Symposium" class="uniform-img"/>
+  <div class="skill-row">
+    <div class="skill-cat">Tech & Frameworks</div>
+    <div class="skill-items">
+      <span class="pill">RDF/SHACL</span><span class="pill">SHACL-AF</span><span class="pill">Android</span>
+      <span class="pill">Firebase</span><span class="pill">Linux</span><span class="pill">MATLAB</span>
+      <span class="pill">Docker</span><span class="pill">Grafana</span><span class="pill">Terraform</span>
+      <span class="pill">AWS</span><span class="pill">GCP</span><span class="pill">Azure</span>
+      <span class="pill">DevOps</span><span class="pill">Power BI</span><span class="pill">WordPress</span>
     </div>
   </div>
-</details>
-<!-- CSS for uniform image sizes -->
-<style>
-/* Styling the container holding the images */
-/* Styling the container holding the images */
-.award-images {
-  display: flex;
-  gap: 20px; /* Increase the gap between images for better spacing */
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-top: 15px; /* Add spacing between text and images */
-  margin-bottom: 30px; /* Add more space below the image container */
-  padding: 10px; /* Add padding around the container */
-  border-radius: 10px; /* Add rounded corners to the image container */
-  /* background-color: rgba(240, 240, 240, 0.5); Light background for image container */
-}
-
-/* Make all images uniform in size */
-.uniform-img {
-  width: 45%;
-  height: 250px; /* Set a fixed height for uniformity */
-  object-fit: cover;
-  border-radius: 8px; /* Keep images rounded */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
-}
-
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-  .uniform-img {
-    width: 100%; /* Make the images take full width on mobile */
-    height: auto; /* Allow height to adjust with the aspect ratio */
-  }
-}
-
-
-</style>
-<div class="section-spacing"></div>
-<h2 id="education">Education</h2>
-<!-- First Education Item -->
-<details class="education-item" open>
-  <summary class="education-summary">
-    <h3>MS in Computer Science</h3>
-    <span class="education-info">
-      <a href="https://mines.edu" target="_blank">Colorado School of Mines</a> | Expected: May 2025 | GPA: 3.7 / 4.0
-    </span>
-  </summary>
-  <div class="education-details">
-    <p>I am pursuing my MS Thesis in Computer Science with a focus on <strong>Data Driven Cyber-physical systems</strong>
-    <p>Currently working under <a href="https://gtf.fyi/" target="_blank">Dr. Gabe Fierro</a> at the <a href="https://datadrivencps.github.io/website/" target="_blank">DataDrivenCPS lab</a>.</p>
-    <p><strong>Notable classes I took include:</strong></p>
-    <ul>
-      <li>Algorithms</li>
-      <li>Principles of Programming Languages</li>
-      <li>Operating Systems</li>
-      <li>Advanced Computer Architecture</li>
-      <li>Discrete Math</li>
-      <li>Advanced Machine Learning</li>
-      <li>Theory of Computation</li>
-    </ul>
-    <div style="padding-bottom: 15px;"></div>
+  <div class="skill-row">
+    <div class="skill-cat">Tools</div>
+    <div class="skill-items">
+      <span class="pill">Git</span><span class="pill">VS Code</span><span class="pill">Android Studio</span>
+      <span class="pill">Eclipse</span><span class="pill">Vim</span><span class="pill">LaTeX</span><span class="pill">MS Office</span>
+    </div>
   </div>
-</details>
-<!-- Second Education Item -->
-<details class="education-item">
-  <summary class="education-summary">
-    <h3>B.E. in Electronics & Communication Engineering</h3>
-    <span class="education-info">
-      <a href="https://annauniv.edu" target="_blank">Anna University</a> | Aug 2022 | GPA: 8.56 / 10
-    </span>
-  </summary>
-</details>
-<style>
- .education-item {
-    margin-bottom: 20px;
-    padding: 0;
-    border-left: none; /* No borders or backgrounds for the section */
-  }
+</div>
 
-  /* Summary (title) without grey background */
-  .education-summary {
-    padding: 10px 15px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    color: var(--primary-color); /* Always use the primary text color */
-    background-color: var(--summary-open-bg);
-  }
+<h3 id="certifications">
+  Certifications
+  
+  <a hidden class="anchor" href="#certifications">
 
-  /* Apply background when details are open */
-  details[open] .education-summary {
-    background-color: var(--summary-open-bg); /* Background color for the open state */
-  }
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M172.5 131.1C228.1 75.51 320.5 75.51 376.1 131.1C426.1 181.1 433.5 260.8 392.4 318.3L391.3 319.9C381 334.2 361 337.6 346.7 327.3C332.3 317 328.9 297 339.2 282.7L340.3 281.1C363.2 249 359.6 205.1 331.7 177.2C300.3 145.8 249.2 145.8 217.7 177.2L105.5 289.5C73.99 320.1 73.99 372 105.5 403.5C133.3 431.4 177.3 435 209.3 412.1L210.9 410.1C225.3 400.7 245.3 404 255.5 418.4C265.8 432.8 262.5 452.8 248.1 463.1L246.5 464.2C188.1 505.3 110.2 498.7 60.21 448.8C3.741 392.3 3.741 300.7 60.21 244.3L172.5 131.1zM467.5 380C411 436.5 319.5 436.5 263 380C213 330 206.5 251.2 247.6 193.7L248.7 192.1C258.1 177.8 278.1 174.4 293.3 184.7C307.7 194.1 311.1 214.1 300.8 229.3L299.7 230.9C276.8 262.1 280.4 306.9 308.3 334.8C339.7 366.2 390.8 366.2 422.3 334.8L534.5 222.5C566 191 566 139.1 534.5 108.5C506.7 80.63 462.7 76.99 430.7 99.9L429.1 101C414.7 111.3 394.7 107.1 384.5 93.58C374.2 79.2 377.5 59.21 391.9 48.94L393.5 47.82C451 6.731 529.8 13.25 579.8 63.24C636.3 119.7 636.3 211.3 579.8 267.7L467.5 380z"/></svg>
 
-  /* Heading for each degree */
-  h3 {
-    margin: 0;
-    font-size: 1.2rem;
-    /* color: var(--primary-color); Primary color for headings */
-    display: inline-block;
-  }
 
-  /* Info section (school, date, GPA) */
-  .education-info {
-    font-size: 0.9rem;
-    /* color: var(--primary-color); Always primary color for the text */
-    margin-top: 5px;
-    display: block;
-  }
+ </a>
+  
+</h3>
+<ul class="cert-list">
+  <li><strong>Cyber Security: From Beginner to Expert</strong> — Udemy</li>
+  <li><strong>Machine Learning, Cryptography & Introduction to Statistics</strong> — Stanford University</li>
+  <li><strong>Power BI — Beginner → Advanced</strong> — Udemy</li>
+  <li><strong>Introduction to Data Science in Python</strong> — University of Michigan</li>
+</ul>
 
-  .education-info a {
-    color: #007acc; /* Link color */
-    text-decoration: none;
-  }
+  </article>
 
-  /* Details section for additional information */
-  .education-details {
-    margin-top: 10px;
-    padding-left: 15px;
-    color: var(--primary-color); Primary color for details text
-  }
+  <aside class="cv-toc-wrap">
+    
+    <div class="cv-toc"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#research">Research Experience</a>
+      <ul>
+        <li><a href="#research-assistant--data-driven-cps-lab-colorado-school-of-mines">Research Assistant — Data-Driven CPS Lab, Colorado School of Mines</a></li>
+        <li><a href="#contributor--brickschema-ontology-data-driven-cps-lab">Contributor — BrickSchema Ontology (Data-Driven CPS Lab)</a></li>
+        <li><a href="#frontend-developer--community-energy-dashboard-sloan-foundation">Frontend Developer — Community Energy Dashboard (Sloan Foundation)</a></li>
+        <li><a href="#backend-engineer--energy-data-pipelines-sloan-foundation">Backend Engineer — Energy Data Pipelines (Sloan Foundation)</a></li>
+      </ul>
+    </li>
+    <li><a href="#industry">Industry</a>
+      <ul>
+        <li><a href="#ncompass-tech-studio-pvt-ltd--chennai-india">NCompass Tech Studio Pvt. Ltd — Chennai, India</a></li>
+      </ul>
+    </li>
+    <li><a href="#projects">Projects</a>
+      <ul>
+        <li><a href="#llm-prompt-recovery">LLM-Prompt-Recovery</a></li>
+        <li><a href="#echoes-of-equality--blasterhacks-1st-place">Echoes of Equality — <em>BlasterHacks, 1st Place</em></a></li>
+        <li><a href="#emi-calculator">EMI Calculator</a></li>
+        <li><a href="#auto-file-organizer">Auto File Organizer</a></li>
+      </ul>
+    </li>
+    <li><a href="#awards">Notable Awards &amp; Participation</a></li>
+    <li><a href="#skills">Technical Skills &amp; Certifications</a>
+      <ul>
+        <li><a href="#certifications">Certifications</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+    
+  </aside>
+</div>
 
-  /* List styles */
-  ul {
-    list-style-type: disc;
-    margin: 0;
-    padding-left: 20px;
-  }
+<script>
+  (function () {
+    function initTOC() {
+      const toc = document.querySelector(".cv-toc");
+      if (!toc) return;
 
-  /* Responsive design */
-  @media (max-width: 768px) {
-    h3 {
-      font-size: 1.1rem;
+      const links = Array.from(toc.querySelectorAll("a"));
+      if (!links.length) return;
+
+      
+      const targets = links.map((a) => {
+        const href = a.getAttribute("href");
+        if (!href || !href.startsWith("#")) return null;
+        try {
+          
+          const el = document.querySelector(href);
+          return el?.closest(".cv-section") || el;
+        } catch {
+          return null;
+        }
+      });
+
+      
+      function clearStates() {
+        links.forEach((l) => l.classList.remove("active"));
+        targets.forEach((t) => t && t.classList.remove("inview"));
+      }
+
+      const io = new IntersectionObserver(
+        (entries) => {
+          
+          const visible = entries
+            .filter((e) => e.isIntersecting)
+            .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+          if (!visible) return;
+
+          const i = targets.indexOf(visible.target);
+          if (i >= 0) {
+            clearStates();
+            links[i].classList.add("active");
+            targets[i]?.classList.add("inview");
+          }
+        },
+        {
+          
+          rootMargin: "0px 0px -60% 0px",
+          threshold: [0.01, 0.2, 0.4, 0.6, 0.8, 1],
+        }
+      );
+
+      
+      targets.forEach((el) => el && io.observe(el));
     }
 
-    .education-info {
-      font-size: 0.8rem;
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initTOC);
+    } else {
+      initTOC();
     }
-  }
-</style>
-
-    <section class="lst-content">
-    
-    <ul class="lst-card">
-    
-    </ul>
-    
-    
-    </section>
-
+  })();
+</script>
 
 
       </main>

@@ -1,0 +1,155 @@
+{{ define "main" }}
+
+<!-- SCOPED RESET: stop main.css from bleeding into the CV area -->
+<style>
+  /* Reset everything *inside* the CV to browser defaults,
+       then let portfolio.css re-apply intended styling */
+  /* --- CV: active TOC link --- */
+  .cv-shell .cv-toc a.active {
+    background: var(--secondary-color-dark);
+    border: 1px solid var(--border-color);
+    color: var(--primary-color);
+    border-radius: var(--radius);
+  }
+
+  /* optional: hover matches active */
+  .cv-shell .cv-toc a:hover {
+    background: var(--secondary-color-dark);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+  }
+
+  /* --- CV: summary/Details open background --- */
+  .cv-shell .cv-body details[open] {
+    background: var(--summary-open-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 0.5rem 0.75rem;
+    margin: 0.5rem 0;
+  }
+
+  /* make <summary> look clickable/calm */
+  .cv-shell .cv-body summary {
+    cursor: pointer;
+    color: var(--primary-color);
+  }
+
+  /* --- CV: “current section” box so you see where you are --- */
+  /* add class="cv-section" to your h2/h3 wrappers (or sections) in the content */
+  .cv-shell .cv-body .cv-section.inview {
+    background: var(--secondary-color-dark);
+    outline: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    transition: background 120ms ease, outline-color 120ms ease;
+  }
+
+  /* some comfy spacing inside highlighted sections */
+  .cv-shell .cv-body .cv-section.inview > *:first-child {
+    margin-top: 0.5rem;
+  }
+  .cv-shell .cv-body .cv-section.inview > *:last-child {
+    margin-bottom: 0.5rem;
+  }
+
+  /* --- CV: sticky TOC (nice QoL) --- */
+  .cv-shell .cv-toc-wrap {
+    position: sticky;
+    top: 1rem;
+    align-self: start;
+  }
+
+  /* keep buttons/pills using your theme tokens even after reset */
+  .cv-shell .btn,
+  .cv-shell .pill {
+    background: var(--background-fg);
+    border: 1px solid var(--border-color);
+    color: var(--primary-color);
+    border-radius: var(--radius);
+  }
+</style>
+
+<!-- Load ONLY your portfolio stylesheet after the scoped reset -->
+{{ $cvcss := resources.Get "css/portfolio.css" | resources.Minify |
+resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $cvcss.RelPermalink }}" />
+
+<div class="cv-shell">
+  <article class="cv-body">
+    {{ with .Params.cv_pdf }}
+    <a class="btn" href="{{ . | relURL }}" target="_blank" rel="noopener"
+      >📄 Download CV</a
+    >
+    {{ end }} {{ .Content }}
+  </article>
+
+  <aside class="cv-toc-wrap">
+    {{ with .TableOfContents }}
+    <div class="cv-toc">{{ . | safeHTML }}</div>
+    {{ end }}
+  </aside>
+</div>
+
+<script>
+  (function () {
+    function initTOC() {
+      const toc = document.querySelector(".cv-toc");
+      if (!toc) return;
+
+      const links = Array.from(toc.querySelectorAll("a"));
+      if (!links.length) return;
+
+      // Map TOC links -> target sections
+      const targets = links.map((a) => {
+        const href = a.getAttribute("href");
+        if (!href || !href.startsWith("#")) return null;
+        try {
+          // prefer a wrapper with .cv-section if present
+          const el = document.querySelector(href);
+          return el?.closest(".cv-section") || el;
+        } catch {
+          return null;
+        }
+      });
+
+      // Clear active + inview states
+      function clearStates() {
+        links.forEach((l) => l.classList.remove("active"));
+        targets.forEach((t) => t && t.classList.remove("inview"));
+      }
+
+      const io = new IntersectionObserver(
+        (entries) => {
+          // choose the entry that is most visible
+          const visible = entries
+            .filter((e) => e.isIntersecting)
+            .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+          if (!visible) return;
+
+          const i = targets.indexOf(visible.target);
+          if (i >= 0) {
+            clearStates();
+            links[i].classList.add("active");
+            targets[i]?.classList.add("inview");
+          }
+        },
+        {
+          // Start “current” a bit before the top of the viewport
+          rootMargin: "0px 0px -60% 0px",
+          threshold: [0.01, 0.2, 0.4, 0.6, 0.8, 1],
+        }
+      );
+
+      // Observe either .cv-section wrappers or the headings themselves
+      targets.forEach((el) => el && io.observe(el));
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initTOC);
+    } else {
+      initTOC();
+    }
+  })();
+</script>
+
+{{ end }}

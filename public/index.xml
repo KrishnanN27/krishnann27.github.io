@@ -45,7 +45,9 @@ Your Word is written in my life.
       <link>//localhost:1313/connect/</link>
       <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/connect/</guid>
-      <description>Let's get in touch!</description>
+      <description>If you'd like to reach out, here are a few ways to get in touch with me:
+Personal Email:krishnaofficial27@gmail.comOfficial Email:sowndaryakrishnanna@mines.eduGitHub:github.com/KrishnanN27LinkedIn:linkedin.com/in/sowndaryakrishnank/Book a MeetingIf you'd like to book a 30-minute meeting with me, you can use the link below:
+📅 Book a Meeting with Krish!Please note that the booking slots are 30 minutes. If you're in a different time zone or need more time, feel free to let me know via email at krishnaofficial27@gmail.com, and we can figure something out!</description>
     </item>
     <item>
       <title>Get to Know More</title>
@@ -53,13 +55,6 @@ Your Word is written in my life.
       <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/about/</guid>
       <description>I'm Sowndarya Krishnan(pronounced: Sown-dar-yeh Krish-nun) — short name: Krish or Chris, currently pursuing a Master’s Thesis in Computer Science at the Colorado School of Mines.</description>
-    </item>
-    <item>
-      <title>My Gallery</title>
-      <link>//localhost:1313/gallery/</link>
-      <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/gallery/</guid>
-      <description>Welcome to my gallery! Here you’ll find some of my favorite landscapes, each capturing a unique and serene moment in nature.</description>
     </item>
     <item>
       <title>Professional Photos</title>
@@ -90,6 +85,13 @@ Your Word is written in my life.
       <description>Your browser does not support the audio element.🔊 Pause Music
 Since Feb 14 is coming up.asdads..
 Why don’t you be the 1 4 me? 💘Will you be my Valentine? 💕Yes ❤️No 😢</description>
+    </item>
+    <item>
+      <title>My Gallery</title>
+      <link>//localhost:1313/gallery/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/gallery/</guid>
+      <description></description>
     </item>
   </channel>
 </rss>

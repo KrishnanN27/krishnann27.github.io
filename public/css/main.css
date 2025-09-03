@@ -1,107 +1,5 @@
 @import url("theme.css");
 
-/* Custom Collapsible Style for Work Experience */
-.work-details {
-  background-color: transparent; /* Remove background color */
-  border: 1px solid var(--primary-color); /* Primary color border */
-  margin-bottom: 15px;
-  border-radius: var(--radius); /* Keep rounded corners */
-  padding: 0px; /* Remove extra padding */
-}
-
-.work-summary {
-  font-weight: bold;
-  color: var(--primary-color); /* Primary color for work titles */
-  cursor: pointer;
-  padding: 10px; /* Add padding for summary block */
-  background-color: transparent; /* Default no background */
-  display: flex;
-  align-items: center; /* Vertically align arrow and text */
-  transition: background-color 0.3s ease; /* Transition for background color */
-  border-radius: 0; /* Remove the corner rounding effect */
-}
-
-.work-summary::before {
-  content: "\25B6"; /* Unicode for right-pointing arrow */
-  margin-right: 10px; /* Space between arrow and text */
-  transition: transform 0.3s ease;
-}
-
-.work-details[open] .work-summary {
-  background-color: var(--summary-open-bg); /* Background color when expanded */
-}
-
-.work-details[open] .work-summary::before {
-  transform: rotate(90deg); /* Rotate to down-pointing arrow */
-}
-
-.work-link i {
-  margin-left: 10px;
-  color: var(--link-color); /* Match link color to link color variable */
-}
-
-.work-details div {
-  margin-top: 10px;
-  padding-left: 15px; /* Indent content slightly */
-  color: var(--primary-color); /* Ensure all text is primary color */
-}
-
-.work-details ul {
-  margin: 0;
-  padding-left: 20px;
-  margin-bottom: 20px;
-}
-
-.work-details p i {
-  margin-right: 5px; /* Add space between icon and text */
-  color: var(--link-color); /* Use the link color for icons */
-}
-
-.section-spacing {
-  margin-top: 40px; /* Adjust the space as needed */
-  margin-bottom: 40px;
-}
-
-/* Note down  */
-.note {
-  background-color: var(--note-bg-light);
-  border: 1px solid var(--note-color-light);
-  padding: 20px 25px;
-  border-radius: 10px;
-  font-size: 1rem;
-  margin: 20px 0;
-  display: flex;
-  align-items: flex-start;
-  color: var(--note-color-light);
-}
-
-.dark .note {
-  background-color: var(--note-bg-dark);
-  border-color: var(--note-color-dark);
-  color: var(--note-color-dark);
-}
-
-.note-icon {
-  font-size: 1.5em;
-  margin-right: 15px;
-  color: inherit; /* Icon color follows the text color */
-}
-
-.note-content {
-  font-weight: bold;
-  color: inherit; /* Inherits the note text color */
-}
-
-.note-text a {
-  color: inherit; /* Link color matches the note text color */
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.note-text a:hover {
-  text-decoration: underline;
-}
-
 body,
 p {
   font-size: 0.95rem; /* Slightly larger for general text */
@@ -166,41 +64,7 @@ html {
   margin-top: 20px;
 }
 
-.education-item {
-  margin-bottom: 20px;
-  padding: 15px;
-  border-left: 4px solid var(--primary-color); /* Use your theme's primary color */
-  background-color: rgba(0, 122, 255, 0.1); /* Subtle background color */
-  border-radius: 8px;
-}
-
-.work-summary {
-  font-weight: bold;
-  color: var(--text-color); /* Dynamic text color */
-  display: block;
-}
-
-.education-item .degree {
-  display: block; /* Forces the degree to the next line */
-  margin-top: 5px;
-  font-style: italic;
-  color: var(--secondary-text-color);
-}
-
-.education-item .details {
-  margin-top: 5px;
-  color: var(--text-color); /* Main text color */
-  font-size: 0.9rem;
-}
-
-.education-item i {
-  margin-right: 5px;
-}
-
-.education-item .work-summary span {
-  display: block;
-  margin-top: 8px;
-}
+/* REMOVED: .education-item, .education-item .degree, .education-item .details, .education-item i, .education-item .work-summary span */
 
 /* Red Callout (Header Section) with Blue Accent */
 .red-callout {
@@ -222,7 +86,7 @@ html {
 }
 
 /* Custom Collapsible Style */
-/* Custom Collapsible Style */
+/* Projects */
 .project-details {
   background-color: var(--secondary-color-light); /* Custom light background */
   border: 1px solid var(--primary-color); /* Primary color border */
@@ -472,7 +336,7 @@ details[open] div {
 
 .content {
   margin: 0 auto;
-  max-width: 900px;
+  width: min(90%, 1200px); /* fluid up to 1200px, with side gutters */
 }
 
 /* Header */

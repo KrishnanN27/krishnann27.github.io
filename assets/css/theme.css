@@ -1,127 +1,279 @@
+/* ------------------------------
+   TYPOGRAPHY & RADIUS
+------------------------------ */
 :root {
-  /* keep your font + sizing system */
   --ff-body: "JetBrains Mono", monospace;
   --ff-heading: "JetBrains Mono", monospace;
   --ff-code: "JetBrains Mono", monospace;
   --radius: 6px;
 
-  /* map to LIGHT palette */
-  /* text color on light bg */
-  --primary-color: #355265; /* = --color */
-  /* page background */
-  --secondary-color: #ffffff; /* = --background */
-  /* panels / cards / code / separators */
-  --secondary-color-dark: #ebebeb; /* = --background-fg2 */
-  /* accent stays your red unless you want to switch it */
-  --tertiary-color: #e0002d; /* keep your brand accent */
-  --tertiary-color-light: #ffb370; /* keep (used for subtle accents) */
-
-  /* links + hovers */
-  --link-color: #4b9dd0; /* = --color-hover (used on :hover in your CSS) */
-
-  /* misc shared vars you already use */
-  --black: #292929;
-
-  /* code colors (unchanged; you can swap later if you want) */
-  --code-bg: #272822; /* Monokai */
-  --code-fg: #f8f8f2; /* Monokai */
-
-  /* scrollbars */
-  --scrollbar-track: #f7f7f7; /* ~ --background-fg */
-  --scrollbar-thumb: #dddddd; /* ~ --border-color */
-
-  /* notes */
-  --note-bg-light: rgba(0, 122, 204, 0.1);
-  --note-color-light: #007acc; /* dark blue for light mode */
-  --note-color-dark: #add8e6; /* used only in .dark */
-  --summary-open-bg: rgba(0, 0, 0, 0.06); /* subtle expand bg on light */
-
-  /* responsive type (unchanged) */
+  /* responsive type */
   --font-size-base: clamp(1rem, 1.5vw, 1.2rem);
   --heading-size-h1: clamp(1.8rem, 2.5vw, 2.2rem);
   --heading-size-h2: clamp(1.4rem, 2vw, 1.8rem);
 }
 
-.dark {
-  /* map to NIGHT palette */
-  /* text color on dark bg */
-  --primary-color: #cccccc; /* = night --color */
-  /* page background */
-  --secondary-color: #333333; /* = night --background */
-  /* panels / cards / code / separators */
-  --secondary-color-dark: #3a3a3a; /* = night --background-fg2 */
+/* ------------------------------
+   LIGHT (maps from your second snippet’s :root)
+------------------------------ */
+:root {
+  /* core surface & text */
+  --primary-color: #355265; /* = --color */
+  --secondary-color: #ffffff; /* = --background */
+  --secondary-color-dark: #ebebeb; /* = --background-fg2 */
 
-  /* accent can stay your brand, but you can swap if you prefer cooler tones */
-  --tertiary-color: #ff7f11; /* you had this already; keep or set to #E0002D */
-  --tertiary-color-light: #a34c00;
+  /* brand / accent (keep your red) */
+  --tertiary-color: #e0002d;
+  --tertiary-color-light: #ffb370;
 
-  /* link emphasis on dark. twilight’s cool cyan reads well */
-  --link-color: #66cccc; /* from night’s base16 (0C) */
+  /* links */
+  --link-color: #4b9dd0; /* = --color-hover */
 
-  /* scrollbars */
-  --scrollbar-track: #333333; /* match bg */
-  --scrollbar-thumb: #666666; /* lighter for contrast */
+  /* misc */
+  --black: #292929;
 
-  /* code colors (you’re using Monokai; keep for now) */
+  /* code (Monokai for now; can swap later) */
   --code-bg: #272822;
   --code-fg: #f8f8f2;
-  --code-scroll-thumb: #525252;
 
-  /* notes / open summary bg tuned for dark */
-  --note-bg-dark: rgba(0, 122, 204, 0.2);
-  --summary-open-bg: rgba(255, 255, 255, 0.08);
+  /* scrollbars */
+  --scrollbar-track: #f7f7f7; /* = --background-fg */
+  --scrollbar-thumb: #dddddd; /* = --border-color */
+
+  /* notes / details */
+  --note-bg-light: rgba(0, 122, 204, 0.1);
+  --note-color-light: #007acc;
+  --summary-open-bg: rgba(0, 0, 0, 0.06);
+
+  /* extras from second snippet you might reference elsewhere */
+  --background-fg: #f7f7f7;
+  --border-color: #dddddd;
+  --box-shadow: 0 0 1px rgba(0, 0, 0, 0.7);
+  --box-shadow2: 0 0 3px rgba(0, 0, 0, 0.2);
+  --home-cover-background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 250, 1) 25%,
+    rgba(214, 219, 220, 1) 50%,
+    rgba(255, 255, 250, 1) 75%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  --icon-filter: invert(41%) sepia(19%) saturate(840%) hue-rotate(161deg)
+    brightness(92%) contrast(92%);
+
+  /* base16 tomorrow (light) */
+  --chroma-base00: #f9f9f9;
+  --chroma-base01: #e0e0e0;
+  --chroma-base02: rgba(159, 218, 159, 0.2);
+  --chroma-base03: #8e908c;
+  --chroma-base04: #969896;
+  --chroma-base05: #4d4d4c;
+  --chroma-base06: #282a2e;
+  --chroma-base07: #1d1f21;
+  --chroma-base08: #c82829;
+  --chroma-base09: #f5871f;
+  --chroma-base0A: #eab700;
+  --chroma-base0B: #718c00;
+  --chroma-base0C: #3e999f;
+  --chroma-base0D: #4271ae;
+  --chroma-base0E: #8959a8;
+  --chroma-base0F: #a3685a;
 }
 
-/* JetBrains Mono Regular */
-@font-face {
-  font-family: "JetBrains Mono";
-  src: url("/fonts/JetBrainsMono-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+/* ------------------------------
+   DARK (maps from :root[data-color="dark"])
+------------------------------ */
+:root[data-color="dark"] {
+  --primary-color: #efefef; /* = --color */
+  --secondary-color: #121212; /* = --background */
+  --secondary-color-dark: #1f1f1f; /* = --background-fg2 */
+
+  /* keep your brand accent or swap here */
+  --tertiary-color: #e0002d;
+  --tertiary-color-light: #ffb370;
+
+  --link-color: #66cccc; /* readable on dark */
+
+  --code-bg: #272822;
+  --code-fg: #f8f8f2;
+
+  --scrollbar-track: #333333;
+  --scrollbar-thumb: #666666;
+
+  --background-fg: #333333;
+  --border-color: rgba(255, 255, 255, 0.4);
+  --box-shadow: 0 0 1px rgba(255, 255, 255, 1);
+  --box-shadow2: 0 0 3px rgba(255, 255, 255, 0.6);
+  --home-cover-background: radial-gradient(
+    circle,
+    rgba(23, 23, 25, 1) 0%,
+    rgba(18, 18, 0, 1) 25%,
+    rgba(32, 32, 32, 1) 50%,
+    rgba(18, 18, 0, 1) 75%,
+    rgba(23, 23, 25, 1) 100%
+  );
+  --icon-filter: invert(83%) sepia(0%) saturate(1582%) hue-rotate(126deg)
+    brightness(86%) contrast(80%);
+
+  /* base16 tomorrow night */
+  --chroma-base00: #080808;
+  --chroma-base01: #393939;
+  --chroma-base02: rgba(159, 218, 159, 0.1);
+  --chroma-base03: #999999;
+  --chroma-base04: #b4b7b4;
+  --chroma-base05: #cccccc;
+  --chroma-base06: #e0e0e0;
+  --chroma-base07: #ffffff;
+  --chroma-base08: #f2777a;
+  --chroma-base09: #f99157;
+  --chroma-base0A: #ffcc66;
+  --chroma-base0B: #99cc99;
+  --chroma-base0C: #66cccc;
+  --chroma-base0D: #6699cc;
+  --chroma-base0E: #cc99cc;
+  --chroma-base0F: #a3685a;
 }
 
-/* JetBrains Mono Italic */
-@font-face {
-  font-family: "JetBrains Mono";
-  src: url("/fonts/JetBrainsMono-Italic.ttf") format("truetype");
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
+/* ------------------------------
+   NIGHT (maps from :root[data-color="night"])
+------------------------------ */
+:root[data-color="night"] {
+  --primary-color: #cccccc; /* = --color */
+  --secondary-color: #333333; /* = --background */
+  --secondary-color-dark: #3a3a3a; /* = --background-fg2 */
+
+  /* accent */
+  --tertiary-color: #e0002d;
+  --tertiary-color-light: #a34c00; /* twilight-ish warm */
+
+  --link-color: #66cccc; /* twilight cyan */
+
+  --code-bg: #272822;
+  --code-fg: #f8f8f2;
+
+  --scrollbar-track: #333333;
+  --scrollbar-thumb: #666666;
+
+  --background-fg: #4a4a4a;
+  --border-color: rgba(255, 255, 255, 0.2);
+  --box-shadow: 0 0 1px rgba(225, 255, 255, 1);
+  --box-shadow2: 0 0 3px rgba(255, 255, 255, 0.6);
+  --home-cover-background: radial-gradient(
+    circle,
+    rgba(52, 52, 52, 1) 0%,
+    rgba(42, 42, 42, 1) 25%,
+    rgba(57, 57, 57, 1) 50%,
+    rgba(42, 42, 42, 1) 75%,
+    rgba(52, 52, 52, 1) 100%
+  );
+  --icon-filter: invert(60%) sepia(25%) saturate(20%) hue-rotate(343deg)
+    brightness(98%) contrast(94%);
+
+  /* base16 twilight */
+  --chroma-base00: #1e1e1e;
+  --chroma-base01: #323537;
+  --chroma-base02: rgba(159, 218, 159, 0.1);
+  --chroma-base03: #5f5a60;
+  --chroma-base04: #838184;
+  --chroma-base05: #a7a7a7;
+  --chroma-base06: #c3c3c3;
+  --chroma-base07: #ffffff;
+  --chroma-base08: #cf6a4c;
+  --chroma-base09: #cda869;
+  --chroma-base0A: #f9ee98;
+  --chroma-base0B: #8f9d6a;
+  --chroma-base0C: #afc4db;
+  --chroma-base0D: #7587a6;
+  --chroma-base0E: #9b859d;
+  --chroma-base0F: #9b703f;
 }
 
-/* JetBrains Mono Medium */
-@font-face {
-  font-family: "JetBrains Mono";
-  src: url("/fonts/JetBrainsMono-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
+/* ------------------------------
+   COMPONENT TOKENS USING THE MAP
+------------------------------ */
+.icon:not(.icon-colored) {
+  filter: var(--icon-filter);
 }
 
-/* JetBrains Mono Medium Italic */
-@font-face {
-  font-family: "JetBrains Mono";
-  src: url("/fonts/JetBrainsMono-MediumItalic.ttf") format("truetype");
-  font-weight: 500;
-  font-style: italic;
-  font-display: swap;
+.cv-body h3 {
+  background: var(--secondary-color-dark);
+  border: 1px solid var(--border-color);
+  color: var(--primary-color);
+  border-radius: var(--radius);
 }
 
-/* JetBrains Mono Bold */
-@font-face {
-  font-family: "JetBrains Mono";
-  src: url("/fonts/JetBrainsMono-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
+.pill,
+.btn {
+  background: var(--background-fg, var(--secondary-color-dark));
+  border: 1px solid var(--border-color);
+  color: var(--primary-color);
+  border-radius: var(--radius);
 }
 
-/* JetBrains Mono Bold Italic */
-@font-face {
-  font-family: "JetBrains Mono";
-  src: url("/fonts/JetBrainsMono-BoldItalic.ttf") format("truetype");
-  font-weight: 700;
-  font-style: italic;
-  font-display: swap;
+/* subtle highlight for active nav/toc */
+.cv-toc a:hover,
+.cv-toc a.active {
+  background: var(--secondary-color-dark);
+}
+
+/* code blocks */
+pre,
+code {
+  background: var(--code-bg);
+  color: var(--code-fg);
+  border-radius: var(--radius);
+}
+
+/* scrollbars */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+*::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+*::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+*::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 999px;
+}
+
+/* links – kill underlines unless you want them on hover */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+
+/* details/summary open bg */
+details[open] {
+  background: var(--summary-open-bg);
+  border-radius: var(--radius);
+}
+
+/* ------------------------------
+   OPTIONAL: .dark class support
+   (if you still toggle with a class on <html>)
+------------------------------ */
+.dark {
+  /* just proxy to the dark data-color so both ways work */
+  --primary-color: #efefef;
+  --secondary-color: #121212;
+  --secondary-color-dark: #1f1f1f;
+  --tertiary-color: #e0002d;
+  --tertiary-color-light: #ffb370;
+  --link-color: #66cccc;
+  --code-bg: #272822;
+  --code-fg: #f8f8f2;
+  --scrollbar-track: #333333;
+  --scrollbar-thumb: #666666;
+  --background-fg: #333333;
+  --border-color: rgba(255, 255, 255, 0.4);
+  --box-shadow: 0 0 1px rgba(255, 255, 255, 1);
+  --box-shadow2: 0 0 3px rgba(255, 255, 255, 0.6);
 }

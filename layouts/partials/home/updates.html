@@ -1,25 +1,41 @@
-<div style="margin-top: 30px; margin-bottom: 0;">
-    <h2 style="border-bottom: 2px solid #007acc; display: inline-block; padding-bottom: 5px; margin-bottom: 10px;">Latest News
-    </h2>
+<div style="margin-top: 30px; margin-bottom: 0">
+  <h2
+    style="
+      border-bottom: 2px solid #007acc;
+      display: inline-block;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+    "
+  >
+    Latest News
+  </h2>
 
-    {{ with .Site.GetPage "updates" }}
-    <div style="padding: 15px; border-radius: 8px;"> <!-- Ensure no background-color or opacity -->
-        <!-- Split the content into separate list items -->
-        {{ $updates := split (string .RawContent) "\n- " }} <!-- Splitting at the markdown list item "-" -->
+  {{ with .Site.GetPage "updates" }}
+  <div style="padding: 15px; border-radius: 8px">
+    <!-- Ensure no background-color or opacity -->
+    <!-- Split the content into separate list items -->
+    {{ $updates := split (string .RawContent) "\n- " }}
+    <!-- Splitting at the markdown list item "-" -->
 
-        <!-- Create a list of updates, limited to the first 3 -->
-        <ul style="list-style-type: none; padding-left: 0; margin-bottom: 0;">
-            {{ range first 3 (after 1 $updates) }} <!-- Skip the first empty element, limit to 3 -->
-                {{ if ne . "" }} <!-- Exclude empty lines -->
-                <li>{{ . | markdownify }}</li> <!-- Directly render the list item as markdown -->
-                {{ end }}
-            {{ end }}
-        </ul>
+    <!-- Create a list of updates, limited to the first 3 -->
+    <ul style="list-style-type: none; padding-left: 0; margin-bottom: 0">
+      {{ range first 3 (after 1 $updates) }}
+      <!-- Skip the first empty element, limit to 3 -->
+      {{ if ne . "" }}
+      <!-- Exclude empty lines -->
+      <li>{{ . | markdownify }}</li>
+      <!-- Directly render the list item as markdown -->
+      {{ end }} {{ end }}
+    </ul>
 
-        <!-- Show more updates link -->
-        <p><a href="{{ .Permalink }}" style="color: #007acc; text-decoration: none;">Show more updates</a></p>
-    </div>
-    {{ else }}
-    <p>No updates available at the moment.</p>
-    {{ end }}
+    <!-- Show more updates link -->
+    <p>
+      <a href="{{ .Permalink }}" style="color: #007acc; text-decoration: none"
+        >Show more updates</a
+      >
+    </p>
+  </div>
+  {{ else }}
+  <p>No updates available at the moment.</p>
+  {{ end }}
 </div>

@@ -7,24 +7,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>//localhost:1313/tags/index/</loc>
-    <lastmod>2024-09-12T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>//localhost:1313/posts/</loc>
-    <lastmod>2024-09-12T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>//localhost:1313/tags/</loc>
-    <lastmod>2024-09-12T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>//localhost:1313/tags/distraction/</loc>
     <lastmod>2024-09-08T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
@@ -68,6 +50,12 @@
   </url>
   <url>
     <loc>//localhost:1313/tags/students/</loc>
+    <lastmod>2024-09-08T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>//localhost:1313/tags/</loc>
     <lastmod>2024-09-08T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -151,7 +139,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>//localhost:1313/gallery/</loc>
+    <loc>//localhost:1313/posts/</loc>
     <lastmod>2024-09-01T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -205,6 +193,16 @@
   </url>
   <url>
     <loc>//localhost:1313/categories/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>//localhost:1313/gallery/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>//localhost:1313/portfolio/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

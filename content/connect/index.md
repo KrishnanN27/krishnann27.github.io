@@ -1,24 +1,21 @@
 ---
 title: "Connect"
 date: 2024-09-01
-description: "Let's get in touch!"
-showReadingTime : false
-externalURL: false
 ---
 
 <p>If you'd like to reach out, here are a few ways to get in touch with me:</p>
 
 <ul style="list-style-type: none; padding-left: 0;">
-    <li><strong><i class="fas fa-envelope"></i> Personal Email:</strong> 
+    <li><strong><i class="fas fa-envelope"></i> Personal Email:</strong>
         <a href="mailto:krishnaofficial27@gmail.com" style="color: #007acc; text-decoration: none;">krishnaofficial27@gmail.com</a>
     </li>
-    <li><strong><i class="fas fa-envelope"></i> Official Email:</strong> 
+    <li><strong><i class="fas fa-envelope"></i> Official Email:</strong>
         <a href="mailto:sowndaryakrishnanna@mines.edu" style="color: #007acc; text-decoration: none;">sowndaryakrishnanna@mines.edu</a>
     </li>
-    <li><strong><i class="fab fa-github"></i> GitHub:</strong> 
+    <li><strong><i class="fab fa-github"></i> GitHub:</strong>
         <a href="https://github.com/KrishnanN27" target="_blank" style="color: #007acc; text-decoration: none;">github.com/KrishnanN27</a>
     </li>
-    <li><strong><i class="fab fa-linkedin"></i> LinkedIn:</strong> 
+    <li><strong><i class="fab fa-linkedin"></i> LinkedIn:</strong>
         <a href="https://www.linkedin.com/in/sowndaryakrishnank/" target="_blank" style="color: #007acc; text-decoration: none;">linkedin.com/in/sowndaryakrishnank/</a>
     </li>
 </ul>
