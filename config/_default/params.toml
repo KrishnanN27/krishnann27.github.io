@@ -35,7 +35,7 @@ enableSearch = true
 # bing = ""
 # pinterest = ""
 # yandex = ""
-# paginate = 4 
+# paginate = 4
 # Homepage settings
 [homepage]
 
