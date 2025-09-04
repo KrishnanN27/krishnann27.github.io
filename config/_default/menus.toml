@@ -19,11 +19,11 @@
 
 
 #
-[[main]]
-name = "about"
-title = "About"
-url = "/about/"
-weight = 2
+# [[main]]
+# name = "about"
+# title = "About"
+# url = "/about/"
+# weight = 2
 
 #
 [[main]]
