@@ -1,7 +1,7 @@
 ---
-title: "Home"
+title: "Sowndarya Krishnan Navaneetha Kannan"
 date: 2024-09-01
-description: "Code & Canvas of Krish."
+description: "Code & Canvas of Sowndarya Krishnan Navaneetha Kannan."
 ---
 
 <style>
