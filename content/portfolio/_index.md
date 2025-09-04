@@ -13,8 +13,9 @@ endLevel: 3
 
 ## Summary {#summary}
 
-First-year **PhD student in Computer Science** at **Colorado School of Mines**, focusing on **Quantum & AI**.
-Background in AI, knowledge graphs (RDF/SHACL), and scalable systems across research, interdisciplinary projects, and industry.
+First-year **PhD student in Computer Science** at **Colorado School of Mines**, focusing on **Quantum Computing & AI application**.
+
+<!-- Background in AI, knowledge graphs (RDF/SHACL),  -->
 
 ---
 
@@ -37,8 +38,18 @@ Background in AI, knowledge graphs (RDF/SHACL), and scalable systems across rese
 
 <span class="meta">Aug 2023 – Present • Golden, CO</span>
 
-- Researched **SHACL validation & inference** (RDF graph acceleration).
-- Built scalable validation for **real-time IoT / Smart-City** data.
+- Built a framework for a custom **SHACL validator** that uses dataflow operations and integrates multiple optimizations for scalability.
+
+<div class="award-images">
+  <div>
+    <img src="/images/research/r1.jpg" alt="SHACL Research Work — Diagram" class="uniform-img">
+    <!-- <p class="caption">SHACL Validator Framework</p> -->
+  </div>
+  <div>
+    <img src="/images/research/r2.jpg" alt="DataDrivenCPS Lab Presentation" class="uniform-img">
+    <!-- <p class="caption">DataDrivenCPS Lab</p> -->
+  </div>
+</div>
 
 ### Contributor — BrickSchema Ontology (Data-Driven CPS Lab)
 
@@ -105,13 +116,55 @@ _More projects on [GitHub](https://github.com/KrishnanN27)._
 
 ## Notable Awards & Participation {#awards}
 
-- **Best Poster Presentation** — CMAPP Honors, CSM <span class="meta">(Jan 2025)</span>
-- **Hackathon Winner (x2)** — Echoes of Equality, CSM <span class="meta">(Feb 2022)</span>
-- **Undergrad Research Symposium Judge (x2)** — CSM <span class="meta">(Sept 2024 & Apr 2024)</span>
-- **Best Presentation** — ECUBE, MSR Engg College <span class="meta">(Mar 2022)</span>
-- **Hostel Rep & Vice President** — ECE Dept., MSR <span class="meta">(2016–2017)</span>
+### Best Poster Presentation — CMAPP Honors, CSM
+
+<span class="meta">(Jan 2025)</span>
+
+<div class="award-images">
+  <div>
+    <img src="/images/2025/p1.jpg" alt="Best Poster Presentation Award" class="uniform-img">
+    <!-- <p class="caption">Poster Award</p> -->
+  </div>
+  <div>
+    <img src="/images/2025/p2.jpg" alt="CMAPP Event" class="uniform-img">
+    <!-- <p class="caption">CMAPP Event</p> -->
+  </div>
+</div>
 
 ---
+
+### Hackathon Winner — Echoes of Equality, CSM
+
+<span class="meta">(Feb 2022)</span>
+
+<div class="award-images">
+  <div>
+    <img src="/images/hb/h6.jpeg" alt="Echoes of Equality Project" class="uniform-img">
+    <!-- <p class="caption">Project Demo</p> -->
+  </div>
+  <div>
+    <img src="/images/hb/h7.jpeg" alt="Hackathon Award" class="uniform-img">
+    <!-- <p class="caption">Hackathon Award</p> -->
+  </div>
+</div>
+
+---
+
+### Undergrad Research Symposium Judge (x2) — CSM
+
+<span class="meta">(Sept 2024 & Apr 2024)</span>
+
+---
+
+### Best Presentation — ECUBE, MSR Engg College
+
+<span class="meta">(Mar 2022)</span>
+
+---
+
+### Hostel Rep & Vice President — ECE Dept., MSR
+
+<span class="meta">(2016–2017)</span>
 
 ## Technical Skills & Certifications {#skills}
 
