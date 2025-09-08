@@ -1,34 +1,39 @@
-<header style="display: flex; justify-content: space-between; align-items: center; padding: 0 1rem;">
-  <div class="header-left" style="display: flex; align-items: center; gap: 0.5rem;">
-    <!-- Left logo / brand -->
-    <a href="{{ "" | relLangURL}}" class="brand" style="font-size: 1.1em; font-weight: normal; text-decoration: none; white-space: nowrap;">
+<!-- Make sure this is in your <head> (usually in your base template) -->
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<header
+  style="display:flex;justify-content:space-between;align-items:center;padding:0 1rem;"
+>
+  <div class="header-left" style="display:flex;align-items:center;gap:.5rem;">
+    <!-- Brand -->
+    <a href="{{ "" | relLangURL }}" class="brand"
+      style="font-size:1.1em;font-weight:normal;text-decoration:none;white-space:nowrap;">
       Sowndarya Krishnan Navaneetha Kannan
     </a>
 
     {{ if .Site.Params.logo }}
-    <a class="title" href="{{ "" | relLangURL}}">
+    <a class="title" href="{{ "" | relLangURL }}">
       {{ $imgData := dict "Page" . "URL" .Site.Params.logo "Alt" "Site Logo" "Size" "64x64" }}
       {{ partial "image-renderer.html" $imgData }}
     </a>
     {{ end }}
   </div>
 
-  <div class="header-cntr" style="flex: 1; display: flex; justify-content: flex-end; align-items: center; gap: 1rem;">
-    <div class="menu" style="display: flex; align-items: center; gap: 1rem;">
-      <!-- Navigation menu -->
-      <nav id="main-menu" class="mm-normal">
-        <ul style="display: flex; align-items: center; gap: 1rem; font-size: 1.2em; margin: 0; padding: 0; list-style: none;">
+  <div class="header-cntr" style="flex:1;display:flex;justify-content:flex-end;align-items:center;gap:1rem;">
+    <div class="menu" style="display:flex;align-items:center;gap:1rem;">
+      <!-- Navigation -->
+      <nav id="main-menu" class="mm-normal" aria-label="Primary">
+        <ul style="display:flex;align-items:center;gap:1rem;margin:0;padding:0;list-style:none;">
           <li>
-            <button id="mob-x-icon" class="menu-btn" arial-label="x-icon" style="display: none;">
+            <button id="mob-x-icon" class="menu-btn" aria-label="Close menu" type="button" style="display:none;">
               {{ partial "icon.html" "xmark" }}
             </button>
           </li>
           {{ range .Site.Menus.main }}
           <li>
-            <a href="{{ .URL }}" aria-label="{{ .Name }}" style="text-decoration: none; display: flex; align-items: center; gap: 0.25rem;">
-              {{ if .Pre }}
-              <span>{{ partial "icon.html" .Pre }}</span>
-              {{ end }}
+            <a href="{{ .URL }}" aria-label="{{ .Name }}"
+               style="text-decoration:none;display:flex;align-items:center;gap:.25rem;">
+              {{ if .Pre }}<span>{{ partial "icon.html" .Pre }}</span>{{ end }}
               {{ .Title | emojify }}
             </a>
           </li>
@@ -36,67 +41,138 @@
         </ul>
       </nav>
 
-      <!-- Search + Theme Switcher inline -->
-      <div class="side-menu" style="display: flex; align-items: center; gap: 0.5rem;">
+      <!-- Search + Theme Switcher -->
+      <div class="side-menu" style="display:flex;align-items:center;gap:.5rem;">
         {{ partial "search.html" . }}
         {{ if .Site.Params.showThemeSwitcher | default false }}
-        <button id="theme-switcher" class="menu-btn" aria-label="Theme switcher" style="display: flex; align-items: center; gap: 0.25rem;">
-          <div id="moon" style="font-size: 1.3em;">
-            {{ partial "icon.html" "moon" }}
-          </div>
-          <div id="sun" style="font-size: 1.3em;">
-            {{ partial "icon.html" "sun" }}
-          </div>
+        <button id="theme-switcher" class="menu-btn" aria-label="Theme switcher" type="button"
+                style="display:flex;align-items:center;gap:.25rem;">
+          <div id="moon" style="font-size:1.3em;">{{ partial "icon.html" "moon" }}</div>
+          <div id="sun" style="font-size:1.3em;">{{ partial "icon.html" "sun" }}</div>
         </button>
         {{ end }}
       </div>
 
-      <!-- Hamburger icon -->
-      <button id="mob-hb-icon" class="menu-btn" aria-label="Hamburger icon">
+      <!-- Hamburger -->
+      <button id="mob-hb-icon" class="menu-btn" aria-label="Open menu" type="button"
+              aria-expanded="false" aria-controls="main-menu">
         {{ partial "icon.html" "bars" }}
       </button>
     </div>
   </div>
 
-  <!-- Mobile toggle scripts -->
+  <!-- Styles for responsiveness -->
+  <style>
+    header .menu-btn{background:none;border:0;padding:.4rem;cursor:pointer}
+    header .brand{text-decoration:none}
+    /* Desktop (>=768px) */
+    @media (min-width:768px){
+      #mob-hb-icon{display:none}
+      #mob-x-icon{display:none !important}
+      #main-menu.mm-normal{display:block}
+      #main-menu ul{display:flex;align-items:center;gap:1rem;margin:0;padding:0;list-style:none}
+      #main-menu a{text-decoration:none;display:flex;align-items:center;gap:.25rem}
+    }
+    /* Mobile (<768px) */
+    @media (max-width:767.98px){
+      #main-menu.mm-normal{display:none}
+      #main-menu.mm-mobile-open{
+        position:fixed;inset:0;display:flex;align-items:flex-start;justify-content:flex-start;
+        background:var(--menu-bg,rgba(0,0,0,.85));z-index:9999;padding:1rem
+      }
+      #main-menu.mm-mobile-open ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+
+  list-style: none;
+  margin: 1rem auto;
+  padding: 1rem;
+  width: min(90vw, 420px);
+  max-height: calc(100vh - 2rem);
+  overflow: auto;
+  border-radius: 1rem;
+
+  background: var(--primary);
+  color: var(--on-primary, #fff); /* ensure text stands out */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Light/Dark scheme auto-fix */
+@media (prefers-color-scheme: light) {
+  #main-menu.mm-mobile-open ul {
+    background: var(--primary-light, var(--primary));
+    color: var(--on-primary-light, #000);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  #main-menu.mm-mobile-open ul {
+    background: var(--primary-dark, var(--primary));
+    color: var(--on-primary-dark, #fff);
+  }
+}
+
+
+      #main-menu.mm-mobile-open a{text-decoration:none;font-size:1.1rem}
+      #mob-hb-icon{display:inline-flex}
+      #mob-x-icon{display:none}
+      /* show X only while open (handled by inline style toggle in JS) */
+    }
+    /* Current item highlight */
+    #main-menu a.active{font-weight:600;text-decoration:underline;text-underline-offset:.2em}
+  </style>
+
+  <!-- Scripts -->
   <script>
     (function () {
       document.addEventListener('DOMContentLoaded', function () {
-        const openBtn = document.getElementById('mob-hb-icon');
+        const openBtn  = document.getElementById('mob-hb-icon');
         const closeBtn = document.getElementById('mob-x-icon');
         const mainMenu = document.getElementById('main-menu');
         const body = document.body;
 
-        openBtn.addEventListener('click', function () {
-          mainMenu.classList.replace('mm-normal', 'mm-mobile-open');
-          closeBtn.style.display = 'block';
+        if (!openBtn || !closeBtn || !mainMenu) return;
+
+        function openMenu() {
+          mainMenu.classList.remove('mm-normal');
+          mainMenu.classList.add('mm-mobile-open');
+          closeBtn.style.display = 'inline-flex';
+          openBtn.setAttribute('aria-expanded', 'true');
           body.style.overflow = 'hidden';
-        });
-
-        closeBtn.addEventListener('click', function () {
-          mainMenu.classList.replace('mm-mobile-open', 'mm-normal');
-          closeBtn.style.display = 'none';
-          body.style.overflow = '';
-        });
-      });
-    })();
-  </script>
-
-  {{ if .Site.Params.highlightCurrentMenu }}
-  <script>
-    (function () {
-      var mainmenu = document.getElementById('main-menu');
-      if (!mainmenu) return;
-
-      var path = window.location.pathname;
-      var links = mainmenu.querySelectorAll('a');
-
-      links.forEach(function (link) {
-        if (link.getAttribute('href') === path) {
-          link.classList.add('active');
         }
+
+        function closeMenu() {
+          mainMenu.classList.remove('mm-mobile-open');
+          mainMenu.classList.add('mm-normal');
+          closeBtn.style.display = 'none';
+          openBtn.setAttribute('aria-expanded', 'false');
+          body.style.overflow = '';
+        }
+
+        openBtn.addEventListener('click', openMenu);
+        closeBtn.addEventListener('click', closeMenu);
+
+        // Close if tapping outside the sheet
+        mainMenu.addEventListener('click', (e) => {
+          if (mainMenu.classList.contains('mm-mobile-open') && e.target === mainMenu) closeMenu();
+        });
+
+        // Close on ESC
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && mainMenu.classList.contains('mm-mobile-open')) closeMenu();
+        });
+
+        // Highlight current menu item (handles trailing slashes)
+        (function highlightActive() {
+          const path = (window.location.pathname || '/').replace(/\/+$/, '') || '/';
+          mainMenu.querySelectorAll('a[href]').forEach((link) => {
+            const href = (link.getAttribute('href') || '').replace(/\/+$/, '') || '/';
+            if (href === path) link.classList.add('active');
+          });
+        })();
       });
     })();
   </script>
-  {{ end }}
 </header>
