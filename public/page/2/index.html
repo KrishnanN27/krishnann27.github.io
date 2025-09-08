@@ -548,7 +548,6 @@
 
 
 
-<!-- If your site has a layout with a <head>, move the following <meta>/<link> into that head. -->
 <link rel="canonical" href="https://skfyi.com/">
 <meta name="description" content="Official site of Sowndarya Krishnan (Krish), PhD student in Computer Science at Colorado School of Mines. Research in Quantum Computing & AI Applications.">
 <meta property="og:title" content="Sowndarya Krishnan (Krish) – Official Site">
@@ -559,53 +558,35 @@
 <meta property="profile:last_name" content="Krishnan">
 <meta name="twitter:card" content="summary">
 <style>
-  .home-wrap {
-    max-width: 760px;
-    margin: 72px auto;
-    padding: 0 20px;
-    text-align: center;
-    color: var(--text-color, inherit);
-  }
-  .home-img  {
-    width: 200px; max-width: 55%; display: block; margin: 0 auto 28px auto;
-    border-radius: 50%; box-shadow: 0 8px 20px rgba(0,0,0,.12);
-  }
-  .home-title{ font-size: 1.8rem; line-height: 1.2; margin: 0; color: var(--primary, #006699); }
-  .home-sub  { font-size: 1.05rem; line-height: 1.8; margin: 14px 0 0 0; }
-  .pillbar   { margin: 22px auto 0; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-  .pill      { font-size: .9rem; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--primary, #006699); color: var(--primary, #006699); background: transparent; }
-  .link      { color: var(--primary, #006699); text-decoration: none; font-weight: 500; }
-  .link:hover{ text-decoration: underline; }
-  .cta-bar   { margin: 22px auto 0; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-  .btn       { display:inline-block; padding:10px 14px; border-radius:12px; border:1px solid var(--primary,#006699); color:white; background: var(--primary,#006699); }
-  .btn.alt   { background:transparent; color: var(--primary,#006699); }
-  .home-recent { max-width: 760px; margin: 48px auto 0; padding: 0 20px; text-align: left; }
-  .home-recent h2 { margin: 0 0 12px 0; font-size: 1.2rem; color: var(--primary, #006699); }
+  :root{ --primary:#006699; --text:inherit; }
+  .home-wrap{ max-width:760px; margin:72px auto; padding:0 20px; text-align:center; color:var(--text); }
+  .home-img{ width:200px; max-width:55%; display:block; margin:0 auto 24px; border-radius:50%; box-shadow:0 8px 20px rgba(0,0,0,.12); }
+  .home-title{ font-size:1.8rem; line-height:1.2; margin:0; color:var(--primary); }
+  .home-sub{ font-size:1.05rem; line-height:1.8; margin:12px 0 0; }
+  .pillbar{ margin:20px auto 0; display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+  .pill{ font-size:.9rem; padding:6px 12px; border-radius:999px; border:1px solid var(--primary); color:var(--primary); background:transparent; }
+  .link{ color:var(--primary); text-decoration:none; font-weight:500; }
+  .link:hover{ text-decoration:underline; }
+  .cta-bar{ margin:22px auto 0; display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+  .btn{ display:inline-block; padding:10px 14px; border-radius:12px; border:1px solid var(--primary); color:white; background:var(--primary); text-decoration:none; }
+  .btn.alt{ background:transparent; color:var(--primary); }
 </style>
 <div class="home-wrap">
-  <img src="/images/prof/dp.png" alt="Portrait of Sowndarya Krishnan (Krish)" class="home-img">
-  <h1 class="home-title">Hi, I’m <span style="white-space:nowrap">Sowndarya Krishnan</span> (Krish) 👋</h1>
+  <img src="/images/prof/dp.png" alt="Portrait of Sowndarya Krishnan (Krish)" class="home-img" width="400" height="400" loading="eager" decoding="async">
+  <h1 class="home-title">Sowndarya Krishnan (Krish)</h1>
   <p class="home-sub">
-    I’m a first-year PhD student in Computer Science at
+    PhD student in Computer Science at
     <a href="https://www.mines.edu/" target="_blank" rel="noopener" class="link">Colorado School of Mines</a>.
-    My research focuses on
-    <!-- <strong>Quantum Computing</strong> and <strong>AI Applications</strong>—including quantum-enhanced learning and practical tooling for applied AI. -->
   </p>
-  <p class="home-sub" style="margin-top:8px">
-    <!-- Also known as <strong>Sowndarya Krishnan Navaneetha Kannan</strong>. -->
+  <p class="home-sub">
+    My research is on:
   </p>
   <div class="pillbar" aria-label="Research areas">
     <span class="pill">Quantum Computing</span>
     <span class="pill">AI Applications</span>
   </div>
-  <!-- </div> -->
 </div>
-<section class="home-recent">
-  <h2>FAQ</h2>
-  <p><strong>Do you go by Krish? Krishna? </strong> Yes—short for <em>Sowndarya Krishnan</em>.</p>
-  <p><strong>Common misspelling:</strong> Some people type <em>soundaryakrishnan,soundaryakrishan </em>. That’s me—hello! 👋</p>
-</section>
-<!-- Person schema: safe to leave in the page body -->
+<!-- FAQ removed as requested -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -694,40 +675,53 @@
 
  
       </main>
-      <footer style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px 0; gap: 10px;">
+      <footer
+  style="
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    gap: 12px;
+    font-size: 0.95em;
+  "
+>
   
-  <div class="footer-icons" style="display: flex; justify-content: center; align-items: center; gap: 15px;">
-    <a href="https://www.linkedin.com/in/krishnan-n/" target="_blank" aria-label="LinkedIn">
-      <img src="/icons/linkedin.svg" alt="LinkedIn" style="width: 24px; height: 24px;">
-    </a>
-    <a href="https://github.com/KrishnanN27" target="_blank" aria-label="GitHub">
-      <img src="/icons/github.svg" alt="GitHub" style="width: 24px; height: 24px;">
-    </a>
-    <a href="https://datadrivencps.github.io/website/" target="_blank" aria-label="DataDrivenCPS Lab">
-      <img src="/icons/lab.png" alt="Research Lab" style="width: 24px; height: 24px;">
-    </a>
-    <a href="https://devpost.com/KrishnanN27?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav" target="_blank" aria-label="DevPost">
-      <img src="/icons/devpost.png" alt="DevPost" style="width: 24px; height: 24px;">
-    </a>
-    <a href="mailto:sowndaryakrishnanna@mines.edu" aria-label="Email">
-      <img src="/icons/email.png" alt="Email" style="width: 24px; height: 24px;">
-    </a>
+  <nav
+    class="footer-links"
+    style="display: flex; flex-wrap: wrap; justify-content: center; gap: 18px"
+  >
+    <a
+      href="https://www.linkedin.com/in/krishnan-n/"
+      target="_blank"
+      rel="noopener"
+      style="text-decoration: none; color: inherit"
+      >LinkedIn</a
+    >
+    <a
+      href="https://github.com/KrishnanN27"
+      target="_blank"
+      rel="noopener"
+      style="text-decoration: none; color: inherit"
+      >GitHub</a
+    >
     
-    <a href="tel:+1234567890" aria-label="Phone">
-      <img src="/icons/phone.png" alt="Phone" style="width: 24px; height: 24px;">
-    </a>
 
-    
-    <span style="margin-left: 10px;">
-      <a href="/connect/" style="color: inherit; font-weight: bold; text-decoration: none;">
-        Connect with me
-      </a>
-    </span>
-  </div>
+    <a
+      href="mailto:sowndaryakrishnanna@mines.edu"
+      style="text-decoration: none; color: inherit"
+      >Email</a
+    >
+  </nav>
 
   
-  <div class="copyright" style="margin-top: 10px; font-size: 0.9em;">
-     © 2025  Sowndarya Krishnan Navaneetha Kannan 
+  
+
+  
+  <div
+    class="copyright"
+    style="margin-top: 8px; font-size: 0.85em; color: gray"
+  >
+     © 2025 Sowndarya Krishnan Navaneetha Kannan 
   </div>
 </footer>
 
