@@ -192,15 +192,26 @@
       }
     </script>
     <div class="content">
-      <header style="display: flex; justify-content: space-between; align-items: center; padding: 0 1rem;">
-  <div class="header-left" style="display: flex; align-items: center; gap: 0.5rem;">
+      
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<header
+  style="display:flex;justify-content:space-between;align-items:center;padding:0 1rem;"
+>
+  <div class="header-left" style="display:flex;align-items:center;gap:.5rem;min-width:0;flex:1 1 auto;">
     
-    <a href="/" class="brand" style="font-size: 1.1em; font-weight: normal; text-decoration: none; white-space: nowrap;">
+    <a href="/" class="brand"
+      style="
+        display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:2;
+        overflow:hidden; line-height:1.2; max-width:100%;
+        font-size:clamp(1rem, 4.5vw, 1.1rem); font-weight:normal; text-decoration:none;
+        word-break:break-word;
+      ">
       Sowndarya Krishnan Navaneetha Kannan
     </a>
 
     
-    <a class="title" href="/">
+    <a class="title" href="/" style="flex:0 0 auto;">
       
       
 
@@ -232,13 +243,13 @@
     
   </div>
 
-  <div class="header-cntr" style="flex: 1; display: flex; justify-content: flex-end; align-items: center; gap: 1rem;">
-    <div class="menu" style="display: flex; align-items: center; gap: 1rem;">
+  <div class="header-cntr" style="flex:0 0 auto;display:flex;justify-content:flex-end;align-items:center;gap:1rem;min-width:0;">
+    <div class="menu" style="display:flex;align-items:center;gap:1rem;min-width:0;">
       
-      <nav id="main-menu" class="mm-normal">
-        <ul style="display: flex; align-items: center; gap: 1rem; font-size: 1.2em; margin: 0; padding: 0; list-style: none;">
+      <nav id="main-menu" class="mm-normal" aria-label="Primary">
+        <ul style="display:flex;align-items:center;gap:1rem;margin:0;padding:0;list-style:none;">
           <li>
-            <button id="mob-x-icon" class="menu-btn" arial-label="x-icon" style="display: none;">
+            <button id="mob-x-icon" class="menu-btn" aria-label="Close menu" type="button" style="display:none;">
               
 
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
@@ -249,36 +260,38 @@
           </li>
           
           <li>
-            <a href="/portfolio/" aria-label="Portfolio" style="text-decoration: none; display: flex; align-items: center; gap: 0.25rem;">
+            <a href="/portfolio/" aria-label="Portfolio"
+               style="text-decoration:none;display:flex;align-items:center;gap:.25rem;">
               
               Portfolio
             </a>
           </li>
           
           <li>
-            <a href="/posts/" aria-label="Posts" style="text-decoration: none; display: flex; align-items: center; gap: 0.25rem;">
+            <a href="/posts/" aria-label="Posts"
+               style="text-decoration:none;display:flex;align-items:center;gap:.25rem;">
               
               Posts
             </a>
           </li>
           
           <li>
-            <a href="/gallery/" aria-label="Gallery" style="text-decoration: none; display: flex; align-items: center; gap: 0.25rem;">
+            <a href="/gallery/" aria-label="Gallery"
+               style="text-decoration:none;display:flex;align-items:center;gap:.25rem;">
               
               Gallery
             </a>
           </li>
           
           <li>
-            <a href="https://github.com/KrishnanN27" aria-label="github" style="text-decoration: none; display: flex; align-items: center; gap: 0.25rem;">
-              
+            <a href="https://github.com/KrishnanN27" aria-label="github"
+               style="text-decoration:none;display:flex;align-items:center;gap:.25rem;">
               <span>
 
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
 
 
 </span>
-              
               
             </a>
           </li>
@@ -287,7 +300,7 @@
       </nav>
 
       
-      <div class="side-menu" style="display: flex; align-items: center; gap: 0.5rem;">
+      <div class="side-menu" style="display:flex;align-items:center;gap:.5rem;">
         
 
 <button id="search-open" class="menu-btn" aria-label="Search button" style="font-size: 1.2em;">
@@ -387,29 +400,27 @@
 </script>
 
         
-        <button id="theme-switcher" class="menu-btn" aria-label="Theme switcher" style="display: flex; align-items: center; gap: 0.25rem;">
-          <div id="moon" style="font-size: 1.3em;">
-            
+        <button id="theme-switcher" class="menu-btn" aria-label="Theme switcher" type="button"
+                style="display:flex;align-items:center;gap:.25rem;">
+          <div id="moon" style="font-size:1.3em;">
 
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
 
 
-
-          </div>
-          <div id="sun" style="font-size: 1.3em;">
-            
+</div>
+          <div id="sun" style="font-size:1.3em;">
 
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
 
 
-
-          </div>
+</div>
         </button>
         
       </div>
 
       
-      <button id="mob-hb-icon" class="menu-btn" aria-label="Hamburger icon">
+      <button id="mob-hb-icon" class="menu-btn" aria-label="Open menu" type="button"
+              aria-expanded="false" aria-controls="main-menu">
         
 
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
@@ -421,46 +432,117 @@
   </div>
 
   
+  <style>
+    header .menu-btn{background:none;border:0;padding:.4rem;cursor:pointer}
+    header .brand{text-decoration:none}
+
+     
+    .header-left, .header-cntr, .menu { min-width: 0; }
+
+     
+    @media (min-width:768px){
+      #mob-hb-icon{display:none}
+      #mob-x-icon{display:none !important}
+      #main-menu.mm-normal{display:block}
+      #main-menu ul{display:flex;align-items:center;gap:1rem;margin:0;padding:0;list-style:none}
+      #main-menu a{text-decoration:none;display:flex;align-items:center;gap:.25rem}
+
+       
+      .brand{
+        display:inline-block; -webkit-line-clamp:unset; -webkit-box-orient:unset;
+        white-space:nowrap; text-overflow:ellipsis; overflow:hidden; max-width:100%;
+      }
+    }
+
+     
+    @media (max-width:767.98px){
+      header { padding: .5rem .75rem !important; }
+      .header-left { gap: .4rem !important; }
+
+      #main-menu.mm-normal{display:none}
+      #main-menu.mm-mobile-open{
+        position:fixed;inset:0;display:flex;align-items:flex-start;justify-content:flex-start;
+        background:var(--menu-bg,rgba(0,0,0,.85));z-index:9999;padding:1rem
+      }
+      #main-menu.mm-mobile-open ul{
+        display:flex;flex-direction:column;align-items:flex-start;gap:1rem;
+        list-style:none;margin:1rem auto;padding:1rem;width:min(90vw,420px);
+        max-height:calc(100vh - 2rem);overflow:auto;border-radius:1rem;
+        background:var(--primary); color:var(--on-primary,#fff);
+        box-shadow:0 4px 12px rgba(0,0,0,.2)
+      }
+      @media (prefers-color-scheme: light){
+        #main-menu.mm-mobile-open ul{
+          background:var(--primary-light,var(--primary));
+          color:var(--on-primary-light,#000)
+        }
+      }
+      @media (prefers-color-scheme: dark){
+        #main-menu.mm-mobile-open ul{
+          background:var(--primary-dark,var(--primary));
+          color:var(--on-primary-dark,#fff)
+        }
+      }
+      #main-menu.mm-mobile-open a{text-decoration:none;font-size:1.1rem}
+      #mob-hb-icon{display:inline-flex}
+      #mob-x-icon{display:none}
+    }
+
+     
+    #main-menu a.active{font-weight:600;text-decoration:underline;text-underline-offset:.2em}
+  </style>
+
+  
   <script>
     (function () {
       document.addEventListener('DOMContentLoaded', function () {
-        const openBtn = document.getElementById('mob-hb-icon');
+        const openBtn  = document.getElementById('mob-hb-icon');
         const closeBtn = document.getElementById('mob-x-icon');
         const mainMenu = document.getElementById('main-menu');
         const body = document.body;
 
-        openBtn.addEventListener('click', function () {
-          mainMenu.classList.replace('mm-normal', 'mm-mobile-open');
-          closeBtn.style.display = 'block';
+        if (!openBtn || !closeBtn || !mainMenu) return;
+
+        function openMenu() {
+          mainMenu.classList.remove('mm-normal');
+          mainMenu.classList.add('mm-mobile-open');
+          closeBtn.style.display = 'inline-flex';
+          openBtn.setAttribute('aria-expanded', 'true');
           body.style.overflow = 'hidden';
-        });
-
-        closeBtn.addEventListener('click', function () {
-          mainMenu.classList.replace('mm-mobile-open', 'mm-normal');
-          closeBtn.style.display = 'none';
-          body.style.overflow = '';
-        });
-      });
-    })();
-  </script>
-
-  
-  <script>
-    (function () {
-      var mainmenu = document.getElementById('main-menu');
-      if (!mainmenu) return;
-
-      var path = window.location.pathname;
-      var links = mainmenu.querySelectorAll('a');
-
-      links.forEach(function (link) {
-        if (link.getAttribute('href') === path) {
-          link.classList.add('active');
         }
+
+        function closeMenu() {
+          mainMenu.classList.remove('mm-mobile-open');
+          mainMenu.classList.add('mm-normal');
+          closeBtn.style.display = 'none';
+          openBtn.setAttribute('aria-expanded', 'false');
+          body.style.overflow = '';
+        }
+
+        openBtn.addEventListener('click', openMenu);
+        closeBtn.addEventListener('click', closeMenu);
+
+        
+        mainMenu.addEventListener('click', (e) => {
+          if (mainMenu.classList.contains('mm-mobile-open') && e.target === mainMenu) closeMenu();
+        });
+
+        
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && mainMenu.classList.contains('mm-mobile-open')) closeMenu();
+        });
+
+        
+        (function highlightActive() {
+          const path = (window.location.pathname || '/').replace(/\/+$/, '') || '/';
+          mainMenu.querySelectorAll('a[href]').forEach((link) => {
+            const href = (link.getAttribute('href') || '').replace(/\/+$/, '') || '/';
+            if (href === path) link.classList.add('active');
+          });
+        })();
       });
     })();
   </script>
-  
 </header>
 
       <main>
