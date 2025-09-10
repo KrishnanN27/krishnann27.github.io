@@ -1,0 +1,348 @@
+<!-- Pomodoro Shortcode (centered, polished) -->
+<style>
+  /* Scoped styles to avoid theme conflicts */
+  .pomd-wrap {
+    /* take available width inside theme container */
+    width: 100%;
+    min-height: min(84vh, 900px);
+    display: grid;
+    place-items: center; /* perfect centering */
+    padding: 2rem 1rem;
+  }
+  .pomd-card {
+    width: min(720px, 100%);
+    background: linear-gradient(
+      180deg,
+      rgba(17, 24, 39, 0.96) 0%,
+      rgba(31, 41, 55, 0.96) 100%
+    );
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+    padding: clamp(20px, 4vw, 32px);
+    color: var(--pomd-text, #e5e7eb);
+    position: relative;
+    overflow: hidden;
+  }
+  /* subtle glow */
+  .pomd-card::before {
+    content: "";
+    position: absolute;
+    inset: -40%;
+    background: radial-gradient(
+        600px 300px at 20% 0%,
+        rgba(34, 197, 94, 0.1),
+        transparent 60%
+      ),
+      radial-gradient(
+        500px 260px at 80% 120%,
+        rgba(16, 185, 129, 0.08),
+        transparent 65%
+      );
+    pointer-events: none;
+  }
+
+  .pomd-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+  .pomd-title {
+    margin: 0;
+    font-size: 0.8rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #9ca3af;
+  }
+  .pomd-pill {
+    margin-left: auto;
+    font-size: 0.8rem;
+    color: #0a0f1a;
+    background: linear-gradient(90deg, #22c55e, #10b981);
+    border-radius: 999px;
+    padding: 0.35rem 0.7rem;
+    border: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .pomd-timer {
+    display: grid;
+    gap: 0.5rem;
+    place-items: center;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+  .pomd-face {
+    font-variant-numeric: tabular-nums;
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: 0.02em;
+    font-size: clamp(48px, 12vw, 112px);
+    color: #f3f4f6;
+  }
+  .pomd-status {
+    color: #9ca3af;
+    font-size: 0.95rem;
+    min-height: 1.25em; /* keeps layout stable when text changes */
+  }
+
+  .pomd-progress {
+    width: 100%;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
+    overflow: hidden;
+    margin-top: 0.5rem;
+    position: relative;
+  }
+  .pomd-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #22c55e, #10b981);
+    transition: width 0.2s linear;
+  }
+
+  .pomd-row {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  .pomd-btn {
+    appearance: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #0b1220;
+    color: #e5e7eb;
+    padding: 0.7rem 1rem;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+    transition: transform 0.06s ease, background 0.2s ease,
+      border-color 0.2s ease;
+  }
+  .pomd-btn:hover {
+    transform: translateY(-1px);
+  }
+  .pomd-btn:active {
+    transform: translateY(0) scale(0.99);
+  }
+
+  .pomd-btn--primary {
+    background: linear-gradient(90deg, #22c55e, #10b981);
+    color: #0a0f1a;
+    border-color: transparent;
+  }
+  .pomd-btn--danger {
+    background: linear-gradient(90deg, #f87171, #ef4444);
+    color: #0a0f1a;
+    border-color: transparent;
+  }
+  .pomd-btn--ghost {
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  .pomd-note {
+    margin-top: 0.5rem;
+    color: #a1a1aa;
+    font-size: 0.85rem;
+    text-align: center;
+  }
+
+  /* Respect light themes (optional) */
+  @media (prefers-color-scheme: light) {
+    .pomd-card {
+      background: #ffffff;
+      color: #0b1220;
+      border-color: rgba(0, 0, 0, 0.06);
+    }
+    .pomd-title {
+      color: #6b7280;
+    }
+    .pomd-status {
+      color: #6b7280;
+    }
+    .pomd-progress {
+      background: rgba(0, 0, 0, 0.08);
+    }
+    .pomd-btn {
+      background: #f8fafc;
+      color: #0b1220;
+      border-color: rgba(0, 0, 0, 0.08);
+    }
+    .pomd-btn--ghost {
+      background: #eef2f7;
+    }
+    .pomd-wrap {
+      background: transparent;
+    }
+  }
+</style>
+
+<div class="pomd-wrap">
+  <section class="pomd-card" role="region" aria-labelledby="pomd-title">
+    <div class="pomd-head">
+      <h2 class="pomd-title" id="pomd-title">Pomodoro</h2>
+      <span class="pomd-pill" id="pomd-phase">Focus</span>
+    </div>
+
+    <div class="pomd-timer">
+      <div class="pomd-face" id="pomd-time">25:00</div>
+      <div class="pomd-status" id="pomd-status">Ready</div>
+      <div class="pomd-progress" aria-hidden="true">
+        <div class="pomd-bar" id="pomd-bar"></div>
+      </div>
+
+      <div class="pomd-row" style="margin-top: 1rem">
+        <button
+          class="pomd-btn pomd-btn--primary"
+          id="pomd-toggle"
+          aria-pressed="false"
+        >
+          Start
+        </button>
+        <button class="pomd-btn pomd-btn--ghost" id="pomd-skip">Skip</button>
+        <button class="pomd-btn pomd-btn--danger" id="pomd-reset">Reset</button>
+      </div>
+
+      <div class="pomd-note">
+        Shortcuts: <kbd>Space</kbd> start/pause • <kbd>R</kbd> reset •
+        <kbd>S</kbd> skip
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+  (function () {
+    // Small, scoped helper
+    const $ = (id) => document.getElementById(id);
+
+    const el = {
+      time: $("pomd-time"),
+      bar: $("pomd-bar"),
+      toggle: $("pomd-toggle"),
+      reset: $("pomd-reset"),
+      skip: $("pomd-skip"),
+      status: $("pomd-status"),
+      phase: $("pomd-phase"),
+    };
+
+    // Simple single-phase (25:00) timer; you can expand later
+    const DFLT_MS = 25 * 60 * 1000;
+    let state = {
+      running: false,
+      start: 0,
+      end: 0,
+      total: DFLT_MS,
+      t: null,
+    };
+
+    function fmt(ms) {
+      const s = Math.max(0, Math.round(ms / 1000));
+      const m = Math.floor(s / 60);
+      const r = s % 60;
+      return String(m).padStart(2, "0") + ":" + String(r).padStart(2, "0");
+    }
+
+    function render() {
+      const now = Date.now();
+      const remain = Math.max(0, state.end - now);
+      el.time.textContent = fmt(remain);
+      el.bar.style.width = 100 * (1 - remain / state.total) + "%";
+      el.status.textContent = state.running ? "In progress" : "Paused";
+      el.toggle.textContent = state.running ? "Pause" : "Start";
+      el.toggle.setAttribute("aria-pressed", String(state.running));
+    }
+
+    function start() {
+      if (state.running) return;
+      state.running = true;
+      if (!state.start || Date.now() >= state.end) {
+        state.start = Date.now();
+        state.end = state.start + state.total;
+      }
+      tick();
+    }
+
+    function pause() {
+      if (!state.running) return;
+      state.running = false;
+      clearInterval(state.t);
+      render();
+    }
+
+    function reset() {
+      clearInterval(state.t);
+      state.running = false;
+      state.total = DFLT_MS;
+      state.start = Date.now();
+      state.end = state.start + state.total;
+      el.phase.textContent = "Focus";
+      el.status.textContent = "Ready";
+      render();
+    }
+
+    function complete() {
+      pause();
+      el.status.textContent = "Done!";
+      el.phase.textContent = "Break";
+      // simple beep with WebAudio
+      try {
+        const AudioCtx = window.AudioContext || window.webkitAudioContext;
+        const ctx = new AudioCtx();
+        const o = ctx.createOscillator();
+        const g = ctx.createGain();
+        o.type = "sine";
+        o.frequency.value = 880;
+        g.gain.setValueAtTime(0.0001, ctx.currentTime);
+        g.gain.exponentialRampToValueAtTime(0.25, ctx.currentTime + 0.02);
+        g.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.6);
+        o.connect(g).connect(ctx.destination);
+        o.start();
+        o.stop(ctx.currentTime + 0.65);
+      } catch (e) {}
+    }
+
+    function tick() {
+      clearInterval(state.t);
+      state.t = setInterval(() => {
+        if (Date.now() >= state.end) {
+          complete();
+          clearInterval(state.t);
+        }
+        render();
+      }, 250);
+    }
+
+    // Events
+    el.toggle.addEventListener("click", () =>
+      state.running ? pause() : start()
+    );
+    el.reset.addEventListener("click", reset);
+    el.skip.addEventListener("click", complete);
+
+    // Shortcuts
+    window.addEventListener("keydown", (e) => {
+      if (e.code === "Space") {
+        e.preventDefault();
+        state.running ? pause() : start();
+      }
+      if (e.key === "r" || e.key === "R") {
+        reset();
+      }
+      if (e.key === "s" || e.key === "S") {
+        complete();
+      }
+    });
+
+    // Initialize
+    reset();
+  })();
+</script>

@@ -53,6 +53,12 @@ title = "Gallery"
 url = "/gallery/"
 weight = 4
 
+[[main]]
+name = "Pomodoro"
+title = "Pomodoro"
+url = "/pomodoro/"
+weight = 4
+
 # [[main]]
 # name = "Connect"
 # title = "Connect"

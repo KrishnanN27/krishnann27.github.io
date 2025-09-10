@@ -35,6 +35,10 @@ buildFuture = true
   section  = ["HTML", "RSS"]
   taxonomy = ["HTML", "RSS"]
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 
 
 # Sitemap setting
