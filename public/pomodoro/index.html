@@ -598,7 +598,6 @@
 <style>
    
   .pomd-wrap {
-     
     width: 100%;
     min-height: min(84vh, 900px);
     display: grid;
@@ -641,7 +640,7 @@
 
   .pomd-head {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-between;
     gap: 0.75rem;
     margin-bottom: 0.75rem;
@@ -752,15 +751,44 @@
   }
 
    
+  :where(.pomd-card:fullscreen, .pomd-card:-webkit-full-screen) {
+    inset: 0;
+    width: 100vw !important;
+    height: 100vh !important;
+    max-width: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: clamp(24px, 6vw, 48px);
+    display: grid;
+    place-content: center;
+  }
+  :where(
+      .pomd-card:fullscreen .pomd-face,
+      .pomd-card:-webkit-full-screen .pomd-face
+    ) {
+    font-size: clamp(72px, 16vw, 180px);
+  }
+  :where(
+      .pomd-card:fullscreen .pomd-progress,
+      .pomd-card:-webkit-full-screen .pomd-progress
+    ) {
+    height: 14px;
+  }
+  :where(
+      .pomd-card:fullscreen .pomd-title,
+      .pomd-card:-webkit-full-screen .pomd-title
+    ) {
+    font-size: 0.9rem;
+  }
+
+   
   @media (prefers-color-scheme: light) {
     .pomd-card {
       background: #ffffff;
       color: #0b1220;
       border-color: rgba(0, 0, 0, 0.06);
     }
-    .pomd-title {
-      color: #6b7280;
-    }
+    .pomd-title,
     .pomd-status {
       color: #6b7280;
     }
@@ -786,6 +814,13 @@
     <div class="pomd-head">
       <h2 class="pomd-title" id="pomd-title">Pomodoro</h2>
       <span class="pomd-pill" id="pomd-phase">Focus</span>
+      <button
+        class="pomd-btn pomd-btn--ghost"
+        id="pomd-full"
+        title="Toggle full screen (F)"
+      >
+        Full screen
+      </button>
     </div>
 
     <div class="pomd-timer">
@@ -809,7 +844,8 @@
 
       <div class="pomd-note">
         Shortcuts: <kbd>Space</kbd> start/pause • <kbd>R</kbd> reset •
-        <kbd>S</kbd> skip
+        <kbd>S</kbd> skip • <kbd>F</kbd> full screen • <kbd>Esc</kbd> exit full
+        screen
       </div>
     </div>
   </section>
@@ -828,6 +864,8 @@
       skip: $("pomd-skip"),
       status: $("pomd-status"),
       phase: $("pomd-phase"),
+      full: $("pomd-full"),
+      card: document.querySelector(".pomd-card"),
     };
 
     
@@ -918,11 +956,43 @@
     }
 
     
+    function isFullscreen() {
+      return (
+        document.fullscreenElement === el.card ||
+        document.webkitFullscreenElement === el.card
+      );
+    }
+    function requestFS() {
+      if (el.card.requestFullscreen) return el.card.requestFullscreen();
+      if (el.card.webkitRequestFullscreen)
+        return el.card.webkitRequestFullscreen(); 
+    }
+    function exitFS() {
+      if (document.exitFullscreen) return document.exitFullscreen();
+      if (document.webkitExitFullscreen) return document.webkitExitFullscreen(); 
+    }
+    function toggleFS() {
+      if (isFullscreen()) {
+        exitFS();
+      } else {
+        requestFS();
+      }
+    }
+    function updateFSButton() {
+      el.full.textContent = isFullscreen() ? "Exit full screen" : "Full screen";
+    }
+
+    
     el.toggle.addEventListener("click", () =>
       state.running ? pause() : start()
     );
     el.reset.addEventListener("click", reset);
     el.skip.addEventListener("click", complete);
+    el.full.addEventListener("click", toggleFS);
+
+    
+    document.addEventListener("fullscreenchange", updateFSButton);
+    document.addEventListener("webkitfullscreenchange", updateFSButton);
 
     
     window.addEventListener("keydown", (e) => {
@@ -936,10 +1006,14 @@
       if (e.key === "s" || e.key === "S") {
         complete();
       }
+      if (e.key === "f" || e.key === "F") {
+        toggleFS();
+      }
     });
 
     
     reset();
+    updateFSButton();
   })();
 </script>
 
