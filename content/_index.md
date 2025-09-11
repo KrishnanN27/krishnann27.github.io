@@ -35,7 +35,7 @@ description: "Official site of Sowndarya Krishnan (Krish) – PhD student in Com
   <h1 class="home-title">Sowndarya Krishnan (Krish)</h1>
 
   <p class="home-sub">
-    PhD student in Computer Science at
+    First year PhD student in Computer Science at
     <a href="https://www.mines.edu/" target="_blank" rel="noopener" class="link">Colorado School of Mines</a>.
   </p>
 
