@@ -11,15 +11,14 @@
       bar: $("pomd-bar"),
       toggle: $("pomd-toggle"),
       reset: $("pomd-reset"),
-      // skip removed (no skip in fullscreen or anywhere)
-      status: $("pomd-status"), // present or not; we don't show it
+      status: $("pomd-status"),
       full: $("pomd-full"),
       bgBtn: $("pomd-bg-btn"),
       card: root.querySelector(".pomd-card"),
       bgImg: root.querySelector(".pomd-bg"),
     };
 
-    // --- Backgrounds ---
+    // --- Backgrounds (unchanged) ---
     const bgList = (() => {
       try {
         const raw = root.dataset.bglist ? JSON.parse(root.dataset.bglist) : [];
@@ -28,10 +27,8 @@
         return [];
       }
     })();
-
     const initialBg = root.dataset.bg || "";
     if (initialBg && !bgList.includes(initialBg)) bgList.unshift(initialBg);
-
     let bgIndex = Math.max(0, bgList.indexOf(initialBg));
     function setBg(i) {
       if (!bgList.length) return;
@@ -65,7 +62,7 @@
     }
     if (bgList.length) setBg(bgIndex);
 
-    // --- Timer core ---
+    // --- Timer core (unchanged) ---
     const DFLT_MS = 25 * 60 * 1000; // 25:00
     let state = { running: false, start: 0, end: 0, total: DFLT_MS, t: null };
 
@@ -82,7 +79,6 @@
       if (el.time) el.time.textContent = fmt(remain);
       if (el.bar) el.bar.style.width = 100 * (1 - remain / state.total) + "%";
 
-      // Icon-only toggle + ARIA
       if (el.toggle) {
         el.toggle.textContent = state.running ? "⏸" : "▶";
         el.toggle.setAttribute("aria-pressed", String(state.running));
@@ -115,7 +111,6 @@
     }
     function complete() {
       pause();
-      // tiny beep
       try {
         const AudioCtx = window.AudioContext || window.webkitAudioContext;
         const ctx = new AudioCtx(),
@@ -142,19 +137,39 @@
       }, 250);
     }
 
-    // --- Fullscreen helpers ---
+    // --- Fullscreen helpers (patched) ---
+    const canFullscreen = () =>
+      !!(
+        el.card.requestFullscreen ||
+        el.card.webkitRequestFullscreen ||
+        document.fullscreenEnabled ||
+        document.webkitFullscreenEnabled
+      );
+
     const isFS = () =>
       document.fullscreenElement === el.card ||
       document.webkitFullscreenElement === el.card;
-    const reqFS = () =>
-      el.card.requestFullscreen
-        ? el.card.requestFullscreen()
-        : el.card.webkitRequestFullscreen && el.card.webkitRequestFullscreen();
-    const exitFS = () =>
-      document.exitFullscreen
-        ? document.exitFullscreen()
-        : document.webkitExitFullscreen && document.webkitExitFullscreen();
-    const toggleFS = () => (isFS() ? exitFS() : reqFS());
+
+    const reqFS = () => {
+      if (el.card.requestFullscreen) return el.card.requestFullscreen();
+      if (el.card.webkitRequestFullscreen)
+        return el.card.webkitRequestFullscreen();
+      alert("Fullscreen is not supported on this device/browser.");
+    };
+
+    const exitFS = () => {
+      if (document.exitFullscreen) return document.exitFullscreen();
+      if (document.webkitExitFullscreen) return document.webkitExitFullscreen();
+    };
+
+    const toggleFS = () => {
+      if (!canFullscreen()) {
+        alert("Fullscreen mode isn’t available on this device/browser.");
+        return;
+      }
+      isFS() ? exitFS() : reqFS();
+    };
+
     const updateFSBtn = () => {
       const b = $("pomd-full");
       if (b) {
@@ -168,9 +183,6 @@
     );
     el.reset?.addEventListener("click", reset);
 
-    // Skip removed: no listener, no button
-
-    // Background refresh (works always)
     el.bgBtn?.addEventListener("click", (e) => {
       if (!bgList.length) return;
       if (e.ctrlKey || e.metaKey) randomBg();
@@ -182,19 +194,13 @@
     document.addEventListener("fullscreenchange", updateFSBtn);
     document.addEventListener("webkitfullscreenchange", updateFSBtn);
 
-    // Keyboard shortcuts
     window.addEventListener("keydown", (e) => {
       if (e.code === "Space") {
         e.preventDefault();
         state.running ? pause() : start();
       }
       if (e.key === "r" || e.key === "R") reset();
-      // 's' shortcut used to “complete” previously — keep for power users if desired:
-      // if (e.key === "s" || e.key === "S") complete();
-
       if (e.key === "f" || e.key === "F") toggleFS();
-
-      // Background controls
       if (e.key === "b" || e.key === "B") {
         if (e.ctrlKey || e.metaKey) randomBg();
         else if (e.shiftKey) prevBg();
