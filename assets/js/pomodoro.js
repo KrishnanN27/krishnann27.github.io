@@ -18,7 +18,7 @@
       bgImg: root.querySelector(".pomd-bg"),
     };
 
-    // --- Backgrounds ---
+    // --- Backgrounds (unchanged) ---
     const bgList = (() => {
       try {
         const raw = root.dataset.bglist ? JSON.parse(root.dataset.bglist) : [];
@@ -62,7 +62,7 @@
     }
     if (bgList.length) setBg(bgIndex);
 
-    // --- Timer core ---
+    // --- Timer core (unchanged) ---
     const DFLT_MS = 25 * 60 * 1000; // 25:00
     let state = { running: false, start: 0, end: 0, total: DFLT_MS, t: null };
 
@@ -137,35 +137,38 @@
       }, 250);
     }
 
-    // --- Fullscreen helpers ---
-    const isiOS =
-      /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    // --- Fullscreen helpers (patched) ---
+    const canFullscreen = () =>
+      !!(
+        el.card.requestFullscreen ||
+        el.card.webkitRequestFullscreen ||
+        document.fullscreenEnabled ||
+        document.webkitFullscreenEnabled
+      );
 
     const isFS = () =>
       document.fullscreenElement === el.card ||
-      document.webkitFullscreenElement === el.card ||
-      el.card.classList.contains("fake-fullscreen");
+      document.webkitFullscreenElement === el.card;
 
     const reqFS = () => {
-      if (isiOS) {
-        el.card.classList.add("fake-fullscreen");
-        return;
-      }
       if (el.card.requestFullscreen) return el.card.requestFullscreen();
       if (el.card.webkitRequestFullscreen)
         return el.card.webkitRequestFullscreen();
+      alert("Fullscreen is not supported on this device/browser.");
     };
 
     const exitFS = () => {
-      if (isiOS) {
-        el.card.classList.remove("fake-fullscreen");
-        return;
-      }
       if (document.exitFullscreen) return document.exitFullscreen();
       if (document.webkitExitFullscreen) return document.webkitExitFullscreen();
     };
 
-    const toggleFS = () => (isFS() ? exitFS() : reqFS());
+    const toggleFS = () => {
+      if (!canFullscreen()) {
+        alert("Fullscreen mode isn’t available on this device/browser.");
+        return;
+      }
+      isFS() ? exitFS() : reqFS();
+    };
 
     const updateFSBtn = () => {
       const b = $("pomd-full");
@@ -187,10 +190,7 @@
       else nextBg();
     });
 
-    $("pomd-full")?.addEventListener("click", () => {
-      toggleFS();
-      updateFSBtn();
-    });
+    $("pomd-full")?.addEventListener("click", toggleFS);
     document.addEventListener("fullscreenchange", updateFSBtn);
     document.addEventListener("webkitfullscreenchange", updateFSBtn);
 
@@ -200,10 +200,7 @@
         state.running ? pause() : start();
       }
       if (e.key === "r" || e.key === "R") reset();
-      if (e.key === "f" || e.key === "F") {
-        toggleFS();
-        updateFSBtn();
-      }
+      if (e.key === "f" || e.key === "F") toggleFS();
       if (e.key === "b" || e.key === "B") {
         if (e.ctrlKey || e.metaKey) randomBg();
         else if (e.shiftKey) prevBg();
