@@ -1,30 +1,47 @@
-<!-- Pomodoro Shortcode (centered, polished, with Fullscreen) -->
+{{/* layouts/shortcodes/pomodoro.html */}} {{ $pomJS := resources.Get
+"js/pomodoro.js" | resources.Minify | resources.Fingerprint }} {{ $bgParam :=
+.Get "bg" | default "" }} {{ $gifs := slice }} {{- $dir := "static/gifs_pomo"
+-}} {{- if (fileExists $dir) -}} {{- range (readDir $dir) -}} {{- if and (not
+.IsDir) (in (lower .Name) ".gif") -}} {{- $gifs = $gifs | append (printf
+"/gifs_pomo/%s" .Name) -}} {{- end -}} {{- end -}} {{- end -}} {{ $bgSrc := ""
+}} {{ if $bgParam }} {{ $bgSrc = (printf "/gifs_pomo/%s" $bgParam) }} {{ else if
+gt (len $gifs) 0 }} {{ $bgSrc = (index (shuffle $gifs) 0) }} {{ end }}
+
 <style>
-  /* Scoped styles to avoid theme conflicts */
   .pomd-wrap {
     width: 100%;
-    min-height: min(84vh, 900px);
+    min-height: min(92vh, 1080px); /* increased from 84vh */
     display: grid;
-    place-items: center; /* perfect centering */
-    padding: 2rem 1rem;
+    place-items: center;
+    padding: clamp(16px, 4vw, 32px);
   }
   .pomd-card {
-    width: min(720px, 100%);
+    width: 100%;
+    max-width: 800px; /* larger cap for desktop */
+    margin: 0 auto; /* centers card always */
     background: linear-gradient(
       180deg,
-      rgba(17, 24, 39, 0.96) 0%,
-      rgba(31, 41, 55, 0.96) 100%
+      rgba(17, 24, 39, 0.96),
+      rgba(31, 41, 55, 0.96)
     );
-    backdrop-filter: blur(6px);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 18px;
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
-    padding: clamp(20px, 4vw, 32px);
-    color: var(--pomd-text, #e5e7eb);
+    padding: clamp(20px, 5vw, 36px);
+    color: #e5e7eb;
     position: relative;
     overflow: hidden;
   }
-  /* subtle glow */
+
+  .pomd-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    filter: brightness(0.55) saturate(1.05);
+  }
   .pomd-card::before {
     content: "";
     position: absolute;
@@ -40,64 +57,70 @@
         transparent 65%
       );
     pointer-events: none;
+    z-index: 1;
+  }
+  .pomd-inner {
+    position: relative;
+    z-index: 2;
   }
 
-  .pomd-head {
+  .pomd-actions {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.75rem;
-    margin-bottom: 0.75rem;
-  }
-  .pomd-title {
-    margin: 0;
-    font-size: 0.8rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: #9ca3af;
-  }
-  .pomd-pill {
-    margin-left: auto;
-    font-size: 0.8rem;
-    color: #0a0f1a;
-    background: linear-gradient(90deg, #22c55e, #10b981);
-    border-radius: 999px;
-    padding: 0.35rem 0.7rem;
-    border: 0;
-    display: inline-flex;
-    align-items: center;
     gap: 0.4rem;
+    justify-content: flex-end;
+    margin-bottom: 0.5rem;
+  }
+  .pomd-iconbtn {
+    appearance: none;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(11, 18, 32, 0.75);
+    color: #e5e7eb;
+    padding: 0.5rem 0.7rem;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
   }
 
   .pomd-timer {
     display: grid;
-    gap: 0.5rem;
+    gap: 0.6rem;
     place-items: center;
     text-align: center;
-    margin-top: 0.5rem;
+    margin-top: 0.25rem;
   }
   .pomd-face {
     font-variant-numeric: tabular-nums;
     font-weight: 800;
     line-height: 1.05;
     letter-spacing: 0.02em;
-    font-size: clamp(48px, 12vw, 112px);
+    font-size: clamp(56px, 14vw, 120px);
     color: #f3f4f6;
+    font-size: clamp(48px, 18vw, 160px);
   }
   .pomd-status {
-    color: #9ca3af;
+    color: #d1d5db;
     font-size: 0.95rem;
-    min-height: 1.25em; /* keeps layout stable when text changes */
+    min-height: 1.2em;
+  }
+
+  @media (max-width: 480px) {
+    .pomd-row {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .pomd-btn {
+      min-width: unset;
+      width: 100%;
+    }
   }
 
   .pomd-progress {
     width: 100%;
     height: 10px;
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.12);
     border-radius: 999px;
     overflow: hidden;
-    margin-top: 0.5rem;
-    position: relative;
   }
   .pomd-bar {
     height: 100%;
@@ -111,28 +134,20 @@
     gap: 0.6rem;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 1rem;
+    margin-top: 0.75rem;
   }
   .pomd-btn {
     appearance: none;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    background: #0b1220;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(11, 18, 32, 0.75);
     color: #e5e7eb;
-    padding: 0.7rem 1rem;
-    border-radius: 12px;
-    font-weight: 700;
+    padding: 0.8rem 1.1rem;
+    border-radius: 14px;
+    font-weight: 800;
     cursor: pointer;
+    min-width: 120px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
-    transition: transform 0.06s ease, background 0.2s ease,
-      border-color 0.2s ease;
   }
-  .pomd-btn:hover {
-    transform: translateY(-1px);
-  }
-  .pomd-btn:active {
-    transform: translateY(0) scale(0.99);
-  }
-
   .pomd-btn--primary {
     background: linear-gradient(90deg, #22c55e, #10b981);
     color: #0a0f1a;
@@ -143,18 +158,27 @@
     color: #0a0f1a;
     border-color: transparent;
   }
-  .pomd-btn--ghost {
-    background: rgba(255, 255, 255, 0.06);
+
+  @media (max-width: 640px) {
+    .pomd-card {
+      margin: 12px; /* ensures breathing room */
+      width: auto; /* shrink naturally inside margins */
+      max-width: calc(100% - 24px); /* never overflow screen */
+    }
+    .pomd-row {
+      gap: 0.5rem;
+    }
+    .pomd-btn {
+      width: 100%;
+    }
+    .pomd-iconbtn {
+      padding: 0.55rem 0.7rem;
+    }
+    .pomd-status {
+      display: none;
+    }
   }
 
-  .pomd-note {
-    margin-top: 0.5rem;
-    color: #a1a1aa;
-    font-size: 0.85rem;
-    text-align: center;
-  }
-
-  /* Fullscreen tweaks: make the card itself the fullscreen element */
   :where(.pomd-card:fullscreen, .pomd-card:-webkit-full-screen) {
     inset: 0;
     width: 100vw !important;
@@ -162,7 +186,7 @@
     max-width: none;
     border-radius: 0;
     box-shadow: none;
-    padding: clamp(24px, 6vw, 48px);
+    padding: clamp(20px, 6vw, 48px);
     display: grid;
     place-content: center;
   }
@@ -170,253 +194,98 @@
       .pomd-card:fullscreen .pomd-face,
       .pomd-card:-webkit-full-screen .pomd-face
     ) {
-    font-size: clamp(72px, 16vw, 180px);
+    font-size: clamp(88px, 18vw, 200px);
   }
   :where(
       .pomd-card:fullscreen .pomd-progress,
       .pomd-card:-webkit-full-screen .pomd-progress
     ) {
-    height: 14px;
+    display: none;
   }
   :where(
-      .pomd-card:fullscreen .pomd-title,
-      .pomd-card:-webkit-full-screen .pomd-title
+      .pomd-card:fullscreen .pomd-row,
+      .pomd-card:-webkit-full-screen .pomd-row
     ) {
-    font-size: 0.9rem;
+    gap: 1rem;
   }
 
-  /* Respect light themes (optional) */
   @media (prefers-color-scheme: light) {
     .pomd-card {
-      background: #ffffff;
+      background: rgba(255, 255, 255, 0.85);
       color: #0b1220;
       border-color: rgba(0, 0, 0, 0.06);
     }
-    .pomd-title,
-    .pomd-status {
-      color: #6b7280;
-    }
     .pomd-progress {
-      background: rgba(0, 0, 0, 0.08);
+      background: rgba(0, 0, 0, 0.1);
     }
-    .pomd-btn {
-      background: #f8fafc;
+    .pomd-btn,
+    .pomd-iconbtn {
+      background: rgba(248, 250, 252, 0.85);
       color: #0b1220;
       border-color: rgba(0, 0, 0, 0.08);
-    }
-    .pomd-btn--ghost {
-      background: #eef2f7;
-    }
-    .pomd-wrap {
-      background: transparent;
     }
   }
 </style>
 
-<div class="pomd-wrap">
-  <section class="pomd-card" role="region" aria-labelledby="pomd-title">
-    <div class="pomd-head">
-      <h2 class="pomd-title" id="pomd-title">Pomodoro</h2>
-      <span class="pomd-pill" id="pomd-phase">Focus</span>
-      <button
-        class="pomd-btn pomd-btn--ghost"
-        id="pomd-full"
-        title="Toggle full screen (F)"
-      >
-        Full screen
-      </button>
-    </div>
-
-    <div class="pomd-timer">
-      <div class="pomd-face" id="pomd-time">25:00</div>
-      <div class="pomd-status" id="pomd-status">Ready</div>
-      <div class="pomd-progress" aria-hidden="true">
-        <div class="pomd-bar" id="pomd-bar"></div>
-      </div>
-
-      <div class="pomd-row" style="margin-top: 1rem">
+<div
+  class="pomd-wrap"
+  data-pomd
+  data-bg="{{ $bgSrc }}"
+  data-bglist="{{ $gifs | jsonify }}"
+>
+  <section class="pomd-card" role="region">
+    {{- if $bgSrc -}}<img
+      class="pomd-bg"
+      src="{{ $bgSrc }}"
+      alt="Focus background"
+    />{{- end -}}
+    <div class="pomd-inner">
+      <div class="pomd-actions">
         <button
-          class="pomd-btn pomd-btn--primary"
-          id="pomd-toggle"
-          aria-pressed="false"
+          class="pomd-iconbtn"
+          id="pomd-bg-btn"
+          title="Refresh background (B / ← → / ⌃B)"
         >
-          Start
+          ↻
         </button>
-        <button class="pomd-btn pomd-btn--ghost" id="pomd-skip">Skip</button>
-        <button class="pomd-btn pomd-btn--danger" id="pomd-reset">Reset</button>
+        <button
+          class="pomd-iconbtn"
+          id="pomd-full"
+          title="Toggle full screen (F)"
+        >
+          ⤢
+        </button>
       </div>
 
-      <div class="pomd-note">
-        Shortcuts: <kbd>Space</kbd> start/pause • <kbd>R</kbd> reset •
-        <kbd>S</kbd> skip • <kbd>F</kbd> full screen • <kbd>Esc</kbd> exit full
-        screen
+      <div class="pomd-timer">
+        <div class="pomd-face" id="pomd-time">25:00</div>
+        {{/*
+        <div class="pomd-status" id="pomd-status">Ready</div>
+        */}}
+        <div class="pomd-progress" aria-hidden="true">
+          <div class="pomd-bar" id="pomd-bar"></div>
+        </div>
+
+        <div class="pomd-row">
+          <button
+            class="pomd-btn pomd-btn--primary"
+            id="pomd-toggle"
+            aria-pressed="false"
+          >
+            Start
+          </button>
+          <button class="pomd-btn pomd-btn--danger" id="pomd-reset">
+            Reset
+          </button>
+        </div>
       </div>
     </div>
   </section>
 </div>
 
-<script>
-  (function () {
-    // Small, scoped helper
-    const $ = (id) => document.getElementById(id);
-
-    const el = {
-      time: $("pomd-time"),
-      bar: $("pomd-bar"),
-      toggle: $("pomd-toggle"),
-      reset: $("pomd-reset"),
-      skip: $("pomd-skip"),
-      status: $("pomd-status"),
-      phase: $("pomd-phase"),
-      full: $("pomd-full"),
-      card: document.querySelector(".pomd-card"),
-    };
-
-    // Simple single-phase (25:00) timer; you can expand later
-    const DFLT_MS = 25 * 60 * 1000;
-    let state = {
-      running: false,
-      start: 0,
-      end: 0,
-      total: DFLT_MS,
-      t: null,
-    };
-
-    function fmt(ms) {
-      const s = Math.max(0, Math.round(ms / 1000));
-      const m = Math.floor(s / 60);
-      const r = s % 60;
-      return String(m).padStart(2, "0") + ":" + String(r).padStart(2, "0");
-    }
-
-    function render() {
-      const now = Date.now();
-      const remain = Math.max(0, state.end - now);
-      el.time.textContent = fmt(remain);
-      el.bar.style.width = 100 * (1 - remain / state.total) + "%";
-      el.status.textContent = state.running ? "In progress" : "Paused";
-      el.toggle.textContent = state.running ? "Pause" : "Start";
-      el.toggle.setAttribute("aria-pressed", String(state.running));
-    }
-
-    function start() {
-      if (state.running) return;
-      state.running = true;
-      if (!state.start || Date.now() >= state.end) {
-        state.start = Date.now();
-        state.end = state.start + state.total;
-      }
-      tick();
-    }
-
-    function pause() {
-      if (!state.running) return;
-      state.running = false;
-      clearInterval(state.t);
-      render();
-    }
-
-    function reset() {
-      clearInterval(state.t);
-      state.running = false;
-      state.total = DFLT_MS;
-      state.start = Date.now();
-      state.end = state.start + state.total;
-      el.phase.textContent = "Focus";
-      el.status.textContent = "Ready";
-      render();
-    }
-
-    function complete() {
-      pause();
-      el.status.textContent = "Done!";
-      el.phase.textContent = "Break";
-      // simple beep with WebAudio
-      try {
-        const AudioCtx = window.AudioContext || window.webkitAudioContext;
-        const ctx = new AudioCtx();
-        const o = ctx.createOscillator();
-        const g = ctx.createGain();
-        o.type = "sine";
-        o.frequency.value = 880;
-        g.gain.setValueAtTime(0.0001, ctx.currentTime);
-        g.gain.exponentialRampToValueAtTime(0.25, ctx.currentTime + 0.02);
-        g.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.6);
-        o.connect(g).connect(ctx.destination);
-        o.start();
-        o.stop(ctx.currentTime + 0.65);
-      } catch (e) {}
-    }
-
-    function tick() {
-      clearInterval(state.t);
-      state.t = setInterval(() => {
-        if (Date.now() >= state.end) {
-          complete();
-          clearInterval(state.t);
-        }
-        render();
-      }, 250);
-    }
-
-    // --- Fullscreen helpers ---
-    function isFullscreen() {
-      return (
-        document.fullscreenElement === el.card ||
-        document.webkitFullscreenElement === el.card
-      );
-    }
-    function requestFS() {
-      if (el.card.requestFullscreen) return el.card.requestFullscreen();
-      if (el.card.webkitRequestFullscreen)
-        return el.card.webkitRequestFullscreen(); // Safari
-    }
-    function exitFS() {
-      if (document.exitFullscreen) return document.exitFullscreen();
-      if (document.webkitExitFullscreen) return document.webkitExitFullscreen(); // Safari
-    }
-    function toggleFS() {
-      if (isFullscreen()) {
-        exitFS();
-      } else {
-        requestFS();
-      }
-    }
-    function updateFSButton() {
-      el.full.textContent = isFullscreen() ? "Exit full screen" : "Full screen";
-    }
-
-    // Events
-    el.toggle.addEventListener("click", () =>
-      state.running ? pause() : start()
-    );
-    el.reset.addEventListener("click", reset);
-    el.skip.addEventListener("click", complete);
-    el.full.addEventListener("click", toggleFS);
-
-    // Keep button label in sync when user presses Esc or uses browser UI
-    document.addEventListener("fullscreenchange", updateFSButton);
-    document.addEventListener("webkitfullscreenchange", updateFSButton);
-
-    // Shortcuts
-    window.addEventListener("keydown", (e) => {
-      if (e.code === "Space") {
-        e.preventDefault();
-        state.running ? pause() : start();
-      }
-      if (e.key === "r" || e.key === "R") {
-        reset();
-      }
-      if (e.key === "s" || e.key === "S") {
-        complete();
-      }
-      if (e.key === "f" || e.key === "F") {
-        toggleFS();
-      }
-    });
-
-    // Initialize
-    reset();
-    updateFSButton();
-  })();
-</script>
+<noscript
+  ><p style="text-align: center">
+    This timer needs JavaScript enabled.
+  </p></noscript
+>
+<script defer src="{{ $pomJS.RelPermalink }}"></script>
