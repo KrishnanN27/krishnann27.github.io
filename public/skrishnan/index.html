@@ -613,7 +613,7 @@
   /* Hero */
   .hero {
     position: relative;
-    height: 100vh;
+    height: 65vh; /* smaller by default */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -621,33 +621,28 @@
     overflow: hidden;
   }
 
-.hero img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  .hero img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+    z-index: 0;
+  }
 
-  border-radius: 24px; /* round ALL corners */
-  z-index: 0;
-}
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.7));
+    border-radius: 24px;
+    z-index: 1;
+  }
 
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6));
-  border-radius: 24px; /* match the image corners */
-  z-index: 1;
-}
-
-:root[data-color="light"] .hero::after {
-  background: linear-gradient(to bottom, rgba(255,255,255,0.1), rgba(0,0,0,0.3));
-}
   .hero-content {
     position: relative;
     z-index: 2;
-    animation: fadeUp 1.5s ease forwards;
     max-width: 800px;
     padding: 0 1rem;
     color: #fff;
@@ -656,18 +651,23 @@
   .hero h1 {
     font-size: clamp(2rem, 5vw, 3rem);
     font-weight: bold;
-    color: var(--primary);
+    color: #ffffff;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
   }
 
   .hero p {
     margin-top: 1rem;
     font-size: clamp(1rem, 2.5vw, 1.3rem);
     line-height: 1.6;
+    color: rgba(255,255,255,0.9);
   }
 
   /* Sections */
   section {
     padding: 4rem 1rem;
+  }
+  section:first-of-type {
+    margin-top: 3rem; /* breathing space after hero */
   }
   section h2 {
     text-align: center;
@@ -701,12 +701,7 @@
     color: var(--primary-color);
     border-radius: 12px;
     margin-bottom: 2rem;
-    box-shadow: var(--box-shadow2, 0 4px 10px rgba(0,0,0,0.05));
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .timeline-item:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--box-shadow, 0 6px 16px rgba(0,0,0,0.1));
+    border: 1px solid #ddd;
   }
   .timeline-item h3 {
     margin: 0;
@@ -722,12 +717,7 @@
   }
   .timeline-item a {
     color: var(--primary);
-    text-decoration: none;
-    border-bottom: 1px dashed transparent;
-    transition: border-color .3s;
-  }
-  .timeline-item a:hover {
-    border-color: var(--primary);
+    text-decoration: underline;
   }
 
   /* alternating layout */
@@ -741,21 +731,20 @@
   }
 
   .timeline-item::before {
-    content: "";
     position: absolute;
     top: 10px;
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     background: var(--primary);
-    border: 3px solid var(--secondary-color);
+    content: "";
     z-index: 1;
   }
   .timeline-item.left::before {
-    right: -9px;
+    right: -10px;
   }
   .timeline-item.right::before {
-    left: -9px;
+    left: -10px;
   }
 
   /* Closing */
@@ -768,7 +757,6 @@
     border-radius: 16px;
     max-width: 900px;
     margin: 0 auto 4rem auto;
-    transition: background .3s, color .3s;
   }
   .closing h2 {
     color: var(--primary);
@@ -778,6 +766,7 @@
     margin: 1rem auto 0;
     line-height: 1.6;
     font-size: clamp(0.95rem, 2.5vw, 1rem);
+    font-style: italic;
   }
   .closing a.button {
     display: inline-block;
@@ -787,46 +776,29 @@
     background: var(--primary);
     color: var(--secondary-color);
     text-decoration: none;
-    transition: background 0.3s;
-  }
-  .closing a.button:hover {
-    background: var(--tertiary-color, #e0002d);
   }
 
-  /* Animation */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(30px);}
-    to   { opacity: 1; transform: translateY(0);}
-  }
-
-  /* Responsive timeline */
+  /* Responsive adjustments */
   @media (max-width: 992px) {
-    .timeline::before {
-      left: 12px;
-    }
+    .hero { height: 50vh; }
+    .timeline::before { left: 12px; }
     .timeline-item {
       width: 100%;
       padding: 1.5rem 2rem 1.5rem 2.5rem;
       text-align: left !important;
     }
     .timeline-item.left,
-    .timeline-item.right {
-      left: 0;
-    }
-    .timeline-item::before {
-      left: 0;
-      right: auto;
-    }
+    .timeline-item.right { left: 0; }
+    .timeline-item::before { left: -10px; right: auto; }
   }
 
-  /* Smooth theme transitions */
-  html, body, .hero, .timeline-item, .closing {
-    transition: background-color 0.4s ease, color 0.4s ease;
+  @media (max-width: 600px) {
+    .hero { height: 40vh; }
   }
 </style>
 <!-- Hero Section -->
 <section class="hero">
-  <img src="/images/aboutme.jpeg" alt="Portrait of Sowndarya Krishnan Navaneetha Kannan" />
+  <img src="/images/aboutme.jpeg" alt="Nature forest background" />
   <div class="hero-content">
     <h1>Hi, I’m Sowndarya Krishnan</h1>
     <p>
@@ -861,11 +833,11 @@
 <!-- Closing Section -->
 <section class="closing">
   <h2>Thanks for stopping by</h2>
-<p>
-  I’m building, learning, and teaching — but mostly, I’m just trying to grow a little every day.<br/>
-  Feel free to reach out if you’d like to connect or learn more about what I do.
-</p>
-<p><a href="/connect" class="button">Get in Touch</a></p>
+  <p>
+    I’m building, learning, and teaching — but mostly, I’m just trying to grow a little every day.<br/>
+    Feel free to reach out if you’d like to connect or learn more about what I do.
+  </p>
+  <a href="/connect" class="button">Get in Touch</a>
 </section>
 
     <section class="lst-content">
