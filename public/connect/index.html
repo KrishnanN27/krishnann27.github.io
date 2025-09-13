@@ -445,10 +445,17 @@ Personal Email:krishnaofficial27@gmail.comOfficial Email:sowndaryakrishnanna@
 
   
   <style>
-    header .menu-btn{background:none;border:0;padding:.4rem;cursor:pointer}
-    header .brand{text-decoration:none}
+    header .menu-btn {
+      background: none;
+      border: 0;
+      padding: .5rem;
+      cursor: pointer;
+      border-radius: .5rem;
+      transition: background 0.2s;
+    }
+    header .menu-btn:hover { background: rgba(0,0,0,0.05); }
+    header .brand { text-decoration:none }
 
-     
     .header-left, .header-cntr, .menu { min-width: 0; }
 
      
@@ -459,7 +466,6 @@ Personal Email:krishnaofficial27@gmail.comOfficial Email:sowndaryakrishnanna@
       #main-menu ul{display:flex;align-items:center;gap:1rem;margin:0;padding:0;list-style:none}
       #main-menu a{text-decoration:none;display:flex;align-items:center;gap:.25rem}
 
-       
       .brand{
         display:inline-block; -webkit-line-clamp:unset; -webkit-box-orient:unset;
         white-space:nowrap; text-overflow:ellipsis; overflow:hidden; max-width:100%;
@@ -468,92 +474,100 @@ Personal Email:krishnaofficial27@gmail.comOfficial Email:sowndaryakrishnanna@
 
      
     @media (max-width:767.98px){
-      header { padding: .5rem .75rem !important; }
+      header { padding: .75rem 1rem !important; }
       .header-left { gap: .4rem !important; }
 
       #main-menu.mm-normal{display:none}
       #main-menu.mm-mobile-open{
-        position:fixed;inset:0;display:flex;align-items:flex-start;justify-content:flex-start;
-        background:var(--menu-bg,rgba(0,0,0,.85));z-index:9999;padding:1rem
-      }
-      #main-menu.mm-mobile-open ul{
-        display:flex;flex-direction:column;align-items:flex-start;gap:1rem;
-        list-style:none;margin:1rem auto;padding:1rem;width:min(90vw,420px);
-        max-height:calc(100vh - 2rem);overflow:auto;border-radius:1rem;
-        background:var(--primary); color:var(--on-primary,#fff);
-        box-shadow:0 4px 12px rgba(0,0,0,.2)
-      }
-      @media (prefers-color-scheme: light){
-        #main-menu.mm-mobile-open ul{
-          background:var(--primary-light,var(--primary));
-          color:var(--on-primary-light,#000)
-        }
+        position:fixed;inset:0;
+        display:flex;align-items:stretch;justify-content:flex-start;
+        z-index:9999;
+        transition:background .3s ease;
+        background:rgba(255,255,255,.6);  
+        backdrop-filter: blur(6px);       
       }
       @media (prefers-color-scheme: dark){
-        #main-menu.mm-mobile-open ul{
-          background:var(--primary-dark,var(--primary));
-          color:var(--on-primary-dark,#fff)
-        }
+        #main-menu.mm-mobile-open{ background:rgba(0,0,0,.6); }
       }
-      #main-menu.mm-mobile-open a{text-decoration:none;font-size:1.1rem}
+
+      #main-menu.mm-mobile-open ul{
+        display:flex;flex-direction:column;gap:1.2rem;
+        margin:0;padding:2rem 1.5rem;
+        width:min(80vw,320px);height:100%;
+        background:#fff; color:#000;
+        box-shadow:4px 0 12px rgba(0,0,0,.2);
+        transform:translateX(-100%);
+        animation:slideIn .3s forwards;
+        border-radius:0 .75rem .75rem 0;
+      }
+      @media (prefers-color-scheme: dark){
+        #main-menu.mm-mobile-open ul{ background:#111; color:#fff; }
+      }
+
+      #main-menu.mm-mobile-open a{
+        font-size:1.1rem;font-weight:500;color:inherit;text-decoration:none;
+        transition:color .2s;
+      }
+      #main-menu.mm-mobile-open a:hover{ color:#0077ff; }
+
       #mob-hb-icon{display:inline-flex}
       #mob-x-icon{display:none}
     }
 
      
-    #main-menu a.active{font-weight:600;text-decoration:underline;text-underline-offset:.2em}
+    #main-menu a.active{
+      font-weight:600;
+      text-decoration:underline;
+      text-underline-offset:.2em;
+    }
+
+     
+    @keyframes slideIn { to{ transform:translateX(0); } }
   </style>
 
   
   <script>
-    (function () {
-      document.addEventListener('DOMContentLoaded', function () {
-        const openBtn  = document.getElementById('mob-hb-icon');
-        const closeBtn = document.getElementById('mob-x-icon');
-        const mainMenu = document.getElementById('main-menu');
-        const body = document.body;
+    document.addEventListener("DOMContentLoaded", () => {
+      const hamburger = document.getElementById("mob-hb-icon");
+      const closeBtn  = document.getElementById("mob-x-icon");
+      const mobileMenu = document.getElementById("main-menu");
+      const body = document.body;
 
-        if (!openBtn || !closeBtn || !mainMenu) return;
+      if (!hamburger || !closeBtn || !mobileMenu) return;
 
-        function openMenu() {
-          mainMenu.classList.remove('mm-normal');
-          mainMenu.classList.add('mm-mobile-open');
-          closeBtn.style.display = 'inline-flex';
-          openBtn.setAttribute('aria-expanded', 'true');
-          body.style.overflow = 'hidden';
+      function openMenu() {
+        mobileMenu.classList.remove("mm-normal");
+        mobileMenu.classList.add("mm-mobile-open");
+        closeBtn.style.display = "inline-flex";
+        hamburger.setAttribute("aria-expanded", "true");
+        body.style.overflow = "hidden";
+      }
+
+      function closeMenu() {
+        mobileMenu.classList.remove("mm-mobile-open");
+        mobileMenu.classList.add("mm-normal");
+        closeBtn.style.display = "none";
+        hamburger.setAttribute("aria-expanded", "false");
+        body.style.overflow = "";
+      }
+
+      hamburger.addEventListener("click", openMenu);
+      closeBtn.addEventListener("click", closeMenu);
+
+      
+      mobileMenu.addEventListener("click", (e) => {
+        if (mobileMenu.classList.contains("mm-mobile-open") && e.target === mobileMenu) {
+          closeMenu();
         }
-
-        function closeMenu() {
-          mainMenu.classList.remove('mm-mobile-open');
-          mainMenu.classList.add('mm-normal');
-          closeBtn.style.display = 'none';
-          openBtn.setAttribute('aria-expanded', 'false');
-          body.style.overflow = '';
-        }
-
-        openBtn.addEventListener('click', openMenu);
-        closeBtn.addEventListener('click', closeMenu);
-
-        
-        mainMenu.addEventListener('click', (e) => {
-          if (mainMenu.classList.contains('mm-mobile-open') && e.target === mainMenu) closeMenu();
-        });
-
-        
-        document.addEventListener('keydown', (e) => {
-          if (e.key === 'Escape' && mainMenu.classList.contains('mm-mobile-open')) closeMenu();
-        });
-
-        
-        (function highlightActive() {
-          const path = (window.location.pathname || '/').replace(/\/+$/, '') || '/';
-          mainMenu.querySelectorAll('a[href]').forEach((link) => {
-            const href = (link.getAttribute('href') || '').replace(/\/+$/, '') || '/';
-            if (href === path) link.classList.add('active');
-          });
-        })();
       });
-    })();
+
+      
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && mobileMenu.classList.contains("mm-mobile-open")) {
+          closeMenu();
+        }
+      });
+    });
   </script>
 </header>
 
