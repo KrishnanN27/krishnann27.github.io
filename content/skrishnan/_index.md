@@ -4,9 +4,9 @@ title: "Sowndarya Krishnan Navaneetha Kannan"
 
 <style>
   :root {
-    --primary: #006699;
-    --text: inherit;
-    --bg: inherit;
+    --primary: var(--primary-color, #006699);
+    --text: var(--primary-color, #292929);
+    --bg: var(--secondary-color, #ffffff);
   }
 
   /* Hero */
@@ -20,29 +20,33 @@ title: "Sowndarya Krishnan Navaneetha Kannan"
     overflow: hidden;
   }
 
-  .hero img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 0 0 24px 24px; /* softer corners at bottom */
-    z-index: 0;
-  }
+.hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 
-  .hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.5);
-    border-radius: 0 0 24px 24px; /* match corners */
-    z-index: 1;
-  }
+  border-radius: 24px; /* round ALL corners */
+  z-index: 0;
+}
 
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6));
+  border-radius: 24px; /* match the image corners */
+  z-index: 1;
+}
+
+:root[data-color="light"] .hero::after {
+  background: linear-gradient(to bottom, rgba(255,255,255,0.1), rgba(0,0,0,0.3));
+}
   .hero-content {
     position: relative;
     z-index: 2;
-    animation: fadeIn 2s ease;
+    animation: fadeUp 1.5s ease forwards;
     max-width: 800px;
     padding: 0 1rem;
     color: #fff;
@@ -92,6 +96,16 @@ title: "Sowndarya Krishnan Navaneetha Kannan"
     width: 50%;
     padding: 1rem 2rem;
     box-sizing: border-box;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: var(--box-shadow2, 0 4px 10px rgba(0,0,0,0.05));
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .timeline-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--box-shadow, 0 6px 16px rgba(0,0,0,0.1));
   }
   .timeline-item h3 {
     margin: 0;
@@ -103,7 +117,6 @@ title: "Sowndarya Krishnan Navaneetha Kannan"
     margin: 0.3rem 0 0;
     font-size: clamp(0.9rem, 2vw, 1rem);
     font-weight: normal;
-    color: var(--text);
     opacity: 0.85;
   }
   .timeline-item a {
@@ -134,7 +147,7 @@ title: "Sowndarya Krishnan Navaneetha Kannan"
     height: 18px;
     border-radius: 50%;
     background: var(--primary);
-    border: 3px solid white;
+    border: 3px solid var(--secondary-color);
     z-index: 1;
   }
   .timeline-item.left::before {
@@ -146,14 +159,15 @@ title: "Sowndarya Krishnan Navaneetha Kannan"
 
   /* Closing */
   .closing {
-    background: var(--bg);
-    color: var(--text);
+    background: var(--secondary-color);
+    color: var(--primary-color);
     text-align: center;
-    padding: 4rem 1rem;
+    padding: 4rem 2rem;
     border: 2px solid var(--primary);
-    border-radius: 12px;
+    border-radius: 16px;
     max-width: 900px;
     margin: 0 auto 4rem auto;
+    transition: background .3s, color .3s;
   }
   .closing h2 {
     color: var(--primary);
@@ -164,11 +178,24 @@ title: "Sowndarya Krishnan Navaneetha Kannan"
     line-height: 1.6;
     font-size: clamp(0.95rem, 2.5vw, 1rem);
   }
+  .closing a.button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.6rem;
+    border-radius: 999px;
+    background: var(--primary);
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  .closing a.button:hover {
+    background: var(--tertiary-color, #e0002d);
+  }
 
   /* Animation */
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px);}
-    to { opacity: 1; transform: translateY(0);}
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px);}
+    to   { opacity: 1; transform: translateY(0);}
   }
 
   /* Responsive timeline */
@@ -178,7 +205,7 @@ title: "Sowndarya Krishnan Navaneetha Kannan"
     }
     .timeline-item {
       width: 100%;
-      padding: 1rem 2rem 1rem 2.5rem;
+      padding: 1.5rem 2rem 1.5rem 2.5rem;
       text-align: left !important;
     }
     .timeline-item.left,
@@ -190,17 +217,22 @@ title: "Sowndarya Krishnan Navaneetha Kannan"
       right: auto;
     }
   }
+
+  /* Smooth theme transitions */
+  html, body, .hero, .timeline-item, .closing {
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
 </style>
 
 <!-- Hero Section -->
 <section class="hero">
-  <img src="/images/aboutme.jpeg" alt="About me" />
+  <img src="/images/aboutme.jpeg" alt="Portrait of Sowndarya Krishnan Navaneetha Kannan" />
   <div class="hero-content">
     <h1>Hi, I’m Sowndarya Krishnan</h1>
     <p>
       Most friends call me Krish or Chris.<br/>
       If you’d like to pronounce my full name: <em>(Sown-dar-yeh Krish-nun)</em>.<br/>
-      I see myself as a curious learner, an explorer of ideas, and someone who loves connecting with people and cultures across the world.
+      I’m a curious learner, an explorer of ideas, and someone who loves connecting with people and cultures across the world.
     </p>
   </div>
 </section>
@@ -231,8 +263,11 @@ title: "Sowndarya Krishnan Navaneetha Kannan"
 <!-- Closing Section -->
 <section class="closing">
   <h2>Thanks for stopping by</h2>
-  <p>
-    I’m building, learning, and teaching — but mostly, I’m just trying to grow a little every day.<br/>
-    If that resonates with you, I’d love to connect.
-  </p>
+<p>
+  I’m building, learning, and teaching — but mostly, I’m just trying to grow a little every day.<br/>
+  Feel free to reach out if you’d like to connect or learn more about what I do.
+</p>
+
+<a href="/connect" class="button">Get in Touch</a>
+
 </section>
