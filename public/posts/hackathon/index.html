@@ -477,46 +477,54 @@
     }
 
      
-    @media (max-width:767.98px){
-      header { padding: .75rem 1rem !important; }
-      .header-left { gap: .4rem !important; }
+  
+@media (max-width:767.98px){
+  header { padding: .75rem 1rem !important; }
+  .header-left { gap: .4rem !important; }
 
-      #main-menu.mm-normal{display:none}
-      #main-menu.mm-mobile-open{
-        position:fixed;inset:0;
-        display:flex;align-items:stretch;justify-content:flex-start;
-        z-index:9999;
-        transition:background .3s ease;
-        background:rgba(255,255,255,.6);  
-        backdrop-filter: blur(6px);       
-      }
-      @media (prefers-color-scheme: dark){
-        #main-menu.mm-mobile-open{ background:rgba(0,0,0,.6); }
-      }
+  #main-menu.mm-normal{display:none}
 
-      #main-menu.mm-mobile-open ul{
-        display:flex;flex-direction:column;gap:1.2rem;
-        margin:0;padding:2rem 1.5rem;
-        width:min(80vw,320px);height:100%;
-        background:#fff; color:#000;
-        box-shadow:4px 0 12px rgba(0,0,0,.2);
-        transform:translateX(-100%);
-        animation:slideIn .3s forwards;
-        border-radius:0 .75rem .75rem 0;
-      }
-      @media (prefers-color-scheme: dark){
-        #main-menu.mm-mobile-open ul{ background:#111; color:#fff; }
-      }
+  #main-menu.mm-mobile-open {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    z-index: 9999;
+    transition: background .3s ease;
+    background: color-mix(in srgb, var(--secondary-color) 80%, transparent);  
+    backdrop-filter: blur(6px);  
+  }
 
-      #main-menu.mm-mobile-open a{
-        font-size:1.1rem;font-weight:500;color:inherit;text-decoration:none;
-        transition:color .2s;
-      }
-      #main-menu.mm-mobile-open a:hover{ color:#0077ff; }
+  #main-menu.mm-mobile-open ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin: 0;
+    padding: 2rem 1.5rem;
+    width: min(80vw, 320px);
+    height: 100%;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    box-shadow: 4px 0 12px rgba(0,0,0,.2);
+    transform: translateX(-100%);
+    animation: slideIn .3s forwards;
+    border-radius: 0 .75rem .75rem 0;
+  }
 
-      #mob-hb-icon{display:inline-flex}
-      #mob-x-icon{display:none}
-    }
+  #main-menu.mm-mobile-open a {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: inherit;
+    text-decoration: none;
+    transition: color .2s;
+  }
+  #main-menu.mm-mobile-open a:hover { color: var(--link-color); }
+
+  #mob-hb-icon { display: inline-flex }
+  #mob-x-icon { display: none }
+}
+
 
      
     #main-menu a.active{
