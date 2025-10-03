@@ -13,23 +13,23 @@ Together, they can reach destinations that classical methods alone could never a
 
 <img src="/images/research/research.png" alt="Ship on a plane" style="max-width:100%; height:auto; border-radius:12px; box-shadow:0 6px 15px rgba(0,0,0,0.15);" loading="lazy">
 
-<!-- --- -->
+---
 
 ## What I Do
 
 My research in **quantum computing** focuses on designing algorithms to tackle scientific problems governed by **partial differential equations (PDEs)**.
-These equations capture the behavior of complex physical systems—from fluid flow in porous media to the dynamics of large-scale engineering processes—that are often too demanding for classical computers.
+These equations describe the behavior of complex physical systems—from fluid flow in porous media to the dynamics of large-scale engineering processes—that are often too demanding for classical computers.
 
 ---
 
-## Hybrid Quantum–AI and Machine Learning
+## Hybrid Quantum–AI
 
-I am developing **hybrid quantum–AI and machine learning methods** that combine the strengths of both paradigms.
-The aim is to achieve **efficiency, scalability, and accuracy** beyond what either quantum algorithms, AI, or machine learning can deliver on their own.
+I am developing **hybrid quantum–AI methods**, with a strong emphasis on machine learning, that combine the strengths of both paradigms.
+The goal is to achieve **efficiency, scalability, and accuracy** beyond what either quantum algorithms or AI techniques can deliver on their own.
 
 ---
 
 ## Why It Matters
 
 By reformulating PDE-based models for quantum hardware, my goal is to simulate **multiscale, multiphysics processes** in science and engineering.
-This opens the door to breakthroughs in modeling, prediction, and discovery across disciplines where classical approaches reach their limits.
+This opens the door to breakthroughs in modeling, prediction, and discovery—pushing science and engineering beyond the limits of classical approaches.
