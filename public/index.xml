@@ -86,5 +86,13 @@ Why don’t you be the 1 4 me? 💘Will you be my Valentine? 💕Yes ❤️No
       <guid>//localhost:1313/gallery/</guid>
       <description></description>
     </item>
+    <item>
+      <title>Research</title>
+      <link>//localhost:1313/research/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/research/</guid>
+      <description>If I had to explain my research in one picture: it’s like putting a ship on top of a plane.AI and machine learning are already fast and powerful, like a plane. Quantum computing doesn’t replace them—it brings an entire ship on board, opening up a completely new way of representing and solving problems. Together, they can reach destinations that classical methods alone could never access.
+</description>
+    </item>
   </channel>
 </rss>
