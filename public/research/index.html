@@ -120,13 +120,13 @@
   <link rel="manifest" href="/site.webmanifest" /> 
    <meta property="og:url" content="//localhost:1313/research/">
   <meta property="og:title" content="Research">
-  <meta property="og:description" content="If I had to explain my research in one picture: it’s like putting a ship on top of a plane.AI and machine learning are already fast and powerful, like a plane. Quantum computing doesn’t replace them—it brings an entire ship on board, opening up a completely new way of representing and solving problems. Together, they can reach destinations that classical methods alone could never access.">
+  <meta property="og:description" content="If I had to explain my research in one picture: it’s like giving a fast plane the vast capacity of a ship.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
    
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Research">
-  <meta name="twitter:description" content="If I had to explain my research in one picture: it’s like putting a ship on top of a plane.AI and machine learning are already fast and powerful, like a plane. Quantum computing doesn’t replace them—it brings an entire ship on board, opening up a completely new way of representing and solving problems. Together, they can reach destinations that classical methods alone could never access.">
+  <meta name="twitter:description" content="If I had to explain my research in one picture: it’s like giving a fast plane the vast capacity of a ship.">
    
 
 
@@ -627,58 +627,136 @@
 
 
 
-<p style="text-align:center; font-size:1rem; font-style:italic; margin: 1.5rem 0;">
-If I had to explain my research in one picture: it’s like putting a ship on top of a plane.
-</p>
-<p>AI and machine learning are already fast and powerful, like a plane.
-Quantum computing doesn’t replace them—it brings an entire ship on board, opening up a completely new way of representing and solving problems.
-Together, they can reach destinations that classical methods alone could never access.</p>
-<img src="/images/research/research.png" alt="Ship on a plane" style="max-width:100%; height:auto; border-radius:12px; box-shadow:0 6px 15px rgba(0,0,0,0.15);" loading="lazy">
-<!-- --- -->
+<style>
+  /* Clean structure – respects existing theme */
+  .research-container {
+    margin: 0;
+    padding: 3rem 2rem 4rem;
+    font-family: inherit;
+    line-height: 1.7;
+    text-align: justify;
+  }
 
-<h2 id="what-i-do">
-  What I Do
-  
-  <a hidden class="anchor" href="#what-i-do">
+  .research-img {
+    display: block;
+    margin: 0 auto 1.5rem;
+    border-radius: 14px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    width: 85%;
+    max-width: 780px;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
 
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M172.5 131.1C228.1 75.51 320.5 75.51 376.1 131.1C426.1 181.1 433.5 260.8 392.4 318.3L391.3 319.9C381 334.2 361 337.6 346.7 327.3C332.3 317 328.9 297 339.2 282.7L340.3 281.1C363.2 249 359.6 205.1 331.7 177.2C300.3 145.8 249.2 145.8 217.7 177.2L105.5 289.5C73.99 320.1 73.99 372 105.5 403.5C133.3 431.4 177.3 435 209.3 412.1L210.9 410.1C225.3 400.7 245.3 404 255.5 418.4C265.8 432.8 262.5 452.8 248.1 463.1L246.5 464.2C188.1 505.3 110.2 498.7 60.21 448.8C3.741 392.3 3.741 300.7 60.21 244.3L172.5 131.1zM467.5 380C411 436.5 319.5 436.5 263 380C213 330 206.5 251.2 247.6 193.7L248.7 192.1C258.1 177.8 278.1 174.4 293.3 184.7C307.7 194.1 311.1 214.1 300.8 229.3L299.7 230.9C276.8 262.1 280.4 306.9 308.3 334.8C339.7 366.2 390.8 366.2 422.3 334.8L534.5 222.5C566 191 566 139.1 534.5 108.5C506.7 80.63 462.7 76.99 430.7 99.9L429.1 101C414.7 111.3 394.7 107.1 384.5 93.58C374.2 79.2 377.5 59.21 391.9 48.94L393.5 47.82C451 6.731 529.8 13.25 579.8 63.24C636.3 119.7 636.3 211.3 579.8 267.7L467.5 380z"/></svg>
+  .research-img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+  }
 
+  .research-caption {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.05rem;
+    margin: 1.5rem auto 3rem;
+    line-height: 1.6;
+    opacity: 0.9;
+  }
 
- </a>
-  
-</h2>
-<p>My research in <strong>quantum computing</strong> focuses on designing algorithms to tackle scientific problems governed by <strong>partial differential equations (PDEs)</strong>.
-These equations describe the behavior of complex physical systems—from fluid flow in porous media to the dynamics of large-scale engineering processes—that are often too demanding for classical computers.</p>
-<hr>
+  .research-container h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
 
-<h2 id="hybrid-quantumai">
-  Hybrid Quantum–AI
-  
-  <a hidden class="anchor" href="#hybrid-quantumai">
+  .research-container h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: currentColor;
+    opacity: 0.2;
+    margin-top: 0.4rem;
+  }
 
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M172.5 131.1C228.1 75.51 320.5 75.51 376.1 131.1C426.1 181.1 433.5 260.8 392.4 318.3L391.3 319.9C381 334.2 361 337.6 346.7 327.3C332.3 317 328.9 297 339.2 282.7L340.3 281.1C363.2 249 359.6 205.1 331.7 177.2C300.3 145.8 249.2 145.8 217.7 177.2L105.5 289.5C73.99 320.1 73.99 372 105.5 403.5C133.3 431.4 177.3 435 209.3 412.1L210.9 410.1C225.3 400.7 245.3 404 255.5 418.4C265.8 432.8 262.5 452.8 248.1 463.1L246.5 464.2C188.1 505.3 110.2 498.7 60.21 448.8C3.741 392.3 3.741 300.7 60.21 244.3L172.5 131.1zM467.5 380C411 436.5 319.5 436.5 263 380C213 330 206.5 251.2 247.6 193.7L248.7 192.1C258.1 177.8 278.1 174.4 293.3 184.7C307.7 194.1 311.1 214.1 300.8 229.3L299.7 230.9C276.8 262.1 280.4 306.9 308.3 334.8C339.7 366.2 390.8 366.2 422.3 334.8L534.5 222.5C566 191 566 139.1 534.5 108.5C506.7 80.63 462.7 76.99 430.7 99.9L429.1 101C414.7 111.3 394.7 107.1 384.5 93.58C374.2 79.2 377.5 59.21 391.9 48.94L393.5 47.82C451 6.731 529.8 13.25 579.8 63.24C636.3 119.7 636.3 211.3 579.8 267.7L467.5 380z"/></svg>
+  /* Subtle fade-in effect */
+  [data-fade] {
+    opacity: 0;
+    transform: translateY(25px);
+    animation: fadeInUp 0.9s ease forwards;
+  }
 
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
- </a>
-  
-</h2>
-<p>I am developing <strong>hybrid quantum–AI methods</strong>, with a strong emphasis on machine learning, that combine the strengths of both paradigms.
-The goal is to achieve <strong>efficiency, scalability, and accuracy</strong> beyond what either quantum algorithms or AI techniques can deliver on their own.</p>
-<hr>
+  /* Responsive image handling */
+  @media (max-width: 1000px) {
+    .research-img {
+      width: 90%;
+      max-width: 650px;
+    }
+  }
 
-<h2 id="why-it-matters">
-  Why It Matters
-  
-  <a hidden class="anchor" href="#why-it-matters">
+  @media (max-width: 700px) {
+    .research-img {
+      width: 100%;
+      max-width: 100%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    }
 
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M172.5 131.1C228.1 75.51 320.5 75.51 376.1 131.1C426.1 181.1 433.5 260.8 392.4 318.3L391.3 319.9C381 334.2 361 337.6 346.7 327.3C332.3 317 328.9 297 339.2 282.7L340.3 281.1C363.2 249 359.6 205.1 331.7 177.2C300.3 145.8 249.2 145.8 217.7 177.2L105.5 289.5C73.99 320.1 73.99 372 105.5 403.5C133.3 431.4 177.3 435 209.3 412.1L210.9 410.1C225.3 400.7 245.3 404 255.5 418.4C265.8 432.8 262.5 452.8 248.1 463.1L246.5 464.2C188.1 505.3 110.2 498.7 60.21 448.8C3.741 392.3 3.741 300.7 60.21 244.3L172.5 131.1zM467.5 380C411 436.5 319.5 436.5 263 380C213 330 206.5 251.2 247.6 193.7L248.7 192.1C258.1 177.8 278.1 174.4 293.3 184.7C307.7 194.1 311.1 214.1 300.8 229.3L299.7 230.9C276.8 262.1 280.4 306.9 308.3 334.8C339.7 366.2 390.8 366.2 422.3 334.8L534.5 222.5C566 191 566 139.1 534.5 108.5C506.7 80.63 462.7 76.99 430.7 99.9L429.1 101C414.7 111.3 394.7 107.1 384.5 93.58C374.2 79.2 377.5 59.21 391.9 48.94L393.5 47.82C451 6.731 529.8 13.25 579.8 63.24C636.3 119.7 636.3 211.3 579.8 267.7L467.5 380z"/></svg>
-
-
- </a>
-  
-</h2>
-<p>By reformulating PDE-based models for quantum hardware, my goal is to simulate <strong>multiscale, multiphysics processes</strong> in science and engineering.
-This opens the door to breakthroughs in modeling, prediction, and discovery—pushing science and engineering beyond the limits of classical approaches.</p>
+    .research-caption {
+      font-size: 1rem;
+      margin: 1rem auto 2rem;
+    }
+  }
+</style>
+<div class="research-container">
+  <!-- Start with caption and image -->
+  <div class="research-hero" data-fade>
+    <p class="research-caption">
+      If I had to explain my research in one picture: it’s like giving a fast plane the vast capacity of a ship.
+    </p>
+    <img src="/images/research/research.png"
+         alt="Ship on a plane"
+         loading="lazy"
+         class="research-img">
+  </div>
+  <!-- Then your explanation -->
+  <div data-fade>
+    <p>
+      AI and machine learning are already fast and powerful, like a plane.
+      Quantum computing doesn’t replace them—it expands their capabilities, like adding the depth and capacity of a ship to something that already flies.<br>
+      Together, they can reach destinations that classical methods alone could never access.
+    </p>
+  </div>
+  <!-- Sections -->
+  <section data-fade>
+    <h2>What I Do</h2>
+    <p>
+      My research in <strong>quantum computing</strong> focuses on designing algorithms to tackle scientific problems governed by <strong>partial differential equations (PDEs)</strong>.
+      These equations describe the behavior of complex physical systems—from fluid flow in porous media to the dynamics of large-scale engineering processes—that are often too demanding for classical computers.
+    </p>
+  </section>
+  <section data-fade>
+    <h2>Hybrid Quantum–AI</h2>
+    <p>
+      I am developing <strong>hybrid quantum–AI methods</strong>, with a strong emphasis on machine learning, that combine the strengths of both paradigms.
+      The goal is to achieve <strong>efficiency, scalability, and accuracy</strong> beyond what either quantum algorithms or AI techniques can deliver on their own.
+    </p>
+  </section>
+  <section data-fade>
+    <h2>Why It Matters</h2>
+    <p>
+      By reformulating PDE-based models for quantum hardware, my goal is to simulate <strong>multiscale, multiphysics processes</strong> in science and engineering.
+      This opens the door to breakthroughs in modeling, prediction, and discovery—pushing science and engineering beyond the limits of classical approaches.
+    </p>
+  </section>
+</div>
 
 
 
