@@ -55,6 +55,42 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>//localhost:1313/tags/dns-configuration/</loc>
+    <lastmod>2024-09-12T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>//localhost:1313/tags/domain-hosting/</loc>
+    <lastmod>2024-09-12T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>//localhost:1313/tags/github-pages/</loc>
+    <lastmod>2024-09-12T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>//localhost:1313/tags/guidance/</loc>
+    <lastmod>2024-09-12T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>//localhost:1313/posts/finally_i_got_a_domain_for_myself/</loc>
+    <lastmod>2024-09-12T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>//localhost:1313/tags/ssl/</loc>
+    <lastmod>2024-09-12T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>//localhost:1313/tags/distraction/</loc>
     <lastmod>2024-09-08T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>

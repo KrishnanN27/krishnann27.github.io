@@ -1,10 +1,9 @@
 +++
 title = "Before the PhD: Understanding the MS Thesis Journey"
-date = "2025-10-03"
+date = "2025-10-02"
 author = "Krish"
 description = "There’s a lot of advice out there for PhD students — but what about those doing a research-based MS? Here’s what an MS thesis actually is, what people overlook, and how to figure out if research is really for you."
 tags = ["gradschool", "research", "ms-thesis", "academic-life", "reflection"]
-# draft = true
 +++
 
 ---
