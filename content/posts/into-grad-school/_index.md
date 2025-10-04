@@ -28,10 +28,12 @@ I’ll talk about:
 
 <!-- <a href="#what-led-me-to-give-up-on-my-own-thesis" class="link">What led me to give up on my own thesis</a><br> -->
 
-<a href="#what-an-ms-thesis-actually-is" class="link">What an MS thesis actually is</a><br>
-<a href="#what-a-good-approach-looks-like-for-getting-into-an-ms-thesis" class="link">What a good approach looks like for getting into an MS thesis</a><br>
-<a href="#the-stuff-people-often-overlook" class="link">The stuff people often overlook</a><br>
-<a href="#how-to-figure-out-if-research-and-maybe-a-phd-is-really-for-you" class="link">How to figure out if research (and maybe a PhD) is really for you</a>
+<ul style="list-style-type:'› '; margin:1rem 0; line-height:1.8; padding-left:1.2rem;">
+  <li><a href="#what-an-ms-thesis-actually-is" class="link">What an MS thesis actually is</a></li>
+  <li><a href="#what-a-good-approach-looks-like-for-getting-into-an-ms-thesis" class="link">What a good approach looks like for getting into an MS thesis</a></li>
+  <li><a href="#the-stuff-people-often-overlook" class="link">The stuff people often overlook</a></li>
+  <li><a href="#how-to-figure-out-if-research-and-maybe-a-phd-is-really-for-you" class="link">How to figure out if research (and maybe a PhD) is really for you</a></li>
+</ul>
 
 An MS thesis might look like a “mini PhD” on paper, but it’s really its own thing — a mix of structure and self-direction that tests how well you can explore and think independently.
 
@@ -45,13 +47,17 @@ If you’re planning to start one or already knee-deep in it, I hope this helps 
     What an MS Thesis Actually Is
   </h2>
 
-  <p>
-    Before we get into this, I'd like you to take a quick look at
-    <a href="https://matt.might.net/articles/phd-school-in-pictures/" target="_blank" rel="noopener" style="color:var(--link-color, #0066cc); text-decoration:none; border-bottom:1px solid var(--link-color, #0066cc);">
-      The Illustrated Guide to a PhD
-    </a>.
-    Now, if you’ve gone through it, an MS thesis sits somewhere between those two last stages — deepening your specialty while giving you just enough of a push toward independent research.
-  </p>
+ <p>
+  Before we get into this, I'd like you to take a quick look at
+  <a href="https://matt.might.net/articles/phd-school-in-pictures/"
+     target="_blank"
+     rel="noopener"
+     class="link">
+    The Illustrated Guide to a PhD
+  </a>.
+  Now, if you’ve gone through it, an MS thesis sits somewhere between those two last stages —
+  deepening your specialty while giving you just enough of a push toward independent research.
+</p>
 
 <figure style="margin:1.5rem 0; text-align:center;">
   <img src="guide.png"
