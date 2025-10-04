@@ -13,7 +13,7 @@ Together, they can reach destinations that classical methods alone could never a
 
 <img src="/images/research/research.png" alt="Ship on a plane" style="max-width:100%; height:auto; border-radius:12px; box-shadow:0 6px 15px rgba(0,0,0,0.15);" loading="lazy">
 
----
+<!-- --- -->
 
 ## What I Do
 

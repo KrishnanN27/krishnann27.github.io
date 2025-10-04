@@ -35,6 +35,15 @@
   font-style: italic;
   font-display: swap;
 }
+.link {
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
 
 /* ------------------------------
    LIGHT (maps from your second snippet’s :root)
@@ -217,6 +226,20 @@
 .icon:not(.icon-colored) {
   filter: var(--icon-filter);
 }
+/* ------------------------------
+   COMPONENT TOKENS USING THE MAP
+------------------------------ */
+
+/* custom link style */
+.link {
+  color: var(--link-color) !important;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
 
 .cv-body h3 {
   background: var(--secondary-color-dark);
@@ -262,15 +285,6 @@ code {
 *::-webkit-scrollbar-thumb {
   background: var(--scrollbar-thumb);
   border-radius: 999px;
-}
-
-/* links – kill underlines unless you want them on hover */
-a {
-  color: var(--link-color);
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: none;
 }
 
 /* details/summary open bg */
